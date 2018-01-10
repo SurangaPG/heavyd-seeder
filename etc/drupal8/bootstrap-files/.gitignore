@@ -14,19 +14,9 @@
 /etc/env/local/properties/*.yml
 !/etc/env/local/properties/project.yml
 
-# Phing and phing helpers
-# These live under a seperate directory .phing. Also a symlink is provided but should be loaded on the fly.
-/.phing/vendor
-
 # Node
 node_modules
 bower_components
-
-# Config
-/.workflow/vendor
-
-# Deployer
-/.deployer/vendor
 
 # Workflow
 /temp
@@ -54,3 +44,6 @@ web/sites/*/settings.*.php
 # Ignore the private and temp files
 etc/*/private
 etc/*/temp
+
+# Prevent seed files from being committed
+seed.yml
