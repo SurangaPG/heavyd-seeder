@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project name="HeavyD" default="project:help">
+
+    <target name="info" description="Show some basic information.">
+        <echo message="Welcome to the HeavyD project environment." />
+    </target>
+
+    <!--
+        Property bundle loading
+
+        Ensure that the full property date is written out in the file system.
+        This is to make it easier to add extra properties etc to the project set.
+
+        All the .yml files in the /properties/dist, env and local folder are combined and aggregated
+        into a basic set.
+    -->
+    <!-- Include custom property loading tasks -->
+    <includepath classpath="${project.basedir}/.heavyd/vendor/surangapg/phing-property-bundle/src" />
+
+    <taskdef classname="PropertyDirWriteTask" name="property-dir-write" />
+    <taskdef classname="PropertyDirLoadTask" name="property-dir" />
+
+    <if>
+        <not>
+            <isset property="current.basePath" />
+        </not>
+        <then>
+            <echo message="No custom basepath set, using project.basedir" />
+            <property name="current.basePath" value="${project.basedir}" />
+        </then>
+    </if>
+
+    <property name="output.FULL_PROPERTIES_EXIST" value="false" />
+    <exec command="if [ -f '${project.basedir}/properties/bin.yml' ]; then echo 'true'; else echo 'false'; fi;" outputProperty="output.FULL_PROPERTIES_EXIST" />
+    <if>
+        <equals arg1="${output.FULL_PROPERTIES_EXIST}" arg2="false" />
+        <then>
+            <echo message="full property files don't appear to be generated yet, generating on the fly via property-dir-write" />
+            <property-dir-write originDir="${project.basedir}/properties"
+                                subLevels="dist,stage,env"
+                                outputDir="${project.basedir}/properties"
+                                order="project,dir,bin,behat"
+                                override="true"
+                                outputFull="false"
+            />
+        </then>
+    </if>
+
+    <!-- Loads the full property files from the base dir -->
+    <property-dir propertyDir="${project.basedir}/properties"/>
+
+    <!-- Target to allow forced rebuilding of the properties -->
+    <target name="property:write-full">
+        <if>
+            <not>
+                <isset property="current.basePath" />
+            </not>
+            <then>
+                <echo message="No custom basepath set, using project.basedir" />
+                <property name="current.basePath" value="${project.basedir}" />
+            </then>
+        </if>
+        <property-dir-write originDir="${project.basedir}/properties"
+                            subLevels="dist,stage,env"
+                            outputDir="${project.basedir}/properties"
+                            order="project,dir,bin,behat"
+                            override="true"
+                            outputFull="true"
+        />
+    </target>
+
+    <!-- Auto include all the heavyd build files in the vendor dirs. -->
+    <import>
+        <fileset dir="${project.basedir}/lib/phing">
+            <patternset>
+                <include name="build.*.xml"/>
+            </patternset>
+        </fileset>
+    </import>
+
+    <target name="project:install" description="Installs a full website from scratch.">
+        <!-- Default values -->
+        <property name="final.env" value="local" />
+        <property name="final.stage" value="dev" />
+
+        <!-- Enable the install time data -->
+        <property name="env.to.activate" value="${final.env}" override="true" />
+        <property name="stage.to.activate" value="install" override="true" />
+
+        <phingcall target="project:activate-env" />
+        <phingcall target="project:activate-stage" />
+
+        <!-- Generate a .etc/.host file for the local environment -->
+        <!-- @TODO implement this -->
+
+        <!-- @TODO Look into the mails being sent during install? -->
+        <phingcall target="drush:site-install" />
+
+        <!-- Install the final stage (was forced to install to prevent issues) -->
+        <property name="stage.to.activate" value="${final.stage}" override="true" />
+        <phingcall target="project:activate-stage" />
+    </target>
+
+    <target name="project:build" description="Builds an entire environment up from scratch.">
+        <phingcall target="composer:build" />
+    </target>
+
+    <target name="project:setup" description="Setups up an already prepared environment">
+        <phingcall target="theme:get-assets" />
+    </target>
+
+    <target name="project:init" description="Init a new project with all the needed code etc in place.">
+        <phingcall target="drupal:init:config" />
+        <phingcall target="drupal:init:baseline-module" />
+        <phingcall target="drupal:init:baseline-theme" />
+        <phingcall target="drupal:init:site-dir" />
+        <phingcall target="drupal:init:cleanup" />
+    </target>
+
+    <target name="project:property-cleanse" description="Cleanses a project of all properties etc.">
+        <phingcall target="property:cleanse" />
+        <phingcall target="property:write-full" />
+    </target>
+
+    <target name="project:activate-env" description="Activates a full environment">
+        <phingcall target="property:cleanse:env" />
+        <phingcall target="property:activate:env" />
+        <phingcall target="property:write-full" />
+        <phingcall target="drupal:env:settings-file" />
+    </target>
+
+    <target name="project:activate-stage" description="Activates a the correct stage (e.g production, acc, etc) for a given site (dir).">
+        <phingcall target="property:cleanse:stage" />
+        <phingcall target="property:activate:stage" />
+        <phingcall target="property:write-full" />
+        <phingcall target="drupal:stage:activate-etc-files" />
+    </target>
+
+    <target name="project:help">
+        <exec passthru="true" command="${bin.phing} -l" />
+    </target>
+
+    <target name="project:unlock">
+        <exec passthru="true" command="chmod -R u+w ${project.basedir}" />
+    </target>
+
+    <target name="project:install" description="Installs a full website from scratch.">
+        <property name="domain.for.install" value="${host.default.domain}" />
+        <fail unless="domain.for.install" message="Pass the local domain (without a trailing slash and with http(s):// prefix) e.g -Ddomain.for.install=https://mylocaldomain.local "/>
+        <phingcall target="project:unlock" />
+
+        <!-- Default values -->
+        <property name="final.env" value="local" />
+        <property name="final.stage" value="dev" />
+        <property name="site.to.activate" value="default" />
+
+        <!-- Enable the install time data -->
+        <property name="env.to.activate" value="${final.env}" override="true" />
+        <property name="stage.to.activate" value="install" override="true" />
+
+        <phingcall target="project:activate-env" />
+        <phingcall target="project:activate-stage" />
+
+        <!-- @TODO Look into the mails being sent during install? -->
+        <phingcall target="drush:site-install" />
+
+        <!-- Install the final stage (was forced to install to prevent issues) -->
+        <property name="stage.to.activate" value="${final.stage}" override="true" />
+        <phingcall target="project:activate-stage" />
+
+        <exec passthru="true" command="${bin.drush} uli --uri=${host.default.domain}" dir="${dir.web.root}"/>
+    </target>
+
+</project>

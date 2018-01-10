@@ -11,17 +11,13 @@
     </target>
 
     <target name="drupal8:lock-composer-php-versions" description="Locks a php version in a composer.json file to a given value.">
-        <exec passthru="true" command="composer config platform.php ${seed.project_php_version}" dir="${dir.build}/.phing"/>
-        <exec passthru="true" command="composer config platform.php ${seed.project_php_version}" dir="${dir.build}/.deployer"/>
-        <exec passthru="true" command="composer config platform.php ${seed.project_php_version}" dir="${dir.build}/.workflow"/>
+        <exec passthru="true" command="composer config platform.php ${seed.project_php_version}" dir="${dir.build}/.heavyd"/>
         <exec passthru="true" command="composer config platform.php ${seed.project_php_version}" dir="${dir.build}"/>
     </target>
 
     <target name="drupal8:composer-install" description="Installs the drupal 8 project via composer to ensure some extra files etc for the scaffold.">
         <exec passthru="true" command="composer install" dir="${dir.build}"/>
-        <exec passthru="true" command="composer install" dir="${dir.build}/.phing"/>
-        <exec passthru="true" command="composer install" dir="${dir.build}/.deployer" />
-        <exec passthru="true" command="composer install" dir="${dir.build}/.workflow" />
+        <exec passthru="true" command="composer install" dir="${dir.build}/.heavyd"/>
     </target>
 
     <target name="drupal8:validate-seed-data" description="checks or all the needed seed properties were added.">
