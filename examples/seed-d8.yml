@@ -10,7 +10,7 @@ project_name: "[required] project_machine_name"
 # php version for this project (will ensure composer runs the correct version etc).
 project_php_version: 7.0.15
 # Main version for the repository.
-git_repository: "[required] git@bitbucket.org:suranga_gamage/bananavans.git"
+project_git_repository: "[required] git@bitbucket.org:suranga_gamage/bananavans.git"
 
 # Optionally, add the different servers this site will run on.
 servers:
