@@ -1,0 +1,13 @@
+{
+  "name": "oneagency/deployment",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url":  "git@bitbucket.org:ausybenelux/deployer.git"
+    }
+  ],
+  "require-dev": {
+    "oneagency/deployer": "2.x-dev"
+  },
+  "prefer-stable": true
+}

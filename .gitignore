@@ -1,1 +1,5 @@
-/vendor
+vendor
+output
+/seed.yml
+build
+

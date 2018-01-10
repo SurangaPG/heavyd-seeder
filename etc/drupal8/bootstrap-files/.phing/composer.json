@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phing/phing": "^2.16",
+        "surangapg/phing-property-bundle": "^0"
+    }
+}
