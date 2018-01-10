@@ -1,0 +1,19 @@
+{
+  "repositories": {
+    "heavyd-components": {
+      "type": "vcs",
+      "url": "git@github.com:SurangaPG/heavyd-components.git"
+    }
+  },
+  "name": "heavyd/seeder",
+  "autoload": {
+    "psr-4": {
+      "surangapg\\HeavydSeeder\\": "src"
+    }
+  },
+  "prefer-stable": true,
+  "require": {
+    "heavyd/components": "@dev",
+    "phing/phing": "^2.16"
+  }
+}
