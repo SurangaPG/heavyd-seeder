@@ -16,13 +16,17 @@
         <exec passthru="true" command="git commit -m'Workflow Seeder: ${message.for.commit}'" dir="${dir.build}" />
     </target>
 
+    <target name="git:add-remote" description="Adds a remote.">
+        <fail unless="remote.to.connect" />
+        <fail unless="url.for.remote" />
+        <exec passthru="true" command="git remote add ${remote.to.connect} {url.for.remote}" dir="${dir.build}" />
+    </target>
+
     <target name="git:push" description="Pushes to a remote.">
         <exec passthru="true" command="git push" dir="${dir.build}" />
-        <exec passthru="true" command="git push platform" dir="${dir.build}" />
     </target>
 
     <target name="git:push-upstream" description="Pushes to a remote with upstream.">
         <exec passthru="true" command="git push --upstream" dir="${dir.build}" />
-        <exec passthru="true" command="git push platform --upstream" dir="${dir.build}" />
     </target>
 </project>

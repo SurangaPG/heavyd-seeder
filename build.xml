@@ -34,6 +34,10 @@
 
         <phingcall target="drupal8:bootstrap-files" />
         <phingcall target="git:init" />
+        <phingcall target="git:add-remote">
+            <property name="remote.to.add" value="origin" />
+            <property name="url.for.remote" value="seed.project_git_repository" />
+        </phingcall>
         <phingcall target="drupal8:lock-composer-php-versions" />
         <phingcall target="drupal8:composer-install" />
         <phingcall target="git:commit">
