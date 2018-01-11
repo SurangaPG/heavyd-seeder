@@ -78,14 +78,11 @@ class SitesGenerateDirsTask extends Task {
         $fs->touch($this->getBuildLocation() . '/etc/sites/' . $site . '/config/.gitkeep');
       }
 
-      // For now, place the staged dirs under the sites/NAME dir.
-      // @TODO will be moved the the more general location in time.
-      if (!file_exists($this->getBuildLocation() . '/etc/sites/' . $site . '/stages')) {
-        passthru(sprintf('cd %s && ln -s %s %s',
-          $this->getBuildLocation() . '/etc/sites/' . $site,
-          '../../stages',
-          $this->getBuildLocation() . '/etc/sites/' . $site . '/stages')
-        );
+      // Folder under etc/sites/NAME/properties
+      if (!file_exists($this->getBuildLocation() . '/etc/sites/' . $site . '/properties')) {
+        $fs->mkdir($this->getBuildLocation() . '/etc/sites/' . $site . '/properties');
+        $fs->touch($this->getBuildLocation() . '/etc/sites/' . $site . '/properties/.gitkeep');
+        $fs->dumpFile($this->getBuildLocation() . '/etc/sites/' . $site . '/properties/project.yml', Yaml::dump(['active' => ['site' => $site]]));
       }
 
       // Copy the settings.php file.
