@@ -23,6 +23,19 @@ servers:
     server_user: vd6437
     # Root of the project (not the webroot!). Deployer will place the fully build project here.
     server_root: /var/web/vd6437
+    # If you want to provision the database etc automatically you can add it here.
+    # This will generate a .env file on the remote server during the init phase.
+    # This data will not be committed to the repository.
+    credentials:
+      databases:
+        default:
+          default:
+            "host": "localhost"
+            "port": 3306
+            "username": "root"
+            "password": "root"
+            "database": "database_name"
+
 
 # Define which site folders should be made available. Generates the sites/[KEY] folders.
 sites:

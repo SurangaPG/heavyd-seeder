@@ -12,6 +12,7 @@
     <!-- Include extra phing task classes -->
     <includepath classpath="lib/phing/src" />
     <taskdef classname="ServerWriteDistPropertiesTask" name="write-server-properties" />
+    <taskdef classname="ServerProvisionEnvFileTask" name="provision-server-env-file" />
     <taskdef classname="ProjectWriteDistPropertiesTask" name="write-project-properties" />
     <taskdef classname="JiraWriteDistPropertiesTask" name="write-jira-properties" />
     <taskdef classname="SitesGenerateDirsTask" name="generate-site-dirs" />
@@ -69,6 +70,8 @@
         <phingcall target="git:commit">
             <property name="message.for.commit" value="Added baseline module/theme." override="true"/>
         </phingcall>
+
+        <provision-server-env-file seedFile="${project.basedir}/seed.yml" />
     </target>
 
 </project>
