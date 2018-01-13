@@ -1,0 +1,11 @@
+/**
+ * Main menu icons.
+ */
+#toolbar-link-view-fractions-fractions_page:before {
+  background-image: url(../assets/svg/787878/fa-list.svg);
+}
+
+#toolbar-link-view-fractions-fractions_page:active:before,
+#toolbar-link-view-fractions-fractions_page.is-active:before {
+  background-image: url(../assets/svg/000000/fa-list.svg);
+}

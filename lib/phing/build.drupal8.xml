@@ -29,19 +29,21 @@
         <fail unless="seed.project_git_repository" />
     </target>
 
-    <target name="drupal8:implement-config-profile" description="Copies a config profile to the configuration directory">
-        <property name="config-startup-profile" value="default" />
-        <exec passthru="true" command="rsync -vr ${project.basedir}/etc/drupal8/bootstrap-files/ ${dir.build}/" />
-    </target>
-
     <target name="drupal8:baseline-init" description="Initialise the baseline module and style to the project.">
-        <exec passthru="true" command="git clone git@bitbucket.org:ausybenelux/workflow-baseline-module.git ${dir.build}/web/modules/custom/baseline" />
-        <delete dir="${dir.build}/web/modules/custom/baseline/.git" />
+        <copy todir="${dir.build}/web/modules/custom">
+            <fileset dir="${project.basedir}/etc/drupal8/modules">
+                <patternset>
+                    <include name="**"/>
+                </patternset>
+            </fileset>
+        </copy>
 
-        <exec passthru="true" command="git clone git@bitbucket.org:ausybenelux/workflow-baseline-style.git ${dir.build}/web/themes/custom/baseline_style" />
-        <delete dir="${dir.build}/web/themes/custom/baseline_style/.git" />
-
-        <exec passthru="true" command="git clone git@bitbucket.org:ausybenelux/workflow-baseline-content.git ${dir.build}/web/themes/custom/baseline_content" />
-        <delete dir="${dir.build}/web/themes/custom/baseline_content/.git" />
+        <copy todir="${dir.build}/web/themes/custom">
+            <fileset dir="${project.basedir}/etc/drupal8/themes">
+                <patternset>
+                    <include name="**"/>
+                </patternset>
+            </fileset>
+        </copy>
     </target>
 </project>

@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function baseline_toolbar_alter(&$items) {
+  $items['home']['#attached']['library'][] = 'baseline/baseline.toolbar';
+}
+
+/**
+ * Implements hook_theme_suggestions_views_view_alter().
+ */
+function baseline_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+
+  // This adds an extra suggestion to all the custom blocks that use the
+  // block_content based on the bundle of their nested entity.
+  if($variables['elements']['#base_plugin_id'] == 'block_content') {
+    $suggestions[] = 'block__type__' . $variables['elements']['content']['#block_content']->bundle();
+  }
+}
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function baseline_theme_suggestions_user_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'user__' . $variables['elements']['#view_mode'];
+}
