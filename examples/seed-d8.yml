@@ -23,6 +23,10 @@ servers:
     server_user: vd6437
     # Root of the project (not the webroot!). Deployer will place the fully build project here.
     server_root: /var/web/vd6437
+    # Stage to deploy to this site.
+    server_stage: prod
+    # Env to deploy to this site. 
+    server_env: level27
     # If you want to provision the database etc automatically you can add it here.
     # This will generate a .env file on the remote server during the init phase.
     # This data will not be committed to the repository.
