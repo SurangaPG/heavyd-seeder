@@ -95,6 +95,10 @@ class SitesGenerateDirsTask extends Task {
         $this->getTemplateLocation() . '/site-templates/default.services.yml' ,
         $this->getBuildLocation() . '/web/sites/' . $site . '/services.yml'
       );
+
+      $configProfile = isset($info['config-profile']) ? $info['config-profile'] : 'default';
+      // Activate a standard config profile.
+      $fs->mirror($this->templateLocation . '/config-profiles/' . $configProfile,  $this->getBuildLocation() . '/etc/sites/' . $site . '/config');
     }
   }
 
