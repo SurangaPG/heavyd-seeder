@@ -19,7 +19,7 @@
     <target name="git:add-remote" description="Adds a remote.">
         <fail unless="remote.to.add" />
         <fail unless="url.for.remote" />
-        <exec passthru="true" command="git remote add ${remote.to.add} {url.for.remote}" dir="${dir.build}" />
+        <exec passthru="true" command="git remote add ${remote.to.add} ${url.for.remote}" dir="${dir.build}" />
     </target>
 
     <target name="git:push" description="Pushes to a remote.">

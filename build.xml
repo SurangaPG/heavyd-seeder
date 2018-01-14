@@ -78,12 +78,4 @@
 
         <provision-server-env-file seedFile="${project.basedir}/seed.yml" />
     </target>
-
-    <target name="seed:test">
-        <phingcall target="git:add-remote">
-            <property name="remote.to.add" value="origin" />
-            <property name="url.for.remote" value="${seed.project_git_repository}" />
-        </phingcall>
-        <provision-server-env-file seedFile="${project.basedir}/seed.yml" />
-    </target>
 </project>
