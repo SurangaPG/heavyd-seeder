@@ -68,7 +68,7 @@
 
         <phingcall target="drupal8:baseline-init" />
         <phingcall target="git:commit">
-            <property name="message.for.commit" value="Added baseline module/theme." override="true"/>
+            <property name="message.for.commit" value="Added baseline module/theme etc." override="true"/>
         </phingcall>
 
         <provision-server-env-file seedFile="${project.basedir}/seed.yml" />
