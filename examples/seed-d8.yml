@@ -39,6 +39,8 @@ servers:
             "username": "root"
             "password": "root"
             "database": "database_name"
+            "driver": "mysql"
+            "namespace": "Drupal\\Core\\Database\\Driver\\mysql"
 
 
 # Define which site folders should be made available. Generates the sites/[KEY] folders.
