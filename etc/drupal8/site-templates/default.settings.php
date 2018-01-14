@@ -17,14 +17,14 @@ $settings['update_free_access'] = FALSE;
 
 // Config installer is used as the install profile to enable installing on
 // write only environments such as platform.sh
-$settings['install_profile'] = 'config_installer';
+$settings['install_profile'] = 'standard';
 
 //
-$config_directories[CONFIG_SYNC_DIRECTORY] = '../etc/sites/' . basename(__DIR__) . '/config';
+$config_directories[CONFIG_SYNC_DIRECTORY] = '../etc/site/' . basename(__DIR__) . '/config';
 
 $settings['file_private_path'] = __DIR__ . '/files/private';
 $config['system.file']['path']['temporary'] = __DIR__ . '/files/temp';
-$config['locale.settings']['translation']['path'] = '../etc/sites/' . basename(__DIR__) . '/translations';
+$config['locale.settings']['translation']['path'] = '../etc/site/' . basename(__DIR__) . '/translations';
 
 /*
  * Get the different level of service.yml files. These follow the same logic as
