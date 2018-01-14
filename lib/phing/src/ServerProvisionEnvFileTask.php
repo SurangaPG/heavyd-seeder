@@ -43,14 +43,18 @@ class ServerProvisionEnvFileTask extends Task {
 
         // Start by ensuring the shared dir exists.
         // @TODO Make this a bit more solid (maybe use deployer itself?)
-        passthru(sprintf("ssh %s:%s 'mkdir -p %s/shared'", $properties['server_user'], $properties['server_host'], $properties['server_root']));
+        passthru(sprintf("ssh %s@%s 'mkdir -p %s/shared'", $properties['server_user'], $properties['server_host'], $properties['server_root']));
 
         // Set up the .env file.
         $envJson = [];
         $envJson[$site] = $properties['credentials'];
-        $envJson = json_encode($envJson);
+        if (!isset($envJson[$site]['hash_salt'])) {
+          $php = new \surangapg\HeavydComponents\Crypt\Php();
+          $envJson[$site]['hash_salt'] = $php->generate();
+        }
+        $envJson = json_encode($envJson, JSON_PRETTY_PRINT);
         $envJson = base64_encode($envJson);
-        passthru(sprintf("ssh %s:%s 'echo %s > %s/shared/.env'", $properties['server_user'], $properties['server_host'], $envJson, $properties['server_root']));
+        passthru(sprintf("ssh %s@%s 'echo %s > %s/shared/.env'", $properties['server_user'], $properties['server_host'], $envJson, $properties['server_root']));
       }
     }
   }
