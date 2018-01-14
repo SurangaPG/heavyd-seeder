@@ -91,9 +91,7 @@
       ]
     },
     "patches": {
-      "drupal/config_installer": {
-        "Correct the order of activation of the locale module": "https://www.drupal.org/files/issues/error_with_configurable-2658912-19.patch"
-      }
+
     }
   }
 }

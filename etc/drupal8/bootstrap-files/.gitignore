@@ -7,6 +7,7 @@
 # Once all these have been populated the phing command can be used to set up the full "final" config dir.
 /properties/env/*.yml
 /properties/stage/*.yml
+/properties/site/*.yml
 /properties/*.yml
 
 # For custom local installations we'll provide a local dir where you can place extra config files.
@@ -48,3 +49,6 @@ etc/*/temp
 
 # Prevent seed files from being committed
 seed.yml
+
+# Ignore composer items.
+vendor
