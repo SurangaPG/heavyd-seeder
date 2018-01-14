@@ -62,8 +62,8 @@ class SitesAddConfigTask extends Task {
     foreach ($seedProperties['sites'] as $site => $info) {
       $configProfile = isset($info['config-profile']) ? $info['config-profile'] : 'default';
       // Activate a standard config profile.
-      $this->fs->mirror($this->templateLocation . '/config-profiles/' . $configProfile,  $this->getBuildLocation() . '/etc/sites/' . $site . '/config');
-      $this->cleanConfigDir($this->getBuildLocation() . '/etc/sites/' . $site . '/config');
+      $this->fs->mirror($this->templateLocation . '/config-profiles/' . $configProfile,  $this->getBuildLocation() . '/etc/site/' . $site . '/config');
+      $this->cleanConfigDir($this->getBuildLocation() . '/etc/site/' . $site . '/config');
     }
   }
 

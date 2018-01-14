@@ -57,48 +57,48 @@ class SitesGenerateDirsTask extends Task {
     foreach ($seedProperties['sites'] as $site => $info) {
 
       // Folder under web/sites
-      if (!file_exists($this->getBuildLocation() . '/web/sites/' . $site)) {
-        $fs->mkdir($this->getBuildLocation() . '/web/sites/' . $site);
+      if (!file_exists($this->getBuildLocation() . '/web/site/' . $site)) {
+        $fs->mkdir($this->getBuildLocation() . '/web/site/' . $site);
       }
 
       // Folder under etc/sites
-      if (!file_exists($this->getBuildLocation() . '/etc/sites/' . $site)) {
-        $fs->mkdir($this->getBuildLocation() . '/etc/sites/' . $site);
+      if (!file_exists($this->getBuildLocation() . '/etc/site/' . $site)) {
+        $fs->mkdir($this->getBuildLocation() . '/etc/site/' . $site);
       }
 
-      // Folder under etc/sites/NAME/translations
-      if (!file_exists($this->getBuildLocation() . '/etc/sites/' . $site . '/translations')) {
-        $fs->mkdir($this->getBuildLocation() . '/etc/sites/' . $site . '/translations');
-        $fs->touch($this->getBuildLocation() . '/etc/sites/' . $site . '/translations/.gitkeep');
+      // Folder under etc/site/NAME/translations
+      if (!file_exists($this->getBuildLocation() . '/etc/site/' . $site . '/translations')) {
+        $fs->mkdir($this->getBuildLocation() . '/etc/site/' . $site . '/translations');
+        $fs->touch($this->getBuildLocation() . '/etc/site/' . $site . '/translations/.gitkeep');
       }
 
-      // Folder under etc/sites/NAME/config
-      if (!file_exists($this->getBuildLocation() . '/etc/sites/' . $site . '/config')) {
-        $fs->mkdir($this->getBuildLocation() . '/etc/sites/' . $site . '/config');
-        $fs->touch($this->getBuildLocation() . '/etc/sites/' . $site . '/config/.gitkeep');
+      // Folder under etc/site/NAME/config
+      if (!file_exists($this->getBuildLocation() . '/etc/site/' . $site . '/config')) {
+        $fs->mkdir($this->getBuildLocation() . '/etc/site/' . $site . '/config');
+        $fs->touch($this->getBuildLocation() . '/etc/site/' . $site . '/config/.gitkeep');
       }
 
-      // Folder under etc/sites/NAME/properties
-      if (!file_exists($this->getBuildLocation() . '/etc/sites/' . $site . '/properties')) {
-        $fs->mkdir($this->getBuildLocation() . '/etc/sites/' . $site . '/properties');
-        $fs->touch($this->getBuildLocation() . '/etc/sites/' . $site . '/properties/.gitkeep');
-        $fs->dumpFile($this->getBuildLocation() . '/etc/sites/' . $site . '/properties/project.yml', Yaml::dump(['active' => ['site' => $site]]));
+      // Folder under etc/site/NAME/properties
+      if (!file_exists($this->getBuildLocation() . '/etc/site/' . $site . '/properties')) {
+        $fs->mkdir($this->getBuildLocation() . '/etc/site/' . $site . '/properties');
+        $fs->touch($this->getBuildLocation() . '/etc/site/' . $site . '/properties/.gitkeep');
+        $fs->dumpFile($this->getBuildLocation() . '/etc/site/' . $site . '/properties/project.yml', Yaml::dump(['active' => ['site' => $site]]));
       }
 
       // Copy the settings.php file.
       $fs->copy(
         $this->getTemplateLocation() . '/site-templates/default.settings.php' ,
-        $this->getBuildLocation() . '/web/sites/' . $site . '/settings.php'
+        $this->getBuildLocation() . '/web/site/' . $site . '/settings.php'
       );
 
       $fs->copy(
         $this->getTemplateLocation() . '/site-templates/default.services.yml' ,
-        $this->getBuildLocation() . '/web/sites/' . $site . '/services.yml'
+        $this->getBuildLocation() . '/web/site/' . $site . '/services.yml'
       );
 
       $configProfile = isset($info['config-profile']) ? $info['config-profile'] : 'default';
       // Activate a standard config profile.
-      $fs->mirror($this->templateLocation . '/config-profiles/' . $configProfile,  $this->getBuildLocation() . '/etc/sites/' . $site . '/config');
+      $fs->mirror($this->templateLocation . '/config-profiles/' . $configProfile,  $this->getBuildLocation() . '/etc/site/' . $site . '/config');
     }
   }
 
