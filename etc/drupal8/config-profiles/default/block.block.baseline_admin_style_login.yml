@@ -1,0 +1,22 @@
+uuid: d8b71f99-812d-4fce-989b-8d1e2d6a9f78
+langcode: nl
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - baseline_admin_style
+_core:
+  default_config_hash: IItlF4SKHgxduIysVQdvirDJ_v3HGuAviOkidAOJYRE
+id: baseline_admin_style_login
+theme: baseline_admin_style
+region: content
+weight: 10
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }

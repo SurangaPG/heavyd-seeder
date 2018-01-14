@@ -1,0 +1,22 @@
+uuid: fea872a2-5735-4f7e-9a9a-7356c477222a
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - baseline_admin_style
+_core:
+  default_config_hash: XJqWwLt1LDCnazcEN6QkJmCLjk4R0__-8s0OO9xeNjg
+id: baseline_admin_style_messages
+theme: baseline_admin_style
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

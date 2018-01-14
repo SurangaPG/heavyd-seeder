@@ -1,0 +1,22 @@
+uuid: d8738091-fdbb-4466-bb01-2c30d639bf66
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - baseline_style
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: baseline_style_local_tasks
+theme: baseline_style
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

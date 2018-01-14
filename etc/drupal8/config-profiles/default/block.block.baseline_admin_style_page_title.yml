@@ -1,0 +1,20 @@
+uuid: a182be47-394f-45f4-ba24-342057df93b5
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - baseline_admin_style
+_core:
+  default_config_hash: ZSpc3IoSaLd0PkB02nxjVPBMztIdsTdHek9SiGaqZ_c
+id: baseline_admin_style_page_title
+theme: baseline_admin_style
+region: header
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 0ec66daf-2530-41dd-95ac-b884976efad3
+langcode: nl
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - baseline_admin_style
+_core:
+  default_config_hash: NU5A_49mwLHfs5xFzMFrZ850w9pgUolxMS9NNF3vv4c
+id: baseline_admin_style_help
+theme: baseline_admin_style
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

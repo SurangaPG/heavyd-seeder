@@ -1,0 +1,14 @@
+uuid: 9ccd29d4-a601-43f1-86ce-88bef5d97097
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: default_title_alias
+label: 'Default title alias'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

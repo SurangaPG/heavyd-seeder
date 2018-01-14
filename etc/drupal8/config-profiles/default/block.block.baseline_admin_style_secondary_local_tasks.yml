@@ -1,0 +1,22 @@
+uuid: e49a31ec-5b3a-4922-8e48-8e990e0d256b
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - baseline_admin_style
+_core:
+  default_config_hash: QeZBeCilQfeET3GeW6ZtJkEiwROADTZktFgKWwPieD4
+id: baseline_admin_style_secondary_local_tasks
+theme: baseline_admin_style
+region: pre_content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  provider: core
+  label_display: '0'
+  primary: false
+  secondary: true
+visibility: {  }

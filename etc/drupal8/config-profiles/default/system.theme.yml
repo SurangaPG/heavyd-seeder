@@ -1,0 +1,5 @@
+admin: baseline_admin_style
+default: baseline_style
+_core:
+  default_config_hash: fOjer9hADYYnbCJVZMFZIIM1azTFWyg84ZkFDHfAbUg
+langcode: nl

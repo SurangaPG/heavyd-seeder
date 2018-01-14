@@ -17,10 +17,13 @@ $settings['update_free_access'] = FALSE;
 
 // Config installer is used as the install profile to enable installing on
 // write only environments such as platform.sh
-$settings['install_profile'] = 'standard';
+$settings['install_profile'] = 'config_installer';
 
 //
 $config_directories[CONFIG_SYNC_DIRECTORY] = '../etc/site/' . basename(__DIR__) . '/config';
+
+// Export the dev stage data to the correct folder.
+$config['config_split.config_split.stage_dev']['folder'] = '../etc/stage/dev/config';
 
 $settings['file_private_path'] = __DIR__ . '/files/private';
 $config['system.file']['path']['temporary'] = __DIR__ . '/files/temp';

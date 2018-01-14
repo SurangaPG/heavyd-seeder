@@ -1,0 +1,13 @@
+uuid: 335a2e06-7526-4d43-8cde-3795dd162321
+langcode: nl
+status: true
+dependencies: {  }
+id: webmaster
+label: Webmaster
+weight: 3
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'administer nodes'
+  - 'bypass node access'
