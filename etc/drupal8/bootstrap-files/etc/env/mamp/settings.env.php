@@ -12,28 +12,33 @@ $baseSiteName = basename(__DIR__);
  * Read all the other data from the db properties.
  */
 $dbPropertiesFile = dirname(dirname(dirname(__DIR__))) . '/properties/db.yml';
-$dbPropertieSets = ['default--default' => []];
 
+$dbPropertieSets = ['default' => ['default' => []]];
 if (file_exists($dbPropertiesFile)) {
   $dbPropertieSets = \Symfony\Component\Yaml\Yaml::parse(
     file_get_contents($dbPropertiesFile)
   );
 }
 
-/*
- * Fish the data for the local server from the config
- * If no settings can be found we'll default to meaningful defaults which should
- * allow most devs to install the site without adding a local setup.
- */
-foreach ($dbPropertieSets as $keyName => $dbPropertieSet) {
-  $keyName = explode('--', $keyName);
-  $databases[$keyName[0]][$keyName[1]] = [
-    'host' => isset($dbPropertieSet['host']) ? $dbPropertieSet['host'] : 'localhost',
-    'port' => isset($dbPropertieSet['port']) ? $dbPropertieSet['port'] : '3306',
-    'username' => isset($dbPropertieSet['user']) ? $dbPropertieSet['user'] : 'root',
-    'password' => isset($dbPropertieSet['password']) ? $dbPropertieSet['password'] : 'root',
-    'database' => isset($dbPropertieSet['database']) ? $dbPropertieSet['database'] : 'workflow_8_' . $keyName . '_' . md5(__DIR__),
-    'driver' => isset($dbPropertieSet['db_driver']) ? $dbPropertieSet['driver'] : 'mysql',
-    'namespace' => isset($dbPropertieSet['namespace']) ? $dbPropertieSet['namespace'] : "Drupal\\Core\\Database\\Driver\\mysql",
-  ];
+// Add default database settings if not given
+foreach ($dbPropertieSets[$baseSiteName] as $key1 => $databaseList) {
+  foreach ($databaseList as $key2 => $database) {
+    // check if port is given
+    if (!isset($dbPropertieSets[$baseSiteName][$key1][$key2]['port'])) {
+      $dbPropertieSets[$baseSiteName][$key1][$key2]['port'] = 3306;
+    }
+
+    // check if driver is given
+    if (!isset($dbPropertieSets[$baseSiteName][$key1][$key2]['driver'])) {
+      $dbPropertieSets[$baseSiteName][$key1][$key2]['driver'] = 'mysql';
+    }
+
+    // check if namespace is given
+    if (!isset($dbPropertieSets[$baseSiteName][$key1][$key2]['namespace'])) {
+      $dbPropertieSets[$baseSiteName][$key1][$key2]['namespace'] = "Drupal\\Core\\Database\\Driver\\mysql";
+    }
+  }
 }
+
+// Set databases
+$databases = $dbPropertieSets[$baseSiteName];
