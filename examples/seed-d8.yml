@@ -2,7 +2,7 @@
 # Human readable label for the entire project. e.g Eboard.
 project_label: "[required] human readable label"
 # Type of the project.
-project_type: "drupal-8"
+project_type: d8
 # Machine name for the group, fe.g or example "vds" or "toevla".
 project_group: "[required] group_machine_name"
 # More specific name for the site, e.g: "esoleren" or "datatank".
