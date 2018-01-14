@@ -16,6 +16,7 @@
     <taskdef classname="ProjectWriteDistPropertiesTask" name="write-project-properties" />
     <taskdef classname="JiraWriteDistPropertiesTask" name="write-jira-properties" />
     <taskdef classname="SitesGenerateDirsTask" name="generate-site-dirs" />
+    <taskdef classname="SitesAddConfigTask" name="generate-site-config" />
 
     <!-- Include extra phing build files -->
     <import file="lib/phing/build.drupal8.xml" />
@@ -62,6 +63,10 @@
         <generate-site-dirs buildLocation="${dir.build}"
                             seedFile="${project.basedir}/seed.yml"
                             templateLocation="${project.basedir}/etc/drupal8"/>
+        <generate-site-config buildLocation="${dir.build}"
+                            seedFile="${project.basedir}/seed.yml"
+                            templateLocation="${project.basedir}/etc/drupal8"/>
+
         <phingcall target="git:commit">
             <property name="message.for.commit" value="Added sites dirs." override="true"/>
         </phingcall>
