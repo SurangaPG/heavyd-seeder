@@ -51,7 +51,7 @@ class ProjectWriteDistPropertiesTask extends Task {
     $generatedProperties['machineName'] = $seedProperties['project_name'];
     $generatedProperties['group'] = $seedProperties['project_group'];
     $generatedProperties['basePath'] = '${current.basePath}';
-    $generatedProperties['type'] = 'drupal-8';
+    $generatedProperties['type'] = $seedProperties['project_type'];
     $generatedProperties['repository']['main'] = $seedProperties['project_git_repository'];
     $generatedProperties['php'] = $seedProperties['project_php_version'];
 
