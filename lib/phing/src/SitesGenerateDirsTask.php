@@ -88,12 +88,12 @@ class SitesGenerateDirsTask extends Task {
       // Copy the settings.php file.
       $fs->copy(
         $this->getTemplateLocation() . '/site-templates/default.settings.php' ,
-        $this->getBuildLocation() . '/web/site/' . $site . '/settings.php'
+        $this->getBuildLocation() . '/web/sites/' . $site . '/settings.php'
       );
 
       $fs->copy(
         $this->getTemplateLocation() . '/site-templates/default.services.yml' ,
-        $this->getBuildLocation() . '/web/site/' . $site . '/services.yml'
+        $this->getBuildLocation() . '/web/sites/' . $site . '/services.yml'
       );
 
       $configProfile = isset($info['config-profile']) ? $info['config-profile'] : 'default';
