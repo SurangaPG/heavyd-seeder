@@ -34,7 +34,7 @@ function drush_baseline_content_clean_imported_default_content() {
     $file->setPermanent();
 
     // Get the location based on the export.
-    $fileName = sprintf(drupal_get_path('module', 'default_content') . '/content/file/%s.json', $file->uuid());
+    $fileName = sprintf(drupal_get_path('module', 'baseline_content') . '/content/file/%s.json', $file->uuid());
     if (file_exists($fileName)) {
       $data = json_decode(file_get_contents($fileName));
 
@@ -47,9 +47,11 @@ function drush_baseline_content_clean_imported_default_content() {
         continue;
       }
 
-      explode('\/', $uri);
+      $uri = explode('/', $uri);
+
       array_shift($uri); // - http:
-      array_shift($uri); // - NULL (due to \/\/)
+      array_shift($uri); // - NULL (due to //)
+      array_shift($uri); // - NULL (due to //)
       array_shift($uri); // - sites
       array_shift($uri); // - default
       array_shift($uri); // - files
@@ -59,8 +61,9 @@ function drush_baseline_content_clean_imported_default_content() {
       $uri = implode('/', $uri);
       $uri = "public://" . $uri . '/' . $file->getFilename();
       // Is now the expected public://zalen/klaslokaal-3-1.jpg
-
       $file->setFileUri($uri);
+
+      echo " Changed uri from " . $data->uri[0]->value . " to " . $uri . "\n";
     }
 
     $file->save();
