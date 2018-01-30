@@ -52,3 +52,6 @@ seed.yml
 
 # Ignore composer items.
 vendor
+
+# Ignore generated docker-compose.yml
+/docker-compose.yml

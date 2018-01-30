@@ -1,6 +1,6 @@
 # Directory mapping for the project. This makes various items easier to read/find for various other implementations.
-# Directory mapping for the project. This makes various items easier to read/find for various other implementations.
 properties:
+  generated: ${current.basePath}/properties
   dist: ${current.basePath}/properties/dist
   stage: ${current.basePath}/properties/stage
   site: ${current.basePath}/properties/site
@@ -24,3 +24,6 @@ tests:
   phpunit: ${current.basePath}/tests/phpunit
   haunt: ${current.basePath}/tests/haunt
 temp: ${current.basePath}/temp
+services:
+  db: ${current.basePath}/services/db
+  solr: ${current.basePath}/services/solr
