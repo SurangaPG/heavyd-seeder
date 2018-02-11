@@ -6,6 +6,7 @@ global-styling:
       src/base/base.css: {}
     component:
       src/component/baseline-icon/baseline-icon.css: {}
+      src/component/pager/pager.css: {}
     layout:
       src/layout/layout.css: {}
     theme:
