@@ -39,7 +39,7 @@
 
     <!-- Start a full drupal 8 project -->
     <target name="seed:drupal8">
-
+        <mkdir dir="${dir.build}" />
         <property file="seed.yml" prefix="seed"/>
         <phingcall target="drupal8:validate-seed-data" />
 

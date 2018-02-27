@@ -13,7 +13,7 @@ pipelines:
           script:
             - composer install
             - ./vendor/bin/phing setup:seed-file -buildfile build.test.xml
-            - ./vendor/bin/phing seed:drupal8
+            - ./vendor/bin/phing seed:drupal8 -Ddir.build=$(PWD)/build/default-d8
           artifacts:
             - build/**
       - step:

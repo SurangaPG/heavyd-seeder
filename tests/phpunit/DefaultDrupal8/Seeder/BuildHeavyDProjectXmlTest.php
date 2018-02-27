@@ -1,10 +1,10 @@
 <?php
 
-namespace surangapg\Test\Seeder;
+namespace surangapg\Test\DefaultDrupal8\Seeder;
 
 use PHPUnit\Framework\TestCase;
+use surangapg\Test\DefaultDrupal8\AbstractDefaultDrupal8BaseTestCase;
 use Symfony\Component\Yaml\Yaml;
-use surangapg\Test\AbstractBaseTestCase;
 
 /**
  * Class HeavyDFileTest
@@ -15,7 +15,7 @@ use surangapg\Test\AbstractBaseTestCase;
  *
  * @covers seed:init
  */
-class BuildHeavyDProjectXmlTest extends AbstractBaseTestCase {
+class BuildHeavyDProjectXmlTest extends AbstractDefaultDrupal8BaseTestCase {
 
   /**
    * Checks or the heavyd.project.xml exists.

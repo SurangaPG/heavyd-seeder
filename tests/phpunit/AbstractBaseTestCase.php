@@ -27,12 +27,14 @@ abstract class AbstractBaseTestCase extends TestCase {
    */
   public function __construct($name = null, array $data = [], $dataName = '') {
 
-    $this->setProjectDirectory(getcwd() . '/build');
+    $this->setProjectDirectory($this->generateProjectDirectory());
 
     $this->fs = new Filesystem();
 
     parent::__construct($name, $data, $dataName);
   }
+
+  abstract function generateProjectDirectory();
 
   /**
    * @param string $projectDirectory

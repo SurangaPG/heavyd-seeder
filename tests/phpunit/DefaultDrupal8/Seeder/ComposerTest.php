@@ -1,10 +1,10 @@
 <?php
 
-namespace surangapg\Test\Seeder;
+namespace surangapg\Test\DefaultDrupal8\Seeder;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Yaml;
-use surangapg\Test\AbstractBaseTestCase;
+use surangapg\Test\DefaultDrupal8\AbstractDefaultDrupal8BaseTestCase;
 
 /**
  * Class HeavyDFileTest
@@ -15,7 +15,7 @@ use surangapg\Test\AbstractBaseTestCase;
  *
  * @covers seed:init
  */
-class ComposerTest extends AbstractBaseTestCase {
+class ComposerTest extends AbstractDefaultDrupal8BaseTestCase {
 
   /**
    * Checks or the composer.json exists.
