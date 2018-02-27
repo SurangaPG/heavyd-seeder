@@ -28,6 +28,15 @@
         <mkdir dir="${dir.build}" />
     </target>
 
+    <target name="seed:drupal8-sandbox" description="Generates a sandbox environment for a module.">
+        <phingcall target="seed:cleanse-build" />
+        <mkdir dir="${dir.build}/module" />
+        <mkdir dir="${dir.build}/module/${module.name}" />
+        <exec command="drush dl drupal --drupal-project-rename=environment" dir="${dir.build}"/>
+        <exec command="composer install" dir="${dir.build}/environment"/>
+        <mkdir dir="${dir.build}/environment/modules/custom"/>
+    </target>
+
     <!-- Start a full drupal 8 project -->
     <target name="seed:drupal8">
 
