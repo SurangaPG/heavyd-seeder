@@ -12,6 +12,8 @@ pipelines:
           image: surangagamage/heavyd-php-apache:7.1
           script:
             - composer install
+            - git config --global user.email "you@test.com"
+            - git config --global user.name "Your Name"
             - ./vendor/bin/phing setup:seed-file -buildfile build.test.xml
             - ./vendor/bin/phing seed:drupal8 -Ddir.build=$(PWD)/build/default-d8
           artifacts:
