@@ -3,7 +3,7 @@ clone:
   depth: 1
 pipelines:
   branches:
-    dev:
+    master:
       - step:
           name: Prepare default build
           caches:
