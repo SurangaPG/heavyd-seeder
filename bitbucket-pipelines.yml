@@ -5,7 +5,7 @@ pipelines:
   branches:
     master:
       - step:
-          name: Prepare default build
+          name: Preparing build artefacts
           caches:
             - composer
           # @TODO Setup a more optimized container.
@@ -17,7 +17,7 @@ pipelines:
           artifacts:
             - build/**
       - step:
-          name: Validate codebase data
+          name: Validate builds
           caches:
             - composer
           # @TODO Setup a more optimized container.
