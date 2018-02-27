@@ -57,8 +57,8 @@ class SitesGenerateDirsTask extends Task {
     foreach ($seedProperties['sites'] as $site => $info) {
 
       // Folder under web/sites
-      if (!file_exists($this->getBuildLocation() . '/web/site/' . $site)) {
-        $fs->mkdir($this->getBuildLocation() . '/web/site/' . $site);
+      if (!file_exists($this->getBuildLocation() . '/web/sites/' . $site)) {
+        $fs->mkdir($this->getBuildLocation() . '/web/sites/' . $site);
       }
 
       // Folder under etc/sites
