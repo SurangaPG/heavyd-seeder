@@ -24,7 +24,7 @@ pipelines:
           image: surangagamage/heavyd-php-apache:7.1
           script:
             - composer install
-            - ./vendor/bin/phpunit tests/phpunit/Seeder
+            - ./vendor/bin/phpunit tests/phpunit/DefaultDrupal8
 definitions:
   services:
     selenium:
