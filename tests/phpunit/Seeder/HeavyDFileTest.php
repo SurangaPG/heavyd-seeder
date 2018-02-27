@@ -20,7 +20,21 @@ class HeavyDFileTest extends AbstractBaseTestCase {
   /**
    * Checks or the project dir exists and has some expected basic files.
    */
-  public function testHeavyDFileExists() {
+  public function testHeavyDirExists() {
     $this->assertFileExists($this->getProjectDirectory() . '/.heavyd');
+  }
+
+  /**
+   * Checks or the project dir exists and has some expected basic files.
+   */
+  public function testHeavyFileExists() {
+    $this->assertFileExists($this->getProjectDirectory() . '/.heavyd.yml');
+  }
+
+  /**
+   * Checks or the heavyD composer was installed correctly.
+   */
+  public function testHeavyComposerLockExists() {
+    $this->assertFileExists($this->getProjectDirectory() . '/.heavyd/composer.lock');
   }
 }
