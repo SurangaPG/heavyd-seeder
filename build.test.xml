@@ -1,0 +1,5 @@
+<project name="Seed test tasks" default="help" description="">
+    <property file="build.test.properties.dist" />
+
+
+</project>
