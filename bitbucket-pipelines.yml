@@ -1,0 +1,32 @@
+image: php:7.1-cli
+clone:
+  depth: 1
+pipelines:
+  branches:
+    dev:
+      - step:
+          name: Prepare default build
+          caches:
+            - composer
+          # @TODO Setup a more optimized container.
+          image: surangagamage/heavyd-php-apache:7.1
+          script:
+            - composer install
+          artifacts:
+            - build/**
+      - step:
+          name: Validate codebase data
+          caches:
+            - composer
+          # @TODO Setup a more optimized container.
+          image: surangagamage/heavyd-php-apache:7.1
+          script:
+            - ls -la build
+definitions:
+  services:
+    selenium:
+      image: selenium/standalone-firefox-debug:2.53.1-beryllium
+    mysql:
+      image: mysql:5.6
+      environment:
+        MYSQL_ROOT_PASSWORD: root
