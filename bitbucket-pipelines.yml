@@ -26,6 +26,7 @@ pipelines:
           image: surangagamage/heavyd-php-apache:7.1
           script:
             - composer install
+            - ls -la build/default-d8
             - ./vendor/bin/phpunit tests/phpunit/DefaultDrupal8
 definitions:
   services:
