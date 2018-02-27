@@ -8,7 +8,8 @@
   "name": "heavyd/seeder",
   "autoload": {
     "psr-4": {
-      "surangapg\\HeavydSeeder\\": "src"
+      "surangapg\\HeavydSeeder\\": "src",
+      "surangapg\\Test\\": "tests/phpunit"
     }
   },
   "prefer-stable": true,
