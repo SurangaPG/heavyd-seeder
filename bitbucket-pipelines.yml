@@ -12,6 +12,8 @@ pipelines:
           image: surangagamage/heavyd-php-apache:7.1
           script:
             - composer install
+            - ./vendor/bin/phing setup:seed-file -buildfile build.test.xml
+            - ./vendor/bin/phing seed:drupal8
           artifacts:
             - build/**
       - step:
