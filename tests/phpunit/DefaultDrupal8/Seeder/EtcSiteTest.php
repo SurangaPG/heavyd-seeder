@@ -38,5 +38,9 @@ class EtcSiteTest extends AbstractDefaultDrupal8BaseTestCase {
     $this->assertFileExists($this->getProjectDirectory() . '/etc/site/default/config');
     $this->assertFileExists($this->getProjectDirectory() . '/etc/site/default/properties');
     $this->assertFileExists($this->getProjectDirectory() . '/etc/site/default/translations');
+
+    // Check the property file.
+    $propertyFiles = glob($this->getProjectDirectory() . '/etc/site/default/properties/*.yml');
+    $this->assertEquals(1, count($propertyFiles), 'Only 1 property file should exist.');
   }
 }

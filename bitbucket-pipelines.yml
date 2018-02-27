@@ -23,6 +23,7 @@ pipelines:
           # @TODO Setup a more optimized container.
           image: surangagamage/heavyd-php-apache:7.1
           script:
+            - composer install
             - ./vendor/bin/phpunit tests/phpunit/Seeder
 definitions:
   services:
