@@ -37,6 +37,55 @@ abstract class AbstractBaseTestCase extends TestCase {
   abstract function generateProjectDirectory();
 
   /**
+   * Does the return data of the command indicate that it was successful.
+   *
+   * @param int $return
+   *   Return value for the command.
+   * @param string $message
+   *   The message to display.
+   */
+  public function assertCommandSuccessful($return, $message = '') {
+    $message = 'Command failed: ' . PHP_EOL . $message;
+    $this->assertEquals(0, $return, $message);
+  }
+
+  /**
+   * Does the return data of the command indicate that it was not successful.
+   *
+   * @param int $return
+   *   Return value for the command.
+   * @param string $message
+   *   The message to display.
+   */
+  public function assertCommandNotSuccessful($return, $message = '') {
+    $this->assertNotEquals(0, $return, $message);
+  }
+
+  /**
+   * Check or a file exists.
+   *
+   * @param $file
+   *   Path to file.
+   * @param $message
+   *   Message to display.
+   */
+  public function assertFile($file, $message = '') {
+    static::assertFileExists($file, $message);
+  }
+
+  /**
+   * Check that a file doesn't exist.
+   *
+   * @param $file
+   *   Path to file.
+   * @param $message
+   *   Message to display.
+   */
+  public function assertFileNot($file, $message = '') {
+    static::assertFileNotExists($file, $message);
+  }
+
+  /**
    * Runs a heavyD command in the project.
    *
    * @param string $command
@@ -50,6 +99,28 @@ abstract class AbstractBaseTestCase extends TestCase {
   protected function projectRunHeavyd($command, &$output = []) {
     $command = './.heavyd/vendor/bin/heavyd ' . $command;
     return $this->projectRun($command, $output);
+  }
+
+  /**
+   * Runs a phing command in the project for this testcase.
+   *
+   * @param string $target
+   *   The phing target to run.
+   * @param bool array $output
+   *   The output for the command.
+   *
+   * @return integer
+   *   Return value for the command.
+   */
+  protected function projectRunPhing($target, &$output = []) {
+    $command = './.heavyd/vendor/bin/phing ' . $target;
+    $this->projectRun($command, $output);
+
+    $stdErrFlag = (strpos($output['stderr'], 'BUILD FAILED') !== false);
+    $stdOutFlag = (strpos($output['stdout'], 'BUILD FAILED') !== false);
+
+    // Check the return output for the flag that marks phing as a success.
+    return (int) ($stdErrFlag || $stdOutFlag);
   }
 
   /**
@@ -74,7 +145,6 @@ abstract class AbstractBaseTestCase extends TestCase {
 
     return $return;
   }
-
 
   /**
    * Runs a bash command in the container dir.

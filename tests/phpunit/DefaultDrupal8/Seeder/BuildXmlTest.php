@@ -15,12 +15,12 @@ use Symfony\Component\Yaml\Yaml;
  *
  * @covers seed:init
  */
-class BuildHeavyDProjectXmlTest extends AbstractDefaultDrupal8BaseTestCase {
+class BuildXmlTest extends AbstractDefaultDrupal8BaseTestCase {
 
   /**
    * Checks or the heavyd.project.xml exists.
    */
   public function testBuildHeavyDProjectXmlExists() {
-    $this->assertFileExists($this->getProjectDirectory() . '/heavyd.project.xml');
+    $this->assertFileExists($this->getProjectDirectory() . '/build.xml');
   }
 }
