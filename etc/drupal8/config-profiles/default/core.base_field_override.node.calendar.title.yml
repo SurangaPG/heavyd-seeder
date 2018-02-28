@@ -1,0 +1,18 @@
+uuid: d70ce808-39d0-4c25-bc0b-0deee68c8cdb
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.calendar
+id: node.calendar.title
+field_name: title
+entity_type: node
+bundle: calendar
+label: Titel
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

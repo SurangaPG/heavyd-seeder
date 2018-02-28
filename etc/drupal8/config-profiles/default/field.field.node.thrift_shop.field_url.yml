@@ -1,0 +1,23 @@
+uuid: 769b46e2-f394-4f1f-b210-13eeb62121fe
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url
+    - node.type.thrift_shop
+  module:
+    - link
+id: node.thrift_shop.field_url
+field_name: field_url
+entity_type: node
+bundle: thrift_shop
+label: 'Link naar externe website'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

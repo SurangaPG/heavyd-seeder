@@ -1,0 +1,71 @@
+uuid: 02a34ebd-3378-40cd-aab6-b06904fd68e8
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - limburgnet_migration
+_core:
+  default_config_hash: EukPwM4Pp3H7JRZjjmkpu1yBrG3jel5PfF8a5kYUR9E
+id: limburgnet_page
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - SQL
+  - Limburgnet
+  - Migration
+  - Node
+  - Page
+migration_group: limburgnet_migration
+label: News
+source:
+  plugin: node_base_migration
+  node_type: page
+process:
+  title: title
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  uid:
+    plugin: default_value
+    default_value: 1
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  field_tags:
+    plugin: migration_lookup
+    migration: limnet_tags
+    source: tags_tids
+    no_stub: true
+  path/pathauto:
+    plugin: default_value
+    default_value: 0
+  path/alias: alias
+  para_text:
+    plugin: migration
+    migration: limburgnet_page_text_paragraphs
+    source: nid
+    no_stub: true
+  field_main_components:
+    plugin: iterator
+    source:
+      - '@para_text'
+    process:
+      target_id: '0'
+      target_revision_id: '1'
+  field_documents:
+    plugin: migration
+    migration: limburgnet_files
+    source: documents_fid
+    no_stub: true
+destination:
+  plugin: 'entity:node'
+  node_type: dynamic_page
+migration_dependencies:
+  required:
+    - limnet_tags
+    - limburgnet_page_text_paragraphs

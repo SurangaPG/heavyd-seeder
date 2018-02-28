@@ -1,0 +1,66 @@
+uuid: 6f9f0219-d7ef-4b5d-b6bd-233f7d5f892a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - image.style.paragraph_image_desktop
+    - image.style.paragraph_image_desktop_2x
+    - image.style.paragraph_image_mobile
+    - image.style.paragraph_image_mobile_2x
+  module:
+    - baseline
+id: paragraph_image
+label: 'Paragraph image'
+image_style_mappings:
+  -
+    breakpoint_id: baseline.xl
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: paragraph_image_desktop
+  -
+    breakpoint_id: baseline.xl
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: paragraph_image_desktop_2x
+  -
+    breakpoint_id: baseline.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: paragraph_image_desktop
+  -
+    breakpoint_id: baseline.lg
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: paragraph_image_desktop_2x
+  -
+    breakpoint_id: baseline.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: paragraph_image_desktop
+  -
+    breakpoint_id: baseline.md
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: paragraph_image_desktop_2x
+  -
+    breakpoint_id: baseline.sm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: paragraph_image_mobile
+  -
+    breakpoint_id: baseline.sm
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: paragraph_image_mobile_2x
+  -
+    breakpoint_id: baseline.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: paragraph_image_mobile
+  -
+    breakpoint_id: baseline.xs
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: paragraph_image_mobile_2x
+breakpoint_group: baseline
+fallback_image_style: paragraph_image_desktop

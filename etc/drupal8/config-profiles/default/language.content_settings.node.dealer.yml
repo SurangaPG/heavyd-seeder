@@ -1,0 +1,11 @@
+uuid: 185d7d9f-f4d2-4aa5-bd51-1ddc880c1e2c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.dealer
+id: node.dealer
+target_entity_type_id: node
+target_bundle: dealer
+default_langcode: site_default
+language_alterable: false

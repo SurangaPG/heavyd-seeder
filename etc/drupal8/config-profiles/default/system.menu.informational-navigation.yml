@@ -1,0 +1,8 @@
+uuid: 026a9068-548d-4add-8f10-aca769e4ee0f
+langcode: nl
+status: true
+dependencies: {  }
+id: informational-navigation
+label: Informatie
+description: 'Informatie navigatie (footer)'
+locked: false

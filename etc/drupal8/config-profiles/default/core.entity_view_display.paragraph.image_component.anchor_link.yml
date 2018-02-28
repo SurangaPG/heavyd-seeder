@@ -1,0 +1,26 @@
+uuid: 7190e139-8e8d-4d4a-acf7-bb94658f1856
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.anchor_link
+    - field.field.paragraph.image_component.field_image
+    - field.field.paragraph.image_component.field_title
+    - paragraphs.paragraphs_type.image_component
+  module:
+    - baseline
+id: paragraph.image_component.anchor_link
+targetEntityType: paragraph
+bundle: image_component
+mode: anchor_link
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: anchor_link
+    region: content
+hidden:
+  field_image: true

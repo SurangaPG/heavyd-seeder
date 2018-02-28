@@ -1,0 +1,40 @@
+uuid: 7d8f0a6a-d6a0-4f96-a14b-363704b6f843
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.anchors
+    - field.field.node.dynamic_page.field_intro_components
+    - field.field.node.dynamic_page.field_main_components
+    - field.field.node.dynamic_page.field_side_links
+    - field.field.node.dynamic_page.field_teaser_list
+    - field.field.node.dynamic_page.field_teaser_title
+    - node.type.dynamic_page
+  module:
+    - entity_reference_revisions
+    - user
+id: node.dynamic_page.anchors
+targetEntityType: node
+bundle: dynamic_page
+mode: anchors
+content:
+  field_main_components:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: anchor_link
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_display_side_anchors: true
+  field_intro_components: true
+  field_side_links: true
+  field_social_share_description: true
+  field_social_share_image: true
+  field_tags: true
+  field_teaser_list: true
+  field_teaser_title: true
+  langcode: true
+  links: true

@@ -1,0 +1,22 @@
+uuid: 0a91ee87-671e-43d2-99ac-4afc51169855
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: recyclage_park
+label: 'Recyclage park patroon.'
+type: 'canonical_entities:node'
+pattern: '/recyclagepark/[node:title]'
+selection_criteria:
+  fcdfc164-546d-455a-b3b3-4929568b4918:
+    id: node_type
+    bundles:
+      recycle_park: recycle_park
+    negate: false
+    context_mapping:
+      node: node
+    uuid: fcdfc164-546d-455a-b3b3-4929568b4918
+selection_logic: and
+weight: -5
+relationships: {  }

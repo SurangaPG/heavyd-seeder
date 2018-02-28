@@ -1,11 +1,11 @@
-uuid: d42e30a4-f5d0-487b-a779-5ec58c2c9c61
+uuid: 33485229-7270-4753-a83e-f8f4b4f3a150
 langcode: nl
 status: true
 dependencies: {  }
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
-label: 'Authenticated user'
+label: 'Geverifieerde gebruiker'
 weight: 1
 is_admin: false
 permissions:
@@ -17,3 +17,10 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view paragraph content basic_component'
+  - 'view paragraph content block_component'
+  - 'view paragraph content image_component'
+  - 'view paragraph content row_component'
+  - 'view paragraph content video_component'
+  - 'view paragraph content view_component'
+  - 'view paragraph content vue_component'

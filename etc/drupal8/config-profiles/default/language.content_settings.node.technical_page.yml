@@ -1,0 +1,11 @@
+uuid: ed5f68cd-ff80-4836-84d5-6d564d5238ae
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.technical_page
+id: node.technical_page
+target_entity_type_id: node
+target_bundle: technical_page
+default_langcode: site_default
+language_alterable: false

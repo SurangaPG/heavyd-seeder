@@ -1,0 +1,19 @@
+uuid: ac89ee6d-3927-432b-93aa-5b4aea13a14f
+langcode: nl
+status: true
+dependencies:
+  module:
+    - block_content
+    - icon_set
+id: block_content.field_icon
+field_name: field_icon
+entity_type: block_content
+type: icon
+settings: {  }
+module: icon_set
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

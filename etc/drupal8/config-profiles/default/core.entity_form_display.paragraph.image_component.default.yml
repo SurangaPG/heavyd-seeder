@@ -1,0 +1,37 @@
+uuid: df1226b4-6b8e-479c-a5e2-279d5aba8086
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_component.field_image
+    - field.field.paragraph.image_component.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.image_component
+  module:
+    - image
+id: paragraph.image_component.default
+targetEntityType: paragraph
+bundle: image_component
+mode: default
+content:
+  field_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  municipality_access: true
+  status: true
+  uid: true

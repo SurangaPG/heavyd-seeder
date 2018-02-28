@@ -1,0 +1,36 @@
+uuid: eb9c26d3-260a-40b9-8f64-c10345023d8b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.vacancy.field_documents
+    - field.field.node.vacancy.field_main_components
+    - field.field.node.vacancy.field_tags
+    - field.field.node.vacancy.field_teaser_content
+    - field.field.node.vacancy.field_teaser_image
+    - field.field.node.vacancy.field_teaser_title
+    - node.type.vacancy
+  module:
+    - user
+id: node.vacancy.teaser
+targetEntityType: node
+bundle: vacancy
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_date_from: true
+  field_documents: true
+  field_main_components: true
+  field_metatag_description: true
+  field_metatags: true
+  field_social_share_description: true
+  field_social_share_image: true
+  field_tags: true
+  field_teaser_content: true
+  field_teaser_image: true
+  field_teaser_title: true
+  langcode: true

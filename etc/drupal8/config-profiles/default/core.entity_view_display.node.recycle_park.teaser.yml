@@ -1,0 +1,26 @@
+uuid: 52fd01cc-5f19-4195-b2be-ddaf8303ab77
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.recycle_park
+  module:
+    - user
+id: node.recycle_park.teaser
+targetEntityType: node
+bundle: recycle_park
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_cards_id: true
+  field_main_components: true
+  field_map: true
+  field_municipalities: true
+  field_pickup_address_info: true
+  field_recycle_type_external: true
+  field_url: true
+  langcode: true

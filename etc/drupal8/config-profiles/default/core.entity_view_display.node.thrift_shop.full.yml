@@ -1,0 +1,50 @@
+uuid: e8cba25f-dc8e-4bf8-ba6a-098b21fbbcc2
+langcode: nl
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.thrift_shop.field_address
+    - field.field.node.thrift_shop.field_cards_id
+    - field.field.node.thrift_shop.field_phone_number
+    - field.field.node.thrift_shop.field_url
+    - node.type.thrift_shop
+  module:
+    - link
+    - user
+id: node.thrift_shop.full
+targetEntityType: node
+bundle: thrift_shop
+mode: full
+content:
+  field_muncipalities:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_url:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_address: true
+  field_cards_id: true
+  field_phone_number: true
+  field_postal_code: true
+  langcode: true

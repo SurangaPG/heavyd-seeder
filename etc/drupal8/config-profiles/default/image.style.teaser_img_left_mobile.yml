@@ -1,0 +1,17 @@
+uuid: 1a70c9ac-a509-4e71-a806-5443168bd211
+langcode: nl
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_img_left_mobile
+label: 'Teaser img left - mobile'
+effects:
+  37f99b41-0a5f-41db-806e-d023e8dbf0c8:
+    uuid: 37f99b41-0a5f-41db-806e-d023e8dbf0c8
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 230
+      height: 180
+      crop_type: focal_point

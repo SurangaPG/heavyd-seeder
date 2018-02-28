@@ -1,0 +1,17 @@
+uuid: ecd875a5-c75b-45f1-b32f-159d39d3258b
+langcode: nl
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_img_left_desktop
+label: 'Teaser img left - desktop'
+effects:
+  32e55aaf-dcec-4d7d-8f89-8f4a54887af7:
+    uuid: 32e55aaf-dcec-4d7d-8f89-8f4a54887af7
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 270
+      height: 200
+      crop_type: focal_point

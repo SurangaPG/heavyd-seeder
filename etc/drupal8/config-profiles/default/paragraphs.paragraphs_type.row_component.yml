@@ -1,0 +1,9 @@
+uuid: 66876c5a-c4e8-40a9-a3ea-c5a9ac32a191
+langcode: nl
+status: true
+dependencies: {  }
+id: row_component
+label: 'Row component'
+icon_uuid: null
+description: 'Can be used to place 2 other components side by side.'
+behavior_plugins: {  }

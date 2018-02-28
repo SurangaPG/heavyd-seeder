@@ -1,0 +1,26 @@
+uuid: 16137a8e-d14b-4894-8c0b-748203535263
+langcode: nl
+status: true
+dependencies:
+  module:
+    - social_share
+    - system
+  theme:
+    - baseline_style
+id: social_share_block
+theme: baseline_style
+region: content
+weight: -11
+provider: null
+plugin: social_share_block
+settings:
+  id: social_share_block
+  label: 'Social share block'
+  provider: social_share
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/mijn-limburg\r\n/mijn-limburg/*"
+    negate: true
+    context_mapping: {  }

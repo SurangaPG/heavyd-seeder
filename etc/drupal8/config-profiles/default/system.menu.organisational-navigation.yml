@@ -1,0 +1,8 @@
+uuid: 8e97bd34-14a0-4995-af2a-f5493fe5d2f7
+langcode: nl
+status: true
+dependencies: {  }
+id: organisational-navigation
+label: Organisatie
+description: 'Organisational navigation (footer)'
+locked: false

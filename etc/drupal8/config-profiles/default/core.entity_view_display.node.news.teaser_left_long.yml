@@ -1,0 +1,60 @@
+uuid: 05a03d22-3f4a-4f8a-87c4-a765cb353c3b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_left_long
+    - field.field.node.news.field_date_from
+    - field.field.node.news.field_documents
+    - field.field.node.news.field_main_components
+    - field.field.node.news.field_municipalities
+    - field.field.node.news.field_social_share_description
+    - field.field.node.news.field_social_share_image
+    - field.field.node.news.field_tags
+    - field.field.node.news.field_teaser_content
+    - field.field.node.news.field_teaser_image
+    - field.field.node.news.field_teaser_title
+    - node.type.news
+    - responsive_image.styles.teaser_left_image
+  module:
+    - responsive_image
+    - user
+id: node.news.teaser_left_long
+targetEntityType: node
+bundle: news
+mode: teaser_left_long
+content:
+  field_teaser_content:
+    type: basic_string
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_teaser_image:
+    weight: 1
+    label: hidden
+    settings:
+      responsive_image_style: teaser_left_image
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+  field_teaser_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_date_from: true
+  field_documents: true
+  field_main_components: true
+  field_municipalities: true
+  field_social_share_description: true
+  field_social_share_image: true
+  field_tags: true
+  langcode: true
+  links: true

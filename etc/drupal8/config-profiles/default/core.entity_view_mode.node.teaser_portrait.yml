@@ -1,0 +1,10 @@
+uuid: fc647248-07e0-4d57-bf02-a1b6b833226a
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser_portrait
+label: Teaser-portrait
+targetEntityType: node
+cache: true

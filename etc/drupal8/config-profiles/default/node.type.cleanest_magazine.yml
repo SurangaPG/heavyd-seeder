@@ -1,0 +1,29 @@
+uuid: 1b86e719-d971-4f7d-a44a-9a5281e970e5
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Het schoonste magazine'
+type: cleanest_magazine
+description: 'De bedoeling van dit content type is om op een flexibele manier ""het schoonste magazine"-items aan te maken en te beheren.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

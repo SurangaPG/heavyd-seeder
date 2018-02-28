@@ -1,0 +1,15 @@
+uuid: 5927802b-5722-4683-b06d-d294bbde3efe
+langcode: nl
+status: true
+dependencies: {  }
+name: centered_image_mobile
+label: 'Centered image - mobile'
+effects:
+  61cfcda3-d845-4fb6-8f27-d3539d8202b8:
+    uuid: 61cfcda3-d845-4fb6-8f27-d3539d8202b8
+    id: image_scale
+    weight: 1
+    data:
+      width: 740
+      height: 740
+      upscale: false

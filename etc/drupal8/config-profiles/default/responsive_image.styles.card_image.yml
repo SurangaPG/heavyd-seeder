@@ -1,0 +1,66 @@
+uuid: 93d80816-0468-4ee4-becc-90bc3f903d3f
+langcode: nl
+status: true
+dependencies:
+  config:
+    - image.style.card_image
+    - image.style.card_image_2x
+    - image.style.cards_large
+    - image.style.cards_large_2x
+  module:
+    - baseline
+id: card_image
+label: 'Card image'
+image_style_mappings:
+  -
+    breakpoint_id: baseline.xl
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: cards_large
+  -
+    breakpoint_id: baseline.xl
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: cards_large_2x
+  -
+    breakpoint_id: baseline.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: cards_large
+  -
+    breakpoint_id: baseline.lg
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: card_image_2x
+  -
+    breakpoint_id: baseline.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: card_image
+  -
+    breakpoint_id: baseline.md
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: card_image_2x
+  -
+    breakpoint_id: baseline.sm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: card_image
+  -
+    breakpoint_id: baseline.sm
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: card_image_2x
+  -
+    breakpoint_id: baseline.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: card_image
+  -
+    breakpoint_id: baseline.xs
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: card_image_2x
+breakpoint_group: baseline
+fallback_image_style: cards_large

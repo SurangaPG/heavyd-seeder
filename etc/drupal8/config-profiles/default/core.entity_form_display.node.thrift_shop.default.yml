@@ -1,0 +1,146 @@
+uuid: 1367cb40-5c87-49f2-8dfd-ae1acca0407b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.thrift_shop.field_address
+    - field.field.node.thrift_shop.field_cards_id
+    - field.field.node.thrift_shop.field_phone_number
+    - field.field.node.thrift_shop.field_url
+    - node.type.thrift_shop
+  module:
+    - address
+    - field_group
+    - link
+    - path
+    - scheduler
+    - telephone
+third_party_settings:
+  field_group:
+    group_wrapper:
+      children:
+        - group_general
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Wrapper
+    group_general:
+      children:
+        - title
+        - field_cards_id
+        - field_url
+        - field_phone_number
+        - field_address
+      parent_name: group_wrapper
+      weight: 3
+      format_type: tab
+      format_settings:
+        label: General
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: General
+id: node.thrift_shop.default
+targetEntityType: node
+bundle: thrift_shop
+mode: default
+content:
+  field_address:
+    weight: 5
+    settings:
+      default_country: BE
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_cards_id:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_muncipalities:
+    weight: 16
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_phone_number:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_url:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+hidden:
+  created: true
+  field_postal_code: true
+  promote: true
+  sticky: true
+  uid: true

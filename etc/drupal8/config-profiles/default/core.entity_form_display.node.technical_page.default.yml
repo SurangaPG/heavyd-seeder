@@ -1,0 +1,116 @@
+uuid: 15051444-3a50-4561-9435-665c2740eb63
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.technical_page.body
+    - node.type.technical_page
+  module:
+    - field_group
+    - path
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_wrapper:
+      children:
+        - group_general
+        - group_content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Wrapper
+    group_general:
+      children:
+        - title
+        - langcode
+        - status
+      parent_name: group_wrapper
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: General
+    group_content:
+      children:
+        - body
+      parent_name: group_wrapper
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Inhoud
+id: node.technical_page.default
+targetEntityType: node
+bundle: technical_page
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 11
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+hidden:
+  created: true
+  promote: true
+  sticky: true
+  uid: true

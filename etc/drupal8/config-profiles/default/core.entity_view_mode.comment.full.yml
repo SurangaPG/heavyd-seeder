@@ -1,4 +1,4 @@
-uuid: 0aa14229-e163-42e4-9a58-90c593ac0467
+uuid: 6210aa5d-2274-4d67-8836-bbb3bd463dfc
 langcode: nl
 status: false
 dependencies:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: K7eNlfU7NEUajz01wItywZklr2oaPgL6s1_97fmDXLA
 id: comment.full
-label: 'Full comment'
+label: 'Volledige reactie'
 targetEntityType: comment
 cache: true

@@ -1,0 +1,89 @@
+uuid: b73b8761-b042-45bd-bd8c-beab041c0ffd
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.cleanest_magazine.field_date_from
+    - field.field.node.cleanest_magazine.field_documents
+    - field.field.node.cleanest_magazine.field_magazine_cover
+    - image.style.thumbnail
+    - node.type.cleanest_magazine
+  module:
+    - datetime
+    - file
+    - image
+    - path
+    - scheduler
+id: node.cleanest_magazine.default
+targetEntityType: node
+bundle: cleanest_magazine
+mode: default
+content:
+  field_date_from:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_documents:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_magazine_cover:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+hidden:
+  created: true
+  langcode: true
+  promote: true
+  sticky: true
+  uid: true

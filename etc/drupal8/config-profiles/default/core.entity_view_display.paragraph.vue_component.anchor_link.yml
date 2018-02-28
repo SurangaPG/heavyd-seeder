@@ -1,0 +1,26 @@
+uuid: e53931e5-c656-42dc-821d-ee12a701ad63
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.anchor_link
+    - field.field.paragraph.vue_component.field_title
+    - field.field.paragraph.vue_component.field_vue_component
+    - paragraphs.paragraphs_type.vue_component
+  module:
+    - baseline
+id: paragraph.vue_component.anchor_link
+targetEntityType: paragraph
+bundle: vue_component
+mode: anchor_link
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: anchor_link
+    region: content
+hidden:
+  field_vue_component: true

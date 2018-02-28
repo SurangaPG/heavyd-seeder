@@ -1,0 +1,19 @@
+uuid: 06fa2ef6-752c-4835-8025-97fc8b9208a6
+langcode: nl
+status: true
+dependencies:
+  module:
+    - limnet_sorting_rules
+id: fraction.field_prices
+field_name: field_prices
+entity_type: fraction
+type: entity_reference
+settings:
+  target_type: fraction_price
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+uuid: 4680dc9c-a47f-4665-a715-33ebc9a2a4c6
+langcode: nl
+status: true
+dependencies: {  }
+name: portrait_desktop_2x
+label: 'Portrait - desktop - 2x'
+effects:
+  aca1026d-14a7-48ec-a438-5bcbbe005b95:
+    uuid: aca1026d-14a7-48ec-a438-5bcbbe005b95
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 460
+      height: 840

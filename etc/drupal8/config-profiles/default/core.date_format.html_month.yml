@@ -1,10 +1,10 @@
-uuid: 46343a81-e040-448f-b20b-3a431cf121f2
+uuid: c3397dab-b13b-41ef-a6dc-7413d7637846
 langcode: nl
 status: true
 dependencies: {  }
 _core:
   default_config_hash: Z7KuCUwM_WdTNvLcoltuX3_8d-s-8FZkTN6KgNwF0eM
 id: html_month
-label: 'HTML Month'
+label: 'HTML maand'
 locked: true
 pattern: Y-m

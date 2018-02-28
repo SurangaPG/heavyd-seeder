@@ -1,0 +1,28 @@
+uuid: a7f766ee-746f-459c-b6d2-f4deb70d9584
+langcode: nl
+status: true
+dependencies:
+  module:
+    - limnet_core
+    - user
+  theme:
+    - baseline_style
+id: currentmunicipalityblock
+theme: baseline_style
+region: footer_col_4
+weight: -12
+provider: null
+plugin: current_municipality_display_block
+settings:
+  id: current_municipality_display_block
+  label: 'Municipality Caching info'
+  provider: limnet_core
+  label_display: visible
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

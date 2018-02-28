@@ -1,0 +1,287 @@
+uuid: 413e799d-2f88-48ea-a75a-1e708ad27ac1
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.fraction.fraction.field_how
+    - field.field.fraction.fraction.field_municipalities
+    - field.field.fraction.fraction.field_prevention_tips
+    - field.field.fraction.fraction.field_prices
+    - field.field.fraction.fraction.field_svg_icon
+    - field.field.fraction.fraction.field_teaser_content
+    - field.field.fraction.fraction.field_teaser_title
+    - field.field.fraction.fraction.field_variations
+    - field.field.fraction.fraction.field_what
+    - field.field.fraction.fraction.field_what_happens
+    - field.field.fraction.fraction.field_where
+  module:
+    - field_group
+    - file
+    - inline_entity_form
+    - limnet_sorting_rules
+    - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_general:
+      children:
+        - cards_id
+        - name
+        - field_svg_icon
+        - field_municipalities
+        - field_prevention_tips
+      parent_name: group_wrapper
+      weight: 1
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: Algemeen
+    group_wrapper:
+      children:
+        - group_general
+        - group_teaser
+        - group_what
+        - group_where
+        - group_how
+        - group_what_happens
+        - group_variations
+        - group_prices
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Wrapper
+    group_teaser:
+      children:
+        - field_teaser_title
+        - field_teaser_content
+      parent_name: group_wrapper
+      weight: 2
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Teaser
+    group_where:
+      children:
+        - field_where
+      parent_name: group_wrapper
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Waar
+    group_what:
+      children:
+        - field_what
+      parent_name: group_wrapper
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Wat
+    group_how:
+      children:
+        - field_how
+      parent_name: group_wrapper
+      weight: 5
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Hoe
+    group_what_happens:
+      children:
+        - field_what_happens
+      parent_name: group_wrapper
+      weight: 6
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Wat gebeurt er met je afval?'
+    group_variations:
+      children:
+        - field_variations
+      parent_name: group_wrapper
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Fractie variaties'
+    group_prices:
+      children:
+        - field_prices
+      parent_name: group_wrapper
+      weight: 8
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Fractie prijzen'
+id: fraction.fraction.default
+targetEntityType: fraction
+bundle: fraction
+mode: default
+content:
+  cards_id:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_how:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_municipalities:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_prevention_tips:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_prices:
+    weight: 9
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_svg_icon:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_teaser_content:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_teaser_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_variations:
+    weight: 8
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      match_operator: CONTAINS
+      override_labels: false
+      allow_existing: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_what:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_what_happens:
+    type: entity_reference_paragraphs
+    weight: 7
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_where:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

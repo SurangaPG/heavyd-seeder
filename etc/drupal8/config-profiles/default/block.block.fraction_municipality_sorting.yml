@@ -1,0 +1,20 @@
+uuid: 3af486e1-aefb-48c0-bc60-a89c87a5df56
+langcode: nl
+status: true
+dependencies:
+  module:
+    - limnet_sorting_rules
+  theme:
+    - baseline_style
+id: fraction_municipality_sorting
+theme: baseline_style
+region: hidden
+weight: -17
+provider: null
+plugin: fraction_municipality_sorting_block
+settings:
+  id: fraction_municipality_sorting_block
+  label: 'Fraction municipality sorting block'
+  provider: limnet_sorting_rules
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,83 @@
+uuid: 39f188d3-6163-49ff-9eca-50e0bc25ec68
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.calendar.field_date_from
+    - field.field.node.calendar.field_date_until
+    - field.field.node.calendar.field_documents
+    - field.field.node.calendar.field_location
+    - field.field.node.calendar.field_main_components
+    - field.field.node.calendar.field_municipalities
+    - field.field.node.calendar.field_social_share_description
+    - field.field.node.calendar.field_social_share_image
+    - field.field.node.calendar.field_tags
+    - field.field.node.calendar.field_teaser_content
+    - field.field.node.calendar.field_teaser_image
+    - field.field.node.calendar.field_teaser_title
+    - field.field.node.calendar.field_time
+    - field.field.node.calendar.field_url
+    - node.type.calendar
+  module:
+    - baseline
+    - datetime
+    - user
+id: node.calendar.teaser
+targetEntityType: node
+bundle: calendar
+mode: teaser
+content:
+  field_date_from:
+    type: datetime_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: date_name_day_month
+    third_party_settings: {  }
+  field_location:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_teaser_content:
+    type: basic_string
+    weight: 4
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_teaser_title:
+    type: label_fallback
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: true
+      link: true
+    third_party_settings: {  }
+  field_time:
+    type: string
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_date_until: true
+  field_documents: true
+  field_main_components: true
+  field_municipalities: true
+  field_social_share_description: true
+  field_social_share_image: true
+  field_tags: true
+  field_teaser_image: true
+  field_url: true
+  langcode: true
+  links: true

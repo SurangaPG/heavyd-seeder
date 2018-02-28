@@ -1,8 +1,16 @@
 module:
+  address: 0
+  ausy_chosen: 0
   automated_cron: 0
+  baseline: 0
+  baseline_metatags: 0
+  basic_auth: 0
   block: 0
   block_content: 0
+  block_content_permissions: 0
   breakpoint: 0
+  chosen: 0
+  chosen_lib: 0
   ckeditor: 0
   color: 0
   comment: 0
@@ -11,53 +19,88 @@ module:
   config_split: 0
   contact: 0
   contextual: 0
+  crop: 0
   ctools: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
+  entityqueue: 0
   field: 0
   field_group: 0
   field_ui: 0
   file: 0
   filter: 0
+  focal_point: 0
+  hal: 0
   help: 0
   history: 0
+  icon_set: 0
   image: 0
+  inline_entity_form: 0
   language: 0
+  limburgnet_migration: 0
+  limnet_api: 0
+  limnet_core: 0
+  limnet_sorting_rules: 0
+  limnet_vue: 0
   link: 0
   locale: 0
+  menu_attributes: 0
+  menu_block: 0
   menu_ui: 0
+  metatag: 0
+  metatag_google_plus: 0
+  metatag_open_graph: 0
+  metatag_twitter_cards: 0
+  migrate: 0
+  migrate_drupal: 0
+  migrate_plus: 0
+  migrate_tools: 0
   node: 0
   options: 0
-  page_cache: 0
+  paragraphs: 0
+  paragraphs_type_permissions: 0
   path: 0
-  quickedit: 0
+  rabbit_hole: 0
   rdf: 0
+  redirect: 0
+  responsive_image: 0
+  rest: 0
+  restui: 0
+  rh_node: 0
+  scheduler: 0
   search: 0
+  serialization: 0
   shortcut: 0
+  social_share: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
   token: 0
   toolbar: 0
   tour: 0
   update: 0
   user: 0
+  video_embed_field: 0
+  view_unpublished: 0
   views_ui: 0
+  viewsreference: 0
+  vppr: 0
   menu_link_content: 1
   pathauto: 1
   views: 10
-  paragraphs: 11
   config_installer: 1000
 theme:
   stable: 0
   classy: 0
+  bartik: 0
   seven: 0
-  baseline_admin_style: 0
   baseline_style: 0
+  baseline_admin_style: 0
 profile: config_installer
 _core:
-  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
+  default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
 langcode: nl

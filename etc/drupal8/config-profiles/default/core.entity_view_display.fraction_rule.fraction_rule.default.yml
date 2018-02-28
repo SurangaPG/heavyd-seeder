@@ -1,0 +1,74 @@
+uuid: 9fb02fee-29b9-4555-88a4-d218a24b6a0d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.fraction_rule.fraction_rule.field_fraction
+    - field.field.fraction_rule.fraction_rule.field_material
+    - field.field.fraction_rule.fraction_rule.field_municipalities
+    - field.field.fraction_rule.fraction_rule.field_state
+    - field.field.fraction_rule.fraction_rule.field_usable
+  module:
+    - limnet_sorting_rules
+    - options
+    - user
+id: fraction_rule.fraction_rule.default
+targetEntityType: fraction_rule
+bundle: fraction_rule
+mode: default
+content:
+  field_fraction:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_material:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_municipalities:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_state:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_usable:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

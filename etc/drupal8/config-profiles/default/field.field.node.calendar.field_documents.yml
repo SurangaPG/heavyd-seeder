@@ -1,0 +1,27 @@
+uuid: 633c0c95-dc6b-41bf-9dfb-8f4f93344802
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documents
+    - node.type.calendar
+  module:
+    - file
+id: node.calendar.field_documents
+field_name: field_documents
+entity_type: node
+bundle: calendar
+label: Documents
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: generated/documents/pdf
+  file_extensions: pdf
+  max_filesize: 20mb
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

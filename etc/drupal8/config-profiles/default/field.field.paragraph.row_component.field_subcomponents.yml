@@ -1,0 +1,42 @@
+uuid: 1b7358c7-3d87-451e-9e29-1900f2605def
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subcomponents
+    - paragraphs.paragraphs_type.row_component
+  module:
+    - entity_reference_revisions
+id: paragraph.row_component.field_subcomponents
+field_name: field_subcomponents
+entity_type: paragraph
+bundle: row_component
+label: Subonderdelen
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 1
+    target_bundles:
+      row_component: row_component
+    target_bundles_drag_drop:
+      row_component:
+        enabled: true
+        weight: 4
+      block_component:
+        weight: 5
+        enabled: false
+      basic_component:
+        weight: 6
+        enabled: false
+      view_component:
+        weight: 6
+        enabled: false
+      video_component:
+        weight: 9
+        enabled: false
+field_type: entity_reference_revisions

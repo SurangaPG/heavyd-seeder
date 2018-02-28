@@ -1,0 +1,41 @@
+uuid: 32c3be25-4beb-4846-ad01-159d54515a4c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro_components
+    - node.type.tips
+  module:
+    - entity_reference_revisions
+id: node.tips.field_intro_components
+field_name: field_intro_components
+entity_type: node
+bundle: tips
+label: 'Intro componenten'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      basic_component:
+        weight: 6
+        enabled: false
+      block_component:
+        weight: 7
+        enabled: false
+      row_component:
+        weight: 8
+        enabled: false
+      video_component:
+        weight: 9
+        enabled: false
+      view_component:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,21 @@
+uuid: 450d63bc-eaa2-4188-9b7e-789735bd5fe2
+langcode: nl
+status: true
+dependencies:
+  module:
+    - limnet_vue
+  theme:
+    - baseline_style
+id: vue_location_select
+theme: baseline_style
+region: flyout_right
+weight: 0
+provider: null
+plugin: 'vue_plugin_block:limnet-comp-locatie-selectie'
+settings:
+  id: 'vue_plugin_block:limnet-comp-locatie-selectie'
+  label: 'Locatie selecteren'
+  provider: limnet_vue
+  label_display: '0'
+  props: {  }
+visibility: {  }

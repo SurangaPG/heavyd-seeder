@@ -1,0 +1,11 @@
+uuid: de2f1808-5a3b-4915-9ee1-07229e46ebdb
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.tips
+id: node.tips
+target_entity_type_id: node
+target_bundle: tips
+default_langcode: site_default
+language_alterable: false

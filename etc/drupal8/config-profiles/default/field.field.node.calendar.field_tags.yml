@@ -1,0 +1,29 @@
+uuid: fa57c74c-45c3-4a7a-b9b7-cfd2480ad4d0
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.calendar
+    - taxonomy.vocabulary.tags
+id: node.calendar.field_tags
+field_name: field_tags
+entity_type: node
+bundle: calendar
+label: Tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

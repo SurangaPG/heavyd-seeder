@@ -1,0 +1,14 @@
+uuid: 1773ea34-0801-4148-a0c2-cd9e10746c3e
+langcode: nl
+status: true
+dependencies: {  }
+name: portrait_mobile_2x
+label: 'Portrait - mobile - 2x'
+effects:
+  24a4192c-347b-479b-b75b-51414f2b3c63:
+    uuid: 24a4192c-347b-479b-b75b-51414f2b3c63
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 690
+      height: 1260

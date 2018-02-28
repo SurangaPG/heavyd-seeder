@@ -1,0 +1,32 @@
+uuid: b4493f89-41d6-4477-80c3-b1c5f0ef937a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.vue_component.field_title
+    - field.field.paragraph.vue_component.field_vue_component
+    - paragraphs.paragraphs_type.vue_component
+  module:
+    - limnet_vue
+id: paragraph.vue_component.preview
+targetEntityType: paragraph
+bundle: vue_component
+mode: preview
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_vue_component:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: vue_component_string_formatter
+    region: content
+hidden: {  }

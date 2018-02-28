@@ -1,0 +1,15 @@
+uuid: c67c72ad-385b-48d2-8925-760572f015a0
+langcode: nl
+status: true
+dependencies: {  }
+name: cards_large
+label: 'Cards large'
+effects:
+  f18765be-ab13-4658-8db0-6781fe37de5f:
+    uuid: f18765be-ab13-4658-8db0-6781fe37de5f
+    id: image_scale
+    weight: 1
+    data:
+      width: 540
+      height: null
+      upscale: false

@@ -1,0 +1,23 @@
+uuid: a929db07-13f2-4f7f-be09-7ad20388cfe8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.fraction_rule.field_state
+  module:
+    - limnet_sorting_rules
+    - options
+id: fraction_rule.fraction_rule.field_state
+field_name: field_state
+entity_type: fraction_rule
+bundle: fraction_rule
+label: 'Vol / leeg'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Niet van toepassing'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,24 @@
+uuid: ed0fa314-0cee-45e9-a1a7-513d00d70ac6
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_from
+    - node.type.in_the_spotlight
+  module:
+    - datetime
+id: node.in_the_spotlight.field_date_from
+field_name: field_date_from
+entity_type: node
+bundle: in_the_spotlight
+label: 'Publicatie datum'
+description: 'Deze datum wordt gebruikt voor sorteringen'
+required: true
+translatable: true
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,15 @@
+uuid: 8e57a56a-296c-4c42-9995-ef0d712a8809
+langcode: nl
+status: true
+dependencies: {  }
+name: card_image_2x
+label: 'Card image (2x)'
+effects:
+  3b41-4bfc-ae4c-2886e791bb27-ebac644b:
+    uuid: 3b41-4bfc-ae4c-2886e791bb27-ebac644b
+    id: image_scale
+    weight: 1
+    data:
+      width: 730
+      height: null
+      upscale: false

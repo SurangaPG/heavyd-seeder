@@ -1,0 +1,36 @@
+uuid: 71bcd730-a1fc-4550-baa4-c5b92981de13
+langcode: nl
+status: true
+dependencies:
+  config:
+    - image.style.portrait_desktop
+    - image.style.portrait_desktop_2x
+    - image.style.portrait_mobile
+    - image.style.portrait_mobile_2x
+  module:
+    - baseline
+id: portrait
+label: Portrait
+image_style_mappings:
+  -
+    breakpoint_id: baseline.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: portrait_desktop
+  -
+    breakpoint_id: baseline.lg
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: portrait_desktop_2x
+  -
+    breakpoint_id: baseline.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: portrait_mobile
+  -
+    breakpoint_id: baseline.xs
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: portrait_mobile_2x
+breakpoint_group: baseline
+fallback_image_style: portrait_mobile

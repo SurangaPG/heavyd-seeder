@@ -1,0 +1,21 @@
+uuid: a9ec854f-e0aa-41ed-bbc0-df6a029c98e6
+langcode: nl
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - limnet_sorting_rules
+    - paragraphs
+id: fraction.field_what_happens
+field_name: field_what_happens
+entity_type: fraction
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

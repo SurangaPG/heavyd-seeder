@@ -1,0 +1,10 @@
+uuid: 6ba1739a-ff8b-4afa-b202-458013839dd8
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: node.anchors
+label: Anchors
+targetEntityType: node
+cache: true

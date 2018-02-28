@@ -1,0 +1,10 @@
+uuid: 18131f3a-e069-4b89-b05d-6fb5fb3b6ada
+langcode: nl
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.anchor_link
+label: 'Anchor link'
+targetEntityType: paragraph
+cache: true

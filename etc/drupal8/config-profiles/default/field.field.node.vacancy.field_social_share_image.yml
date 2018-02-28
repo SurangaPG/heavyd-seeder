@@ -1,0 +1,38 @@
+uuid: 33c62cb1-ddb5-4488-b74d-332888188fe0
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_social_share_image
+    - node.type.vacancy
+  module:
+    - image
+id: node.vacancy.field_social_share_image
+field_name: field_social_share_image
+entity_type: node
+bundle: vacancy
+label: 'Sociale media: afbeelding'
+description: "Dit is de afbeelding die gebruikt wordt bij het delen op sociale media. <br/>\r\nDeze afbeelding moet minstens 1200 px breed zijn. <br/>\r\nHet resizen gebeurd automatisch."
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: generated/images/vacancy/socialmedia
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

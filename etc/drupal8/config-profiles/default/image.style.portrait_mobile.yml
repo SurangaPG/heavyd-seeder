@@ -1,0 +1,14 @@
+uuid: 21c9ca2e-6a9e-4be0-b1d5-452e8d952c4e
+langcode: nl
+status: true
+dependencies: {  }
+name: portrait_mobile
+label: 'Portrait - mobile'
+effects:
+  94d43442-67de-46a8-850a-c11ed6a73a77:
+    uuid: 94d43442-67de-46a8-850a-c11ed6a73a77
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 630
+      height: 345

@@ -1,0 +1,20 @@
+uuid: 8cedfa63-33b5-4a4b-98c2-f5fac4999315
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - baseline_style
+id: status_messages
+theme: baseline_style
+region: content_highlighted
+weight: -18
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status Messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

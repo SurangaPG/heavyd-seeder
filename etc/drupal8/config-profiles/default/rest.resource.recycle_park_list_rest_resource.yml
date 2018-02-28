@@ -1,0 +1,18 @@
+uuid: d1de2fda-e9ea-4ec5-932b-76c9c20dfa05
+langcode: nl
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - limnet_api
+    - serialization
+id: recycle_park_list_rest_resource
+plugin_id: recycle_park_list_rest_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - basic_auth

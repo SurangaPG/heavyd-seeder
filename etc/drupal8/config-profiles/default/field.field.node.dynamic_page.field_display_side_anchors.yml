@@ -1,0 +1,23 @@
+uuid: e1faa4b4-bdc1-4449-b89f-b7ba81f430e5
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_side_anchors
+    - node.type.dynamic_page
+id: node.dynamic_page.field_display_side_anchors
+field_name: field_display_side_anchors
+entity_type: node
+bundle: dynamic_page
+label: 'Toon inhoudsoverzicht'
+description: 'Als dit is aangevinkt wordt er automatisch een overzicht met de interne links naar de titels van de inhoud componenten.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

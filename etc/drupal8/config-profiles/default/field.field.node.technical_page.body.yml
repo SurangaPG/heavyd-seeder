@@ -1,0 +1,22 @@
+uuid: acd1fc28-5551-42ea-b9b3-f50b8aa16f9f
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.technical_page
+  module:
+    - text
+id: node.technical_page.body
+field_name: body
+entity_type: node
+bundle: technical_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,19 @@
+uuid: 3bab7651-6d1a-47af-8a39-64f9c73999c8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_list
+    - node.type.dynamic_page
+id: node.dynamic_page.field_teaser_list
+field_name: field_teaser_list
+entity_type: node
+bundle: dynamic_page
+label: 'Teaser lijst'
+description: 'Voeg de bullet points toe die verschijnen in de previews.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

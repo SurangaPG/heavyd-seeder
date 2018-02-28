@@ -1,0 +1,39 @@
+uuid: c6fe9581-caff-4e6d-b146-df8853b2a744
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.dealer.field_cards_id
+    - field.field.node.dealer.field_url
+    - node.type.dealer
+  module:
+    - link
+    - user
+id: node.dealer.default
+targetEntityType: node
+bundle: dealer
+mode: default
+content:
+  field_cards_id:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_url:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  langcode: true
+  links: true

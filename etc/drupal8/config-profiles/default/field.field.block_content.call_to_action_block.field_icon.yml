@@ -1,0 +1,21 @@
+uuid: 46fc2675-6cf5-4b3f-861e-a76c20273ad1
+langcode: nl
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action_block
+    - field.storage.block_content.field_icon
+  module:
+    - icon_set
+id: block_content.call_to_action_block.field_icon
+field_name: field_icon
+entity_type: block_content
+bundle: call_to_action_block
+label: Icoon
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: icon

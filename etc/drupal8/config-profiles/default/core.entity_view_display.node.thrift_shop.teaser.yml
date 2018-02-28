@@ -1,0 +1,29 @@
+uuid: 3cf1ce97-7bf1-451f-b29b-77d19bbf98da
+langcode: nl
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.thrift_shop.field_address
+    - field.field.node.thrift_shop.field_cards_id
+    - field.field.node.thrift_shop.field_phone_number
+    - field.field.node.thrift_shop.field_url
+    - node.type.thrift_shop
+  module:
+    - user
+id: node.thrift_shop.teaser
+targetEntityType: node
+bundle: thrift_shop
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_address: true
+  field_cards_id: true
+  field_muncipalities: true
+  field_phone_number: true
+  field_postal_code: true
+  field_url: true
+  langcode: true

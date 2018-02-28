@@ -1,0 +1,27 @@
+uuid: 2d63bba9-155b-4b6d-8407-438fae394bdb
+langcode: nl
+status: true
+dependencies:
+  module:
+    - limnet_vue
+    - system
+  theme:
+    - baseline_style
+id: next_garbage_collection
+theme: baseline_style
+region: content_left
+weight: 0
+provider: null
+plugin: 'vue_plugin_block:limnet-comp-volgende-afval-ophaling'
+settings:
+  id: 'vue_plugin_block:limnet-comp-volgende-afval-ophaling'
+  label: 'Volgende afval ophaling'
+  provider: limnet_vue
+  label_display: '0'
+  props: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

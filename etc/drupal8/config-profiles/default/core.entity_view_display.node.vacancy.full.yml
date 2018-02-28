@@ -1,0 +1,50 @@
+uuid: b5b56085-b100-426b-964d-95300a4c5bed
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.vacancy.field_date_from
+    - field.field.node.vacancy.field_documents
+    - field.field.node.vacancy.field_main_components
+    - field.field.node.vacancy.field_social_share_image
+    - field.field.node.vacancy.field_tags
+    - field.field.node.vacancy.field_teaser_content
+    - field.field.node.vacancy.field_teaser_image
+    - field.field.node.vacancy.field_teaser_title
+    - node.type.vacancy
+  module:
+    - entity_reference_revisions
+    - file
+    - user
+id: node.vacancy.full
+targetEntityType: node
+bundle: vacancy
+mode: full
+content:
+  field_documents:
+    type: file_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_main_components:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  field_date_from: true
+  field_social_share_description: true
+  field_social_share_image: true
+  field_tags: true
+  field_teaser_content: true
+  field_teaser_image: true
+  field_teaser_title: true
+  langcode: true
+  links: true

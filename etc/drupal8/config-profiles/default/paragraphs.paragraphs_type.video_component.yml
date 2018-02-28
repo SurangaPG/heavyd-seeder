@@ -1,0 +1,9 @@
+uuid: 3139c8d5-a809-4c09-9d0e-81a1012cb92b
+langcode: nl
+status: true
+dependencies: {  }
+id: video_component
+label: 'Video component'
+icon_uuid: null
+description: 'An embedded youtube video.'
+behavior_plugins: {  }

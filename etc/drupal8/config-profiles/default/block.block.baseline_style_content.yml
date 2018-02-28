@@ -1,4 +1,4 @@
-uuid: bd9afb2c-4174-41fc-8d79-17503031e925
+uuid: 599991ba-02b5-48af-a6d4-ed0e1dc8d778
 langcode: nl
 status: true
 dependencies:
@@ -11,12 +11,12 @@ _core:
 id: baseline_style_content
 theme: baseline_style
 region: content
-weight: 0
+weight: -13
 provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'Main page content'
+  label: 'Primaire inhoud van de pagina'
   provider: system
   label_display: '0'
 visibility: {  }

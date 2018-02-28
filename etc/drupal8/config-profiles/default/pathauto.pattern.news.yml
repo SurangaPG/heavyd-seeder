@@ -1,0 +1,22 @@
+uuid: 131723df-b383-444f-863a-dd128e95a981
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: news
+label: 'Nieuws item patroon.'
+type: 'canonical_entities:node'
+pattern: '/nieuws/[node:title]'
+selection_criteria:
+  9ebead63-e0c9-4072-83e5-9fee9be7be32:
+    id: node_type
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 9ebead63-e0c9-4072-83e5-9fee9be7be32
+selection_logic: and
+weight: -5
+relationships: {  }

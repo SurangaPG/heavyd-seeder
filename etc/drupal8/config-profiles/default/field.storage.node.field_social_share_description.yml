@@ -1,0 +1,19 @@
+uuid: c34f34fe-834c-4430-afb6-139dca7e93b2
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_social_share_description
+field_name: field_social_share_description
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

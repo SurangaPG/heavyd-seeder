@@ -1,0 +1,27 @@
+uuid: 5d86adfb-92d8-4356-9298-8038bf4dfd62
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documents
+    - node.type.news
+  module:
+    - file
+id: node.news.field_documents
+field_name: field_documents
+entity_type: node
+bundle: news
+label: Documents
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: generated/documents/news
+  file_extensions: pdf
+  max_filesize: '20 MB'
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

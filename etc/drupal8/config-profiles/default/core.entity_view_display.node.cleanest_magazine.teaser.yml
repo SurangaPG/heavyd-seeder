@@ -1,0 +1,31 @@
+uuid: 4d9e9ce6-eb08-475f-916a-1ac674ae7b47
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cleanest_magazine.field_documents
+    - field.field.node.cleanest_magazine.field_magazine_cover
+    - node.type.cleanest_magazine
+  module:
+    - image
+    - user
+id: node.cleanest_magazine.teaser
+targetEntityType: node
+bundle: cleanest_magazine
+mode: teaser
+content:
+  field_magazine_cover:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  field_date_from: true
+  field_documents: true
+  langcode: true
+  links: true

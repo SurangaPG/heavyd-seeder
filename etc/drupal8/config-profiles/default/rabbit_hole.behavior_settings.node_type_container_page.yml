@@ -1,0 +1,9 @@
+uuid: 3a42f925-83e4-4a22-b2a3-917334e937d0
+langcode: nl
+status: true
+dependencies: {  }
+id: node_type_container_page
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

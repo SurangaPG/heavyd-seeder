@@ -5,7 +5,6 @@ baseline.xs:
   multipliers:
     - 1x
     - 2x
-    - 3x
 baseline.sm:
   label: Small
   mediaQuery: '(min-width: 576px)'
@@ -13,7 +12,6 @@ baseline.sm:
   multipliers:
     - 1x
     - 2x
-    - 3x
 baseline.md:
   label: Medium
   mediaQuery: '(min-width: 768px)'
@@ -21,7 +19,6 @@ baseline.md:
   multipliers:
     - 1x
     - 2x
-    - 3x
 baseline.lg:
   label: Large
   mediaQuery: '(min-width: 992px)'
@@ -29,12 +26,10 @@ baseline.lg:
   multipliers:
     - 1x
     - 2x
-    - 3x
 baseline.xl:
-  label: Large
+  label: Extra large
   mediaQuery: '(min-width: 1200px)'
   weight: 30
   multipliers:
     - 1x
     - 2x
-    - 3x

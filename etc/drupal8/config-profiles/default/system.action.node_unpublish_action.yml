@@ -1,4 +1,4 @@
-uuid: 07714f85-5288-469b-8074-484ee541b69c
+uuid: 94c7cba3-4de2-446a-b422-a29cc107b282
 langcode: nl
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: gGQXiSspwGl0lyOS6w_HCPpvGAPDciqDNLFwWOydVtI
 id: node_unpublish_action
-label: 'Unpublish content'
+label: 'Publicatie ongedaan maken'
 type: node
 plugin: node_unpublish_action
 configuration: {  }

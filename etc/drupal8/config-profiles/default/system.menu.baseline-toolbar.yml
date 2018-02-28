@@ -1,0 +1,8 @@
+uuid: 97d8a73a-1301-4b9d-8dd8-592605487db4
+langcode: nl
+status: true
+dependencies: {  }
+id: baseline-toolbar
+label: 'Baseline toolbar'
+description: 'Menu beschikbaar voor de content editors.'
+locked: false

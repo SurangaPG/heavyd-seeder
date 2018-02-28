@@ -1,0 +1,18 @@
+uuid: 2059b79a-cd74-489a-a2bd-e9921b381693
+langcode: nl
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - limnet_api
+    - serialization
+id: calendar_list_rest_resource
+plugin_id: calendar_list_rest_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - basic_auth

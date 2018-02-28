@@ -1,0 +1,19 @@
+uuid: a54d8969-3b8e-4b0e-a234-c2bbc1efa73b
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_pickup_address_info
+field_name: field_pickup_address_info
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

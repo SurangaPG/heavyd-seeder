@@ -1,4 +1,4 @@
-uuid: d8b4d91d-7222-4e35-bf43-c342b558ae13
+uuid: 3544d013-37c0-408e-9547-0a83063fc8db
 langcode: nl
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: N0RDBTqiK4dKoN4p4oW2j0SGWycdHyALUe9M-Ofp89U
 id: node_promote_action
-label: 'Promote content to front page'
+label: 'Inhoud op de voorpagina zichtbaar maken'
 type: node
 plugin: node_promote_action
 configuration: {  }

@@ -1,10 +1,10 @@
-uuid: dab3341f-d448-4fca-92ea-fa197248c550
+uuid: 79880170-7db6-4d6b-946e-9dc77f16016c
 langcode: nl
 status: true
 dependencies: {  }
 _core:
   default_config_hash: BCM-vV1zzRaLHN18dqAR_CuGOj8AFJvTx7BKl_8Gcxc
 id: tools
-label: Tools
-description: 'User tool links, often added by modules'
+label: Hulpmiddelen
+description: 'Links voor gebruikshulp, vaak toegevoegd door modules'
 locked: true

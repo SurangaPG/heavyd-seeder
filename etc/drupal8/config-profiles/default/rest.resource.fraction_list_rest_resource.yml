@@ -1,0 +1,18 @@
+uuid: 39558823-2a3e-4607-9fe7-b91b25240856
+langcode: nl
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - limnet_api
+    - serialization
+id: fraction_list_rest_resource
+plugin_id: fraction_list_rest_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - basic_auth

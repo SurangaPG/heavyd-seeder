@@ -1,0 +1,87 @@
+uuid: 9ffdfc5a-c5ad-430c-94fc-1a3205cfe1c8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.intro
+    - field.field.node.calendar.field_date_from
+    - field.field.node.calendar.field_date_until
+    - field.field.node.calendar.field_documents
+    - field.field.node.calendar.field_location
+    - field.field.node.calendar.field_main_components
+    - field.field.node.calendar.field_municipalities
+    - field.field.node.calendar.field_social_share_image
+    - field.field.node.calendar.field_tags
+    - field.field.node.calendar.field_teaser_content
+    - field.field.node.calendar.field_teaser_image
+    - field.field.node.calendar.field_teaser_title
+    - field.field.node.calendar.field_time
+    - field.field.node.calendar.field_url
+    - node.type.calendar
+  module:
+    - datetime
+    - link
+    - user
+id: node.calendar.intro
+targetEntityType: node
+bundle: calendar
+mode: intro
+content:
+  field_date_from:
+    weight: 0
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: short_date_only
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_until:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: short_date_only
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_location:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_time:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_url:
+    type: link
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+hidden:
+  field_documents: true
+  field_main_components: true
+  field_municipalities: true
+  field_social_share_description: true
+  field_social_share_image: true
+  field_tags: true
+  field_teaser_content: true
+  field_teaser_image: true
+  field_teaser_title: true
+  langcode: true
+  links: true

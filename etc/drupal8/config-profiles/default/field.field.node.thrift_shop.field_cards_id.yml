@@ -1,0 +1,19 @@
+uuid: 77906eae-34a3-4208-9b21-1671bd88618e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cards_id
+    - node.type.thrift_shop
+id: node.thrift_shop.field_cards_id
+field_name: field_cards_id
+entity_type: node
+bundle: thrift_shop
+label: 'Cards id'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

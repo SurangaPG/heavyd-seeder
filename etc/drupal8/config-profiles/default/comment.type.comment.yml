@@ -1,10 +1,10 @@
-uuid: d53c98e8-a28b-43cd-af8d-b6cdbbd648e0
+uuid: d80d685b-4715-4427-9409-cdd964efc33b
 langcode: nl
 status: true
 dependencies: {  }
 _core:
   default_config_hash: bqZsN31T2n0UjcbyCpOPi9D2iO0sAOHR7FnEs9qMvaA
 id: comment
-label: 'Default comments'
+label: Standaardreacties
 target_entity_type_id: node
-description: 'Allows commenting on content'
+description: 'Staat het reageren op de inhoud toe'

@@ -1,0 +1,41 @@
+uuid: 9e796a1d-1ad3-48f8-a201-453ea2e5a212
+langcode: nl
+status: true
+dependencies:
+  content:
+    - 'block_content:back_link:56273462-528c-4bad-8a62-c01a4226fe88'
+  module:
+    - block_content
+    - ctools
+    - node
+  theme:
+    - baseline_style
+id: backlinktips
+theme: baseline_style
+region: content_highlighted
+weight: -13
+provider: null
+plugin: 'block_content:56273462-528c-4bad-8a62-c01a4226fe88'
+settings:
+  id: 'block_content:56273462-528c-4bad-8a62-c01a4226fe88'
+  label: 'Backlink (tips)'
+  provider: core
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      tips: tips
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      tips: tips
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

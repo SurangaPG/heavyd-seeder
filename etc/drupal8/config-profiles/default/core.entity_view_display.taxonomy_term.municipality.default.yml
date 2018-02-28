@@ -1,0 +1,31 @@
+uuid: b302390f-bc14-4edf-b152-be80f1b4a776
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.municipality.field_cards_id
+    - taxonomy.vocabulary.municipality
+  module:
+    - text
+id: taxonomy_term.municipality.default
+targetEntityType: taxonomy_term
+bundle: municipality
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cards_id:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

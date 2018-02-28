@@ -1,0 +1,20 @@
+uuid: 31cf0859-d11d-4181-9676-8a59f8ffa6f1
+langcode: nl
+status: true
+dependencies:
+  module:
+    - limnet_sorting_rules
+    - taxonomy
+id: fraction_variation.field_municipalities
+field_name: field_municipalities
+entity_type: fraction_variation
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

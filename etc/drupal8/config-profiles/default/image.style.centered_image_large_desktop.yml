@@ -1,0 +1,15 @@
+uuid: e6741eb2-6090-4788-941b-d369e2164682
+langcode: nl
+status: true
+dependencies: {  }
+name: centered_image_large_desktop
+label: 'Centered image - large - desktop'
+effects:
+  b302b1eb-9137-4de1-b3f1-16158eefc51f:
+    uuid: b302b1eb-9137-4de1-b3f1-16158eefc51f
+    id: image_scale
+    weight: 1
+    data:
+      width: 640
+      height: 640
+      upscale: false

@@ -1,0 +1,10 @@
+uuid: c8a712b4-817d-4e03-9e6f-a0edb80b7046
+langcode: nl
+status: true
+dependencies:
+  module:
+    - limnet_sorting_rules
+id: fraction.icon
+label: Icon
+targetEntityType: fraction
+cache: true

@@ -1,20 +1,20 @@
-uuid: 1a6cdd4d-6f60-4fdf-a1a3-9f48bb2d9e64
+uuid: 4a3d5927-bb98-4ec7-9a2d-5b2c0cad755e
 langcode: nl
 status: true
 dependencies:
   theme:
     - baseline_admin_style
 _core:
-  default_config_hash: HHryZVJbeKi9WnuBGC8FOhBZmBnk2G1H6KxFuy-rC9A
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
 id: baseline_admin_style_local_actions
 theme: baseline_admin_style
 region: content
-weight: -10
+weight: -4
 provider: null
 plugin: local_actions_block
 settings:
   id: local_actions_block
-  label: 'Primary admin actions'
+  label: 'Primaire beheeracties'
   provider: core
   label_display: '0'
 visibility: {  }

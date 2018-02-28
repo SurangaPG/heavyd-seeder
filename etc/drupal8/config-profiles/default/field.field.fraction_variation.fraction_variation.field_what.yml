@@ -1,0 +1,41 @@
+uuid: 0fa501d3-ca00-4e45-b460-4f5523e720fd
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.fraction_variation.field_what
+  module:
+    - entity_reference_revisions
+    - limnet_sorting_rules
+id: fraction_variation.fraction_variation.field_what
+field_name: field_what
+entity_type: fraction_variation
+bundle: fraction_variation
+label: Wat
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      basic_component:
+        weight: 5
+        enabled: false
+      video_component:
+        weight: 6
+        enabled: false
+      block_component:
+        weight: 6
+        enabled: false
+      row_component:
+        weight: 7
+        enabled: false
+      view_component:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

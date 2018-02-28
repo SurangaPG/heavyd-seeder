@@ -1,0 +1,24 @@
+uuid: 7308b4b8-b7ab-4c90-a063-e02980dbf913
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vue_component
+    - paragraphs.paragraphs_type.vue_component
+  module:
+    - limnet_vue
+id: paragraph.vue_component.field_vue_component
+field_name: field_vue_component
+entity_type: paragraph
+bundle: vue_component
+label: 'Vue Component'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: __NONE__
+    props: ''
+default_value_callback: ''
+settings: {  }
+field_type: vue_component_field_type

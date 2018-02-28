@@ -1,0 +1,11 @@
+uuid: 5b91f38a-681c-498f-a43d-a5b2735e563a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.recycle_park
+id: node.recycle_park
+target_entity_type_id: node
+target_bundle: recycle_park
+default_langcode: site_default
+language_alterable: false

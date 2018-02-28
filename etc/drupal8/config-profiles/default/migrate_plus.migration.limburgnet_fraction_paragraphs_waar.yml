@@ -1,0 +1,33 @@
+uuid: ed47de14-eb99-4c89-bc02-bca481ea2256
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - limburgnet_migration
+_core:
+  default_config_hash: W74DnPOJzaWPfAcK7MkeTy8Kq2_1IU55GVIiwt0vP98
+id: limburgnet_fraction_paragraphs_waar
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - SQL
+  - Limburgnet
+  - Migration
+  - Fraction
+  - Variation
+migration_group: limburgnet_migration
+label: 'Fraction paragraphs SORT_waar'
+source:
+  plugin: limburgnet_fraction_paragraph
+  field_name: sort_waar
+process:
+  field_content/value: sort_waar
+  field_content/format:
+    plugin: default_value
+    default_value: basic_html
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: basic_component
+migration_dependencies: null

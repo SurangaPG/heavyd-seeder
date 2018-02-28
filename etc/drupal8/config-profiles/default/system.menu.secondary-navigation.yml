@@ -1,0 +1,8 @@
+uuid: 40c99f04-ce32-4612-a03f-94c02e43e7a8
+langcode: nl
+status: true
+dependencies: {  }
+id: secondary-navigation
+label: 'Secundaire navigatie '
+description: 'The secondary navigation in the header.'
+locked: false

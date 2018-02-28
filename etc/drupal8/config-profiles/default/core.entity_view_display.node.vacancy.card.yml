@@ -1,0 +1,57 @@
+uuid: bff0583c-5392-42e9-ba5e-9d7424656dee
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.vacancy.field_date_from
+    - field.field.node.vacancy.field_documents
+    - field.field.node.vacancy.field_main_components
+    - field.field.node.vacancy.field_social_share_image
+    - field.field.node.vacancy.field_tags
+    - field.field.node.vacancy.field_teaser_content
+    - field.field.node.vacancy.field_teaser_image
+    - field.field.node.vacancy.field_teaser_title
+    - node.type.vacancy
+  module:
+    - datetime
+    - user
+id: node.vacancy.card
+targetEntityType: node
+bundle: vacancy
+mode: card
+content:
+  field_date_from:
+    type: datetime_custom
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: d/m/Y
+    third_party_settings: {  }
+  field_teaser_content:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_teaser_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_documents: true
+  field_main_components: true
+  field_social_share_description: true
+  field_social_share_image: true
+  field_tags: true
+  field_teaser_image: true
+  langcode: true
+  links: true

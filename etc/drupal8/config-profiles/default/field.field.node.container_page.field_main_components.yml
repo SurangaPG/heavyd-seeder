@@ -1,0 +1,41 @@
+uuid: 1bd5ab6f-3d5d-46fa-87ea-f7af82c054b3
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_main_components
+    - node.type.container_page
+  module:
+    - entity_reference_revisions
+id: node.container_page.field_main_components
+field_name: field_main_components
+entity_type: node
+bundle: container_page
+label: 'Hoofd componenten'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      basic_component:
+        weight: 5
+        enabled: false
+      block_component:
+        weight: 6
+        enabled: false
+      row_component:
+        weight: 7
+        enabled: false
+      view_component:
+        weight: 8
+        enabled: false
+      video_component:
+        weight: 9
+        enabled: false
+field_type: entity_reference_revisions

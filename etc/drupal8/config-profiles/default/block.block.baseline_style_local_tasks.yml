@@ -1,4 +1,4 @@
-uuid: d8738091-fdbb-4466-bb01-2c30d639bf66
+uuid: a3fabd9b-948a-4ec3-9f8f-8f3ada0257a8
 langcode: nl
 status: true
 dependencies:
@@ -9,12 +9,12 @@ _core:
 id: baseline_style_local_tasks
 theme: baseline_style
 region: content
-weight: -40
+weight: -14
 provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: Tabs
+  label: Tabbladen
   provider: core
   label_display: '0'
   primary: true

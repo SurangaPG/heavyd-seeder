@@ -1,0 +1,28 @@
+uuid: 2f76ec19-be91-47ff-806b-3b2fccfb50f0
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - baseline_style
+id: ctadownloadcalendar
+theme: baseline_style
+region: content_left
+weight: 0
+provider: null
+plugin: 'block_content:8a7b7f84-2940-40de-9496-51364f518181'
+settings:
+  id: 'block_content:8a7b7f84-2940-40de-9496-51364f518181'
+  label: 'CTA download calendar'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: alternative
+visibility:
+  request_path:
+    id: request_path
+    pages: /kalender
+    negate: false
+    context_mapping: {  }

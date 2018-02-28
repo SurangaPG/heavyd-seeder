@@ -1,4 +1,4 @@
-uuid: f7898f9c-5687-4c95-b0f4-00713a99e1e1
+uuid: c1f6a5cd-0180-433a-ba56-1d68e5e541a8
 langcode: nl
 status: true
 dependencies:
@@ -14,7 +14,7 @@ provider: null
 plugin: local_actions_block
 settings:
   id: local_actions_block
-  label: 'Primary admin actions'
+  label: 'Primaire beheeracties'
   provider: core
   label_display: '0'
 visibility: {  }

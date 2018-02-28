@@ -1,0 +1,26 @@
+uuid: 8db76ab9-929a-46ed-b606-bf495590ad0d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.fraction_rule.field_fraction
+  module:
+    - limnet_sorting_rules
+id: fraction_rule.fraction_rule.field_fraction
+field_name: field_fraction
+entity_type: fraction_rule
+bundle: fraction_rule
+label: Afvalfractie
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:fraction'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

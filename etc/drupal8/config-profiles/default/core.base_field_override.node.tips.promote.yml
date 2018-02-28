@@ -1,0 +1,22 @@
+uuid: 87883c23-a447-489b-bc8e-4354705189ea
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.tips
+id: node.tips.promote
+field_name: promote
+entity_type: node
+bundle: tips
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

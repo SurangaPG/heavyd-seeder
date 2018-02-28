@@ -1,0 +1,27 @@
+uuid: 9ad8f38b-ed34-4e29-9aa3-8a22649d7d5b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - system.menu.secondary-navigation
+  module:
+    - menu_block
+  theme:
+    - baseline_style
+id: secondary_navigation
+theme: baseline_style
+region: header_secondary
+weight: -8
+provider: null
+plugin: 'menu_block:secondary-navigation'
+settings:
+  id: 'menu_block:secondary-navigation'
+  label: 'Secundaire navigatie'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand: 0
+  parent: 'secondary-navigation:'
+  suggestion: secondary_navigation
+visibility: {  }

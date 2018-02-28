@@ -1,0 +1,26 @@
+uuid: 0aa5c20b-afbe-4afc-85a9-2a148fd2e989
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.anchor_link
+    - field.field.paragraph.video_component.field_title
+    - field.field.paragraph.video_component.field_video
+    - paragraphs.paragraphs_type.video_component
+  module:
+    - baseline
+id: paragraph.video_component.anchor_link
+targetEntityType: paragraph
+bundle: video_component
+mode: anchor_link
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: anchor_link
+    region: content
+hidden:
+  field_video: true

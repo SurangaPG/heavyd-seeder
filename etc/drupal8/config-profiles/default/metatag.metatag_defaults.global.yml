@@ -1,0 +1,43 @@
+uuid: 3305eb86-b8d9-4429-9225-b4752e4bc6cd
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Algemeen
+tags:
+  abstract: '[baseline_metatags:og-description]'
+  canonical_url: '[current-page:url:absolute]'
+  description: '[baseline_metatags:og-description]'
+  title: '[current-page:title] | [site:name]'
+  google_plus_description: '[baseline_metatags:og-description]'
+  google_plus_image: '[baseline_metatags:og-image:url]'
+  google_plus_name: '[current-page:title]'
+  google_plus_publisher: '[current-page:url:absolute]'
+  og_country_name: Belgie
+  og_description: '[baseline_metatags:og-description]'
+  og_email: info@limburg.net
+  og_image: '[baseline_metatags:og-image:url]'
+  og_image_height: '[baseline_metatags:og-image:height]'
+  og_image_secure_url: '[baseline_metatags:og-image:url]'
+  og_image_url: '[baseline_metatags:og-image:url]'
+  og_image_width: '[baseline_metatags:og-image:width]'
+  og_locale: nl_BE
+  og_locality: Hasselt
+  og_phone_number: '003280090720'
+  og_postal_code: '3500'
+  og_site_name: '[site:name]'
+  og_street_address: 'Gouverneur Verwilghensingel 32'
+  og_title: '[current-page:title]'
+  og_type: website
+  og_url: '[current-page:url:absolute]'
+  twitter_cards_description: '[baseline_metatags:og-description]'
+  twitter_cards_image: '[baseline_metatags:og-image:url]'
+  twitter_cards_image_height: '[baseline_metatags:og-image:height]'
+  twitter_cards_image_width: '[baseline_metatags:og-image:width]'
+  twitter_cards_page_url: '[current-page:url:absolute]'
+  twitter_cards_site: '@Limburgnet'
+  twitter_cards_site_id: '412976190'
+  twitter_cards_title: '[current-page:title] '
+  twitter_cards_type: summary_large_image

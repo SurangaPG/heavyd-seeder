@@ -1,0 +1,19 @@
+uuid: 14c82468-4119-4e57-add1-347aa9fbabb3
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_content
+    - node.type.tips
+id: node.tips.field_teaser_content
+field_name: field_teaser_content
+entity_type: node
+bundle: tips
+label: 'Teaser inhoud'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

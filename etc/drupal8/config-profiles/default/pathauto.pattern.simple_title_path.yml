@@ -1,0 +1,25 @@
+uuid: f047aa54-c775-49d0-a392-38012b0c5ed7
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: simple_title_path
+label: 'Simple title path (uses the transliterated label) '
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:root]/[node:title]'
+selection_criteria:
+  c83fc12a-d0b3-4357-882c-72b2cd29c1aa:
+    id: node_type
+    bundles:
+      page: page
+      container_page: container_page
+      dynamic_page: dynamic_page
+      technical_page: technical_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: c83fc12a-d0b3-4357-882c-72b2cd29c1aa
+selection_logic: and
+weight: -5
+relationships: {  }

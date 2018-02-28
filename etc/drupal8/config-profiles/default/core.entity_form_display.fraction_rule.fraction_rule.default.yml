@@ -1,0 +1,53 @@
+uuid: 62166eec-c854-40b4-b241-f544b2617f2c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.fraction_rule.fraction_rule.field_fraction
+    - field.field.fraction_rule.fraction_rule.field_material
+    - field.field.fraction_rule.fraction_rule.field_municipalities
+    - field.field.fraction_rule.fraction_rule.field_state
+    - field.field.fraction_rule.fraction_rule.field_usable
+  module:
+    - limnet_sorting_rules
+id: fraction_rule.fraction_rule.default
+targetEntityType: fraction_rule
+bundle: fraction_rule
+mode: default
+content:
+  field_fraction:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_material:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_municipalities:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_state:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_usable:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  langcode: true
+  name: true
+  user_id: true

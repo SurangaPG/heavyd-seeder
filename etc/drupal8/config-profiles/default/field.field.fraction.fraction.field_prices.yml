@@ -1,0 +1,26 @@
+uuid: c576c1ce-f41e-4012-80ac-b8e08f87d160
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.fraction.field_prices
+  module:
+    - limnet_sorting_rules
+id: fraction.fraction.field_prices
+field_name: field_prices
+entity_type: fraction
+bundle: fraction
+label: Prijzen
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:fraction_price'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

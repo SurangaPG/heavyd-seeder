@@ -1,0 +1,35 @@
+uuid: 8807f1d2-5133-4ac1-bc31-05a57ee50d32
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vue_component.field_title
+    - field.field.paragraph.vue_component.field_vue_component
+    - paragraphs.paragraphs_type.vue_component
+  module:
+    - limnet_vue
+id: paragraph.vue_component.default
+targetEntityType: paragraph
+bundle: vue_component
+mode: default
+content:
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_vue_component:
+    weight: 1
+    settings:
+      size: 128
+    third_party_settings: {  }
+    type: vue_component_widget
+    region: content
+hidden:
+  created: true
+  municipality_access: true
+  status: true
+  uid: true

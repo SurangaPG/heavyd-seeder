@@ -1,0 +1,68 @@
+uuid: fd4956ba-4a36-44ff-a71d-bc947c7fdc6f
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.news.field_date_from
+    - field.field.node.news.field_documents
+    - field.field.node.news.field_main_components
+    - field.field.node.news.field_social_share_description
+    - field.field.node.news.field_social_share_image
+    - field.field.node.news.field_tags
+    - field.field.node.news.field_teaser_content
+    - field.field.node.news.field_teaser_image
+    - field.field.node.news.field_teaser_title
+    - image.style.card_image
+    - node.type.news
+  module:
+    - datetime
+    - image
+    - user
+id: node.news.card
+targetEntityType: node
+bundle: news
+mode: card
+content:
+  field_date_from:
+    type: datetime_default
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      timezone_override: Europe/Brussels
+      format_type: short_date_only
+    third_party_settings: {  }
+  field_teaser_content:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_teaser_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: card_image
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_teaser_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_documents: true
+  field_main_components: true
+  field_municipalities: true
+  field_social_share_description: true
+  field_social_share_image: true
+  field_tags: true
+  langcode: true
+  links: true

@@ -1,4 +1,4 @@
-uuid: 96e23e36-e393-44c8-a525-418c6cbc46de
+uuid: 459007ff-1adb-4031-9a9c-c111be8b963e
 langcode: nl
 status: true
 dependencies:
@@ -9,12 +9,12 @@ _core:
 id: baseline_style_local_actions
 theme: baseline_style
 region: content
-weight: -20
+weight: -15
 provider: null
 plugin: local_actions_block
 settings:
   id: local_actions_block
-  label: 'Primary admin actions'
+  label: 'Primaire beheeracties'
   provider: core
   label_display: '0'
 visibility: {  }

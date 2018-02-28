@@ -1,0 +1,27 @@
+uuid: ed605004-f601-4d01-a321-dfdda5a9ec70
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.fraction.field_svg_icon
+  module:
+    - file
+    - limnet_sorting_rules
+id: fraction.fraction.field_svg_icon
+field_name: field_svg_icon
+entity_type: fraction
+bundle: fraction
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: generated/images/svg
+  file_extensions: svg
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

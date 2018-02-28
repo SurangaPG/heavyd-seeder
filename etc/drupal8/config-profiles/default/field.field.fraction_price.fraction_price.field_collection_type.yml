@@ -1,0 +1,23 @@
+uuid: 4cc7945c-79ee-4264-aabf-730b738999f9
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.fraction_price.field_collection_type
+  module:
+    - limnet_sorting_rules
+    - options
+id: fraction_price.fraction_price.field_collection_type
+field_name: field_collection_type
+entity_type: fraction_price
+bundle: fraction_price
+label: Inzameltype
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Huis aan huis'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,4 +1,4 @@
-uuid: 7b4e798e-3ab7-48d9-9d11-33d94e7bddfe
+uuid: 09a14348-fd22-4323-aac9-20d04853a7f6
 langcode: nl
 status: true
 dependencies:
@@ -13,7 +13,7 @@ id: node.page.body
 field_name: body
 entity_type: node
 bundle: page
-label: Body
+label: Inhoud
 description: ''
 required: false
 translatable: true

@@ -1,0 +1,10 @@
+uuid: 9061c6d2-13df-475d-a7eb-623a95f7e4fd
+langcode: nl
+status: true
+dependencies:
+  module:
+    - limnet_sorting_rules
+id: fraction_rule.overview
+label: overview
+targetEntityType: fraction_rule
+cache: true

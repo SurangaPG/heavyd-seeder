@@ -1,0 +1,19 @@
+uuid: 42c59c77-0213-4664-824a-0a43954f1906
+langcode: nl
+status: true
+dependencies:
+  module:
+    - icon_set
+    - paragraphs
+id: paragraph.field_icon
+field_name: field_icon
+entity_type: paragraph
+type: icon
+settings: {  }
+module: icon_set
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

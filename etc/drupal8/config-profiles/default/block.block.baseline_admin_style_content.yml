@@ -1,4 +1,4 @@
-uuid: fe45a4c6-76b5-47d6-b800-130e0e84e047
+uuid: 828a5027-938e-4aaf-8f7d-022b12075d9c
 langcode: nl
 status: true
 dependencies:
@@ -7,16 +7,16 @@ dependencies:
   theme:
     - baseline_admin_style
 _core:
-  default_config_hash: YRY68JWkaUiGeZlWMv1nzeIgDm0ZZwXYgpqUpLFzwAY
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
 id: baseline_admin_style_content
 theme: baseline_admin_style
 region: content
-weight: 0
+weight: -3
 provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'Main page content'
+  label: 'Primaire inhoud van de pagina'
   provider: system
   label_display: '0'
 visibility: {  }

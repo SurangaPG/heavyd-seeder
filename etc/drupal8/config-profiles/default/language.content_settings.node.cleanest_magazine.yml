@@ -1,0 +1,11 @@
+uuid: 9e40f11a-c7f4-4a75-ae29-d836c64a432a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.cleanest_magazine
+id: node.cleanest_magazine
+target_entity_type_id: node
+target_bundle: cleanest_magazine
+default_langcode: site_default
+language_alterable: false

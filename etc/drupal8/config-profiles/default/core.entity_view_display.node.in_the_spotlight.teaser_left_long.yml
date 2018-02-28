@@ -1,0 +1,66 @@
+uuid: 934915fa-d1ac-4542-9c2e-ff3edd486ac0
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_left_long
+    - field.field.node.in_the_spotlight.field_date_from
+    - field.field.node.in_the_spotlight.field_display_side_anchors
+    - field.field.node.in_the_spotlight.field_documents
+    - field.field.node.in_the_spotlight.field_intro_components
+    - field.field.node.in_the_spotlight.field_main_components
+    - field.field.node.in_the_spotlight.field_municipalities
+    - field.field.node.in_the_spotlight.field_teaser_content
+    - field.field.node.in_the_spotlight.field_teaser_image
+    - field.field.node.in_the_spotlight.field_teaser_title
+    - field.field.node.in_the_spotlight.field_url
+    - node.type.in_the_spotlight
+    - responsive_image.styles.teaser_left_image
+  module:
+    - link
+    - responsive_image
+    - user
+id: node.in_the_spotlight.teaser_left_long
+targetEntityType: node
+bundle: in_the_spotlight
+mode: teaser_left_long
+content:
+  field_teaser_image:
+    type: responsive_image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      responsive_image_style: teaser_left_image
+      image_link: ''
+    third_party_settings: {  }
+  field_teaser_title:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_url:
+    type: link
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings: {  }
+hidden:
+  field_date_from: true
+  field_display_side_anchors: true
+  field_documents: true
+  field_intro_components: true
+  field_main_components: true
+  field_municipalities: true
+  field_teaser_content: true
+  langcode: true
+  links: true

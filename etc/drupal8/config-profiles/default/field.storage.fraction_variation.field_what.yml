@@ -1,0 +1,21 @@
+uuid: f9fd9c21-bfed-4043-9c80-18f9090c1746
+langcode: nl
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - limnet_sorting_rules
+    - paragraphs
+id: fraction_variation.field_what
+field_name: field_what
+entity_type: fraction_variation
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,15 @@
+uuid: ff3ef348-2d2e-482a-89e3-bf7750abbf1e
+langcode: nl
+status: true
+dependencies: {  }
+name: paragraph_image_tablet_2x
+label: 'Paragraph image - Tablet (2x)'
+effects:
+  bb6dac90c0b8-4df2e2df-d7d9-4ebf-b051:
+    uuid: bb6dac90c0b8-4df2e2df-d7d9-4ebf-b051
+    id: image_scale
+    weight: 1
+    data:
+      width: 1500
+      height: null
+      upscale: false

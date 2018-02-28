@@ -1,0 +1,15 @@
+uuid: 553a4772-ecbb-40e3-9b19-7a8bc54e767c
+langcode: nl
+status: true
+dependencies: {  }
+name: card_image
+label: 'Card image'
+effects:
+  ebac644b-3b41-4bfc-ae4c-2886e791bb27:
+    uuid: ebac644b-3b41-4bfc-ae4c-2886e791bb27
+    id: image_scale
+    weight: 1
+    data:
+      width: 365
+      height: null
+      upscale: false

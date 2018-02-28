@@ -1,0 +1,19 @@
+uuid: d1d5fe3a-3976-4f72-b089-a514f26d7ed3
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.image_component
+id: paragraph.image_component.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: image_component
+label: Titel
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

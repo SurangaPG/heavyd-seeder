@@ -1,0 +1,9 @@
+uuid: 526f7f4b-ecf8-448b-aa6d-2f6c4f281d9e
+langcode: nl
+status: true
+dependencies: {  }
+id: image_component
+label: 'Image component'
+icon_uuid: null
+description: 'Simple image component with file upload and a title.'
+behavior_plugins: {  }

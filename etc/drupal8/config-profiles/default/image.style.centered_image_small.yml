@@ -1,0 +1,15 @@
+uuid: a498dd17-0cc3-43ed-b282-cc93a54169dd
+langcode: nl
+status: true
+dependencies: {  }
+name: centered_image_small
+label: 'Centered image - small'
+effects:
+  8f1bf844-834e-4729-bde0-8a323919f369:
+    uuid: 8f1bf844-834e-4729-bde0-8a323919f369
+    id: image_scale
+    weight: 1
+    data:
+      width: 85
+      height: 85
+      upscale: false

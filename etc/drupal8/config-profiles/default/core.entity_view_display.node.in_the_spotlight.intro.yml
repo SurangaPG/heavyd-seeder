@@ -1,0 +1,45 @@
+uuid: da1253a5-8261-4956-9f3b-96dbb4d54780
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.intro
+    - field.field.node.in_the_spotlight.field_date_from
+    - field.field.node.in_the_spotlight.field_display_side_anchors
+    - field.field.node.in_the_spotlight.field_documents
+    - field.field.node.in_the_spotlight.field_intro_components
+    - field.field.node.in_the_spotlight.field_main_components
+    - field.field.node.in_the_spotlight.field_municipalities
+    - field.field.node.in_the_spotlight.field_teaser_content
+    - field.field.node.in_the_spotlight.field_teaser_image
+    - field.field.node.in_the_spotlight.field_teaser_title
+    - node.type.in_the_spotlight
+  module:
+    - entity_reference_revisions
+    - user
+id: node.in_the_spotlight.intro
+targetEntityType: node
+bundle: in_the_spotlight
+mode: intro
+content:
+  field_intro_components:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  field_date_from: true
+  field_display_side_anchors: true
+  field_documents: true
+  field_main_components: true
+  field_municipalities: true
+  field_teaser_content: true
+  field_teaser_image: true
+  field_teaser_title: true
+  field_url: true
+  langcode: true
+  links: true

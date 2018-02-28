@@ -1,0 +1,11 @@
+uuid: 74ba6966-5212-4dbd-996f-987c1475e277
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.thrift_shop
+id: node.thrift_shop
+target_entity_type_id: node
+target_bundle: thrift_shop
+default_langcode: site_default
+language_alterable: false

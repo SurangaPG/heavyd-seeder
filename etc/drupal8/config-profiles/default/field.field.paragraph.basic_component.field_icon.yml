@@ -1,0 +1,21 @@
+uuid: aa9504da-6d47-4c2c-b280-674092b84b2e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon
+    - paragraphs.paragraphs_type.basic_component
+  module:
+    - icon_set
+id: paragraph.basic_component.field_icon
+field_name: field_icon
+entity_type: paragraph
+bundle: basic_component
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: icon

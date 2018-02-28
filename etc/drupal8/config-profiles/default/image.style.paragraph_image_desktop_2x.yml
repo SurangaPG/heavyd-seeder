@@ -1,0 +1,15 @@
+uuid: ebb04fe8-895b-4fae-aa8c-c92ff631cd26
+langcode: nl
+status: true
+dependencies: {  }
+name: paragraph_image_desktop_2x
+label: 'Paragraph image - Desktop (2x)'
+effects:
+  de93-4ff6-ad27-68cd9a01e0c8-aa551db0:
+    uuid: de93-4ff6-ad27-68cd9a01e0c8-aa551db0
+    id: image_scale
+    weight: 1
+    data:
+      width: 2520
+      height: null
+      upscale: false

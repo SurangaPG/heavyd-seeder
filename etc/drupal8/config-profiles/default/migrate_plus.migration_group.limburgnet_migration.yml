@@ -1,0 +1,17 @@
+uuid: 83c37736-3510-4353-a313-2995de38e8cb
+langcode: nl
+status: true
+dependencies:
+  enforced:
+    module:
+      - limburgnet_migration
+_core:
+  default_config_hash: UpJRizl-xLJWOLjb5te-bMt8XpPpfGU_ZkkyR3kTBac
+id: limburgnet_migration
+label: 'Limburgnet D6 migrations'
+description: 'Limburgnet D6 migrations'
+source_type: 'Drupal 6'
+module: null
+shared_configuration:
+  source:
+    key: d6

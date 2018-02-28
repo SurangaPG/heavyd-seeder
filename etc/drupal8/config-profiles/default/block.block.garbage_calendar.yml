@@ -1,0 +1,27 @@
+uuid: 6dc27947-1a7d-47cd-afe0-5759846d85fe
+langcode: nl
+status: true
+dependencies:
+  module:
+    - limnet_vue
+    - system
+  theme:
+    - baseline_style
+id: garbage_calendar
+theme: baseline_style
+region: content_right
+weight: 0
+provider: null
+plugin: 'vue_plugin_block:limnet-comp-afvalkalender-calendar-view'
+settings:
+  id: 'vue_plugin_block:limnet-comp-afvalkalender-calendar-view'
+  label: 'Afvalkalender: kalender'
+  provider: limnet_vue
+  label_display: '0'
+  props: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /kalender
+    negate: false
+    context_mapping: {  }

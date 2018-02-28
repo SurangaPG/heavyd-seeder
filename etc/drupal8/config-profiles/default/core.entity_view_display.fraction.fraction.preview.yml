@@ -1,0 +1,61 @@
+uuid: 19a49dfa-c25a-45ee-ba8d-31dc766a12d4
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.fraction.preview
+    - field.field.fraction.fraction.field_how
+    - field.field.fraction.fraction.field_municipalities
+    - field.field.fraction.fraction.field_prevention_tips
+    - field.field.fraction.fraction.field_prices
+    - field.field.fraction.fraction.field_svg_icon
+    - field.field.fraction.fraction.field_teaser_content
+    - field.field.fraction.fraction.field_teaser_title
+    - field.field.fraction.fraction.field_variations
+    - field.field.fraction.fraction.field_what
+    - field.field.fraction.fraction.field_what_happens
+    - field.field.fraction.fraction.field_where
+  module:
+    - baseline
+    - limnet_sorting_rules
+id: fraction.fraction.preview
+targetEntityType: fraction
+bundle: fraction
+mode: preview
+content:
+  field_svg_icon:
+    type: svg_image
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_teaser_content:
+    type: basic_string
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_teaser_title:
+    type: label_fallback
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: 0
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  cards_id: true
+  field_how: true
+  field_municipalities: true
+  field_prevention_tips: true
+  field_prices: true
+  field_variations: true
+  field_what: true
+  field_what_happens: true
+  field_where: true
+  langcode: true
+  name: true
+  user_id: true

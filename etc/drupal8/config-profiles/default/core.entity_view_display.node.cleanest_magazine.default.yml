@@ -1,0 +1,51 @@
+uuid: 92474f3e-32d5-4b98-8eb7-3d56070357d8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.cleanest_magazine.field_date_from
+    - field.field.node.cleanest_magazine.field_documents
+    - field.field.node.cleanest_magazine.field_magazine_cover
+    - node.type.cleanest_magazine
+  module:
+    - datetime
+    - file
+    - image
+    - user
+id: node.cleanest_magazine.default
+targetEntityType: node
+bundle: cleanest_magazine
+mode: default
+content:
+  field_date_from:
+    weight: 105
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_documents:
+    weight: 102
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_magazine_cover:
+    weight: 104
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

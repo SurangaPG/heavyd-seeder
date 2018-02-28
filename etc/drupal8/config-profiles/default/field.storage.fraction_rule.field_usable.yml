@@ -1,0 +1,30 @@
+uuid: de1a29d5-86b1-4735-9ff5-08d1a7222658
+langcode: nl
+status: true
+dependencies:
+  module:
+    - limnet_sorting_rules
+    - options
+id: fraction_rule.field_usable
+field_name: field_usable
+entity_type: fraction_rule
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'yes'
+      label: Ja
+    -
+      value: 'no'
+      label: Nee
+    -
+      value: na
+      label: 'Niet van toepassing'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

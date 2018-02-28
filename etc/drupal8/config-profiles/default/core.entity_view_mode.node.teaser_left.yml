@@ -1,0 +1,10 @@
+uuid: 8acb6374-19d2-4224-8eac-693cc7902e71
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser_left
+label: Teaser-left
+targetEntityType: node
+cache: true

@@ -1,0 +1,14 @@
+uuid: fc65df38-612a-43ff-962b-c9e92f2653e1
+langcode: nl
+status: true
+dependencies: {  }
+name: portrait_desktop
+label: 'Portrait - desktop'
+effects:
+  1f2e4276-2545-48c9-912e-5c34bafd0372:
+    uuid: 1f2e4276-2545-48c9-912e-5c34bafd0372
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 230
+      height: 420

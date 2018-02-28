@@ -1,0 +1,32 @@
+uuid: fc64ef3a-1d7f-4255-a53f-8c05f837e98e
+langcode: nl
+status: true
+dependencies:
+  module:
+    - baseline
+    - ctools
+  theme:
+    - baseline_style
+id: anchor_links
+theme: baseline_style
+region: content_aside
+weight: -16
+provider: null
+plugin: conditional_node_display_block
+settings:
+  id: conditional_node_display_block
+  label: 'Anchor links (conditional)'
+  provider: baseline
+  label_display: '0'
+  valid_fields:
+    field_display_side_anchors: field_display_side_anchors
+  display_mode: anchors
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      dynamic_page: dynamic_page
+      in_the_spotlight: in_the_spotlight
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

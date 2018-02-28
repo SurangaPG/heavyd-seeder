@@ -1,0 +1,11 @@
+baseline_toolbar.node.add_page:
+  route_name: node.add_page
+  title: 'Add content'
+  appears_on:
+    - view.toolbar_pages.main
+
+baseline.municipality.taxonomy_term.add_form:
+  route_name: baseline.entity.taxonomy_term.add_form
+  title: 'Add term'
+  appears_on:
+    - baseline.entity.taxonomy_vocabulary.overview_form

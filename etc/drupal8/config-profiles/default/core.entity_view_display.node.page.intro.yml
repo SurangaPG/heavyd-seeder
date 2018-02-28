@@ -1,0 +1,25 @@
+uuid: d07ed0a3-b957-485f-bf91-2124ecf6d8ca
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.intro
+    - field.field.node.page.body
+    - field.field.node.page.field_social_share_description
+    - field.field.node.page.field_social_share_image
+    - node.type.page
+  module:
+    - user
+_core:
+  default_config_hash: oZ-7vpIJxjxL2up9B5KrJGD0lazQ9aN0P-fIPo6OrSU
+id: node.page.intro
+targetEntityType: node
+bundle: page
+mode: intro
+content: {  }
+hidden:
+  body: true
+  field_social_share_description: true
+  field_social_share_image: true
+  langcode: true
+  links: true

@@ -1,0 +1,11 @@
+uuid: 27fca7c7-d6e3-4bbf-839b-8b4b812ee7eb
+langcode: nl
+status: true
+dependencies:
+  config:
+    - block_content.type.back_link
+id: block_content.back_link
+target_entity_type_id: block_content
+target_bundle: back_link
+default_langcode: site_default
+language_alterable: false

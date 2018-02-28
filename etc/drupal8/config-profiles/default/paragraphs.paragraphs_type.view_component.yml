@@ -1,0 +1,9 @@
+uuid: 92c2c660-f998-4351-b03e-d5ea83ac5383
+langcode: nl
+status: true
+dependencies: {  }
+id: view_component
+label: 'View component'
+icon_uuid: null
+description: 'Embed a list of other pieces of content, such as news items etc.'
+behavior_plugins: {  }

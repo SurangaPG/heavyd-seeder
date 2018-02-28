@@ -1,0 +1,19 @@
+uuid: e691e3a9-bee2-4c55-8616-4d7789e05f3f
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_title
+    - node.type.in_the_spotlight
+id: node.in_the_spotlight.field_teaser_title
+field_name: field_teaser_title
+entity_type: node
+bundle: in_the_spotlight
+label: 'Teaser titel'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,244 @@
+uuid: ccc88ad7-c262-40a1-9c77-76325bae7364
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.node.dynamic_page.field_display_side_anchors
+    - field.field.node.dynamic_page.field_intro_components
+    - field.field.node.dynamic_page.field_main_components
+    - field.field.node.dynamic_page.field_side_links
+    - field.field.node.dynamic_page.field_social_share_description
+    - field.field.node.dynamic_page.field_social_share_image
+    - field.field.node.dynamic_page.field_tags
+    - field.field.node.dynamic_page.field_teaser_list
+    - field.field.node.dynamic_page.field_teaser_title
+    - image.style.thumbnail
+    - node.type.dynamic_page
+  module:
+    - field_group
+    - image
+    - link
+    - paragraphs
+    - path
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_wrapper:
+      children:
+        - group_general
+        - group_intro
+        - group_main
+        - group_teaser
+        - group_social_media
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: wrapper
+    group_general:
+      children:
+        - title
+        - field_display_side_anchors
+        - field_side_links
+        - field_tags
+      parent_name: group_wrapper
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: General
+    group_main:
+      children:
+        - field_main_components
+      parent_name: group_wrapper
+      weight: 22
+      format_type: tab
+      format_settings:
+        label: Inhoud
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Inhoud
+    group_social_media:
+      children:
+        - field_social_share_image
+        - field_social_share_description
+      parent_name: group_wrapper
+      weight: 24
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Social media'
+    group_teaser:
+      children:
+        - field_teaser_title
+        - field_teaser_list
+      parent_name: group_wrapper
+      weight: 23
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Teaser
+    group_intro:
+      children:
+        - field_intro_components
+      parent_name: group_wrapper
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Intro
+id: node.dynamic_page.default
+targetEntityType: node
+bundle: dynamic_page
+mode: default
+content:
+  field_display_side_anchors:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_intro_components:
+    type: entity_reference_paragraphs
+    weight: 123
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_main_components:
+    type: entity_reference_paragraphs
+    weight: 124
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_side_links:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_social_share_description:
+    weight: 126
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_social_share_image:
+    weight: 125
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_tags:
+    type: entity_reference_autocomplete_tags
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_teaser_list:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_teaser_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 1
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+hidden:
+  created: true
+  langcode: true
+  promote: true
+  sticky: true
+  uid: true

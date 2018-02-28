@@ -1,0 +1,17 @@
+uuid: 30e0fdd7-dac1-41e0-9eb1-67eefa5cb64d
+langcode: nl
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_img_top_mobile
+label: 'Teaser img top - mobile'
+effects:
+  e8046671-308e-44ca-b409-f30b8686c7b5:
+    uuid: e8046671-308e-44ca-b409-f30b8686c7b5
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 230
+      height: 180
+      crop_type: focal_point

@@ -1,0 +1,29 @@
+uuid: c114aca6-dc98-4a68-a07a-94286f99f782
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_municipalities
+    - node.type.in_the_spotlight
+    - taxonomy.vocabulary.municipality
+id: node.in_the_spotlight.field_municipalities
+field_name: field_municipalities
+entity_type: node
+bundle: in_the_spotlight
+label: Gemeentes
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      municipality: municipality
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

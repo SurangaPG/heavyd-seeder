@@ -1,0 +1,26 @@
+uuid: b8c00a36-6b28-4050-a28c-2d2079face23
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.fraction.field_variations
+  module:
+    - limnet_sorting_rules
+id: fraction.fraction.field_variations
+field_name: field_variations
+entity_type: fraction
+bundle: fraction
+label: Variaties
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:fraction_variation'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

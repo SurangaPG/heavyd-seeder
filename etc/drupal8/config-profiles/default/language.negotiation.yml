@@ -3,7 +3,7 @@ session:
 url:
   source: path_prefix
   prefixes:
-    nl: ''
+    nl: nl
   domains:
     nl: ''
 selected_langcode: site_default

@@ -1,4 +1,4 @@
-uuid: 1be73fec-c2bf-46a8-986d-3a827b680329
+uuid: b7ec5f70-08f0-4ed9-8f3d-93b3fd4a46cf
 langcode: nl
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: baseline_style_help
 theme: baseline_style
 region: content
-weight: -30
+weight: -17
 provider: null
 plugin: help_block
 settings:

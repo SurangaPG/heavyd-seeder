@@ -1,0 +1,15 @@
+uuid: 39eb0df3-f276-4b8b-81f5-088e420e2cbb
+langcode: nl
+status: true
+dependencies: {  }
+name: paragraph_image_mobile
+label: 'Paragraph image - Mobile'
+effects:
+  d8f7976f-7d77-4e7b-ab64-5fe7c2976af5:
+    uuid: d8f7976f-7d77-4e7b-ab64-5fe7c2976af5
+    id: image_scale
+    weight: 1
+    data:
+      width: 550
+      height: null
+      upscale: false

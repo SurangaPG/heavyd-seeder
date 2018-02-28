@@ -1,0 +1,20 @@
+uuid: 63b16299-1d8c-46ac-9c12-4b0fb30dd346
+langcode: nl
+status: true
+dependencies:
+  module:
+    - limnet_core
+  theme:
+    - baseline_style
+id: municipality_switch_block
+theme: baseline_style
+region: header_location
+weight: 0
+provider: null
+plugin: municipality_switch_block
+settings:
+  id: municipality_switch_block
+  label: 'Municipality Switch block'
+  provider: limnet_core
+  label_display: '0'
+visibility: {  }

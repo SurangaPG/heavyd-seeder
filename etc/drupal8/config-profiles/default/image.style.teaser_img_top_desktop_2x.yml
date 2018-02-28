@@ -1,0 +1,17 @@
+uuid: edf704b6-9fca-4449-b12c-5f6a903fcbe6
+langcode: nl
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaser_img_top_desktop_2x
+label: 'Teaser img top - desktop (2x)'
+effects:
+  5f051a3e13d7-0551fcec-251d-4cea-a55e:
+    uuid: 5f051a3e13d7-0551fcec-251d-4cea-a55e
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 832
+      height: 470
+      crop_type: focal_point

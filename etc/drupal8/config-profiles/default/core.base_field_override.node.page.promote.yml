@@ -1,4 +1,4 @@
-uuid: 0154ce34-5a98-4de0-889e-e7c06bad4570
+uuid: dede5621-1612-486e-86c4-c97e90cb0223
 langcode: nl
 status: true
 dependencies:
@@ -10,7 +10,7 @@ id: node.page.promote
 field_name: promote
 entity_type: node
 bundle: page
-label: 'Promoted to front page'
+label: 'Aangeraden op de voorpagina'
 description: ''
 required: false
 translatable: false
@@ -19,6 +19,6 @@ default_value:
     value: 0
 default_value_callback: ''
 settings:
-  on_label: 'On'
-  off_label: 'Off'
+  on_label: Aan
+  off_label: Uit
 field_type: boolean

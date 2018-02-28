@@ -1,15 +1,18 @@
-uuid: ae31e99c-9b1b-43c4-83d0-2b646600e464
+uuid: e4544385-bef0-47a2-be1d-f05acb5fdbfb
 langcode: nl
 status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_social_share_description
+    - field.field.node.page.field_social_share_image
     - node.type.page
   module:
+    - image
     - text
     - user
 _core:
-  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
+  default_config_hash: oZ-7vpIJxjxL2up9B5KrJGD0lazQ9aN0P-fIPo6OrSU
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -19,11 +22,29 @@ content:
     label: hidden
     type: text_default
     weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_social_share_description:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_social_share_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   links:
     weight: 101
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true

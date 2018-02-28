@@ -1,0 +1,34 @@
+uuid: c3578a3b-bbf1-482a-bfb2-0c4f646d18b9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - limburgnet_migration
+_core:
+  default_config_hash: ktP_wcokRrrOZ-1EyXB539xCQMU6uwIY_dXJH5-kJ7o
+id: limburgnet_fraction_variation_paragraphs_wat
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - SQL
+  - Limburgnet
+  - Migration
+  - Fraction
+  - Tips
+  - Variation
+migration_group: limburgnet_migration
+label: 'Fraction prices paragraphs SORT_WAT'
+source:
+  plugin: limburgnet_fraction_variation_paragraph
+  field_name: sort_wat
+process:
+  field_content/value: sort_wat
+  field_content/format:
+    plugin: default_value
+    default_value: basic_html
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: basic_component
+migration_dependencies: null

@@ -1,0 +1,22 @@
+uuid: 23606683-ff14-4972-88da-b74b7d3d944c
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: in_the_spotlight_item_patroon
+label: 'In de kijker item patroon'
+type: 'canonical_entities:node'
+pattern: 'in-de-kijker/[node:title]'
+selection_criteria:
+  e0e1394d-13bb-41a5-841e-158cf446f13b:
+    id: node_type
+    bundles:
+      in_the_spotlight: in_the_spotlight
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e0e1394d-13bb-41a5-841e-158cf446f13b
+selection_logic: and
+weight: -5
+relationships: {  }

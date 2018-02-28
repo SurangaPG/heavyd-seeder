@@ -1,0 +1,30 @@
+uuid: 78c40c0a-8383-4f8c-a190-5d9f45086ab6
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.fraction_price.field_municipalities
+    - taxonomy.vocabulary.municipality
+  module:
+    - limnet_sorting_rules
+id: fraction_price.fraction_price.field_municipalities
+field_name: field_municipalities
+entity_type: fraction_price
+bundle: fraction_price
+label: Gemeenten
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      municipality: municipality
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

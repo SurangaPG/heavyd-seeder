@@ -1,0 +1,27 @@
+uuid: d24b28e5-8f48-4079-88ee-ce58af568665
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documents
+    - node.type.cleanest_magazine
+  module:
+    - file
+id: node.cleanest_magazine.field_documents
+field_name: field_documents
+entity_type: node
+bundle: cleanest_magazine
+label: Document
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: generated/documents/magazine
+  file_extensions: pdf
+  max_filesize: '20 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

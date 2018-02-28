@@ -1,0 +1,9 @@
+uuid: 6200f163-4fb7-4eed-a834-4904441a0942
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
+id: node
+label: Inhoud
+tags: {  }

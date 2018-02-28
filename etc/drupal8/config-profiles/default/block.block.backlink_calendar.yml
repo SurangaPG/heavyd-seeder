@@ -1,0 +1,29 @@
+uuid: e9a3e458-643b-4f04-9d85-956d54cef8be
+langcode: nl
+status: true
+dependencies:
+  module:
+    - baseline
+    - ctools
+  theme:
+    - baseline_style
+id: backlink_calendar
+theme: baseline_style
+region: content_highlighted
+weight: -16
+provider: null
+plugin: calendar_back_block
+settings:
+  id: calendar_back_block
+  label: 'Backlink (calendar)'
+  provider: baseline
+  label_display: '0'
+  display_mode: null
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      calendar: calendar
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

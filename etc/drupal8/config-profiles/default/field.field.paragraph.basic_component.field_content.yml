@@ -1,0 +1,21 @@
+uuid: c5a66702-260f-46e8-85e1-74f3025ed3aa
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.basic_component
+  module:
+    - text
+id: paragraph.basic_component.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: basic_component
+label: Inhoud
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

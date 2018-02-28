@@ -1,0 +1,26 @@
+uuid: cd2d5182-d3d3-4b62-ab19-1a3e78700e41
+langcode: nl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.anchor_link
+    - field.field.paragraph.view_component.field_title
+    - field.field.paragraph.view_component.field_views_ref
+    - paragraphs.paragraphs_type.view_component
+  module:
+    - baseline
+id: paragraph.view_component.anchor_link
+targetEntityType: paragraph
+bundle: view_component
+mode: anchor_link
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: anchor_link
+    region: content
+hidden:
+  field_views_ref: true
