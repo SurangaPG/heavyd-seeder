@@ -1,13 +1,11 @@
-uuid: 03124dfe-3f8c-4bf4-838d-8b536f08f0a8
+uuid: 7845626f-3f0f-4e06-901a-31bdcbe69e16
 langcode: nl
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: jonvgt3CkUM2eMLTFwWfHileWWDC4YtXCuIlCahTk_I
 id: personal
-label: 'Persoonlijk contactformulier'
+label: 'Personal contact form'
 recipients: {  }
 reply: ''
 weight: 0
-message: 'Uw bericht is verzonden.'
+message: 'Your message has been sent.'
 redirect: ''

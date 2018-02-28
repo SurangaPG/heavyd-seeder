@@ -1,4 +1,4 @@
-uuid: f87e0d77-c67a-4b1d-9b8f-3dcbdee7e667
+uuid: d31a4eb1-17eb-4a29-9a7d-e52d2868536f
 langcode: nl
 status: true
 dependencies:
@@ -9,8 +9,6 @@ dependencies:
   module:
     - image
     - user
-_core:
-  default_config_hash: C3k_McOy8bL8rTnIjspy5OfFdgqV1z6OdGZaI-tO5eM
 id: user.user.compact
 targetEntityType: user
 bundle: user
@@ -19,12 +17,12 @@ content:
   user_picture:
     type: image
     weight: 0
+    region: content
     settings:
       image_style: thumbnail
       image_link: content
     third_party_settings: {  }
     label: hidden
-    region: content
 hidden:
   langcode: true
   member_for: true

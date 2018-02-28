@@ -1,12 +1,10 @@
-uuid: 97484718-dfc4-4447-9f6d-3431fb6f5c61
+uuid: f48ae6a0-0a35-4da7-9111-92ce7623560c
 langcode: nl
 status: false
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: fVFfJv_GzBRE-wpRHbfD5a3VjnhbEOXG6lvRd3uaccY
 id: node.search_index
-label: Zoekindex
+label: 'Search index'
 targetEntityType: node
 cache: true

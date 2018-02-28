@@ -1,11 +1,9 @@
-uuid: e49a31ec-5b3a-4922-8e48-8e990e0d256b
+uuid: cc33cfd7-4dc3-46be-9055-59a3b3411fd4
 langcode: nl
 status: true
 dependencies:
   theme:
     - baseline_admin_style
-_core:
-  default_config_hash: QeZBeCilQfeET3GeW6ZtJkEiwROADTZktFgKWwPieD4
 id: baseline_admin_style_secondary_local_tasks
 theme: baseline_admin_style
 region: pre_content

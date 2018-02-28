@@ -1,11 +1,9 @@
-uuid: adc2b4b9-bb08-4b3f-ab9b-5e30e97d9367
+uuid: 9e6d2eb3-c5ec-40e3-a7f5-7d48be4d3d93
 langcode: nl
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: lO5ziR5dVI1PpEeHZsSOfQ-Y7NWihSDKW8-MMf6uoms
-name: Labels
+name: Tags
 vid: tags
-description: 'Gebruik tags om artikelen over vergelijkbare onderwerpen in categorieën te groeperen.'
+description: 'Use tags to group articles on similar topics into categories.'
 hierarchy: 0
 weight: 0

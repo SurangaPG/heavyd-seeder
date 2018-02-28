@@ -1,4 +1,4 @@
-uuid: b7ec5f70-08f0-4ed9-8f3d-93b3fd4a46cf
+uuid: b50d3da3-6b09-4077-bd77-eb47fd8e1da2
 langcode: nl
 status: true
 dependencies:
@@ -6,12 +6,10 @@ dependencies:
     - help
   theme:
     - baseline_style
-_core:
-  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
 id: baseline_style_help
 theme: baseline_style
 region: content
-weight: -17
+weight: -30
 provider: null
 plugin: help_block
 settings:

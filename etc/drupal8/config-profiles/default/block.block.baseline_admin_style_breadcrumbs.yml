@@ -1,4 +1,4 @@
-uuid: 1143a76b-7e2d-4ec0-9b56-8affe1e4a2dd
+uuid: e176b006-d3cc-4eec-8641-5ef1ed499d1c
 langcode: nl
 status: true
 dependencies:
@@ -6,8 +6,6 @@ dependencies:
     - system
   theme:
     - baseline_admin_style
-_core:
-  default_config_hash: WWu2OQswgCztl9OeXjD1stexIEMZsSgPMYIdC-JHx9c
 id: baseline_admin_style_breadcrumbs
 theme: baseline_admin_style
 region: breadcrumb

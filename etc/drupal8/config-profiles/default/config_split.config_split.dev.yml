@@ -6,6 +6,7 @@ id: dev
 label: dev
 folder: ../etc/sites/default/stages/dev/config
 module:
+  twig_xdebug: 0
   stage_file_proxy: 0
 theme: {  }
 blacklist: {  }

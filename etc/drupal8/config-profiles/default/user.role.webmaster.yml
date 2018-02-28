@@ -1,4 +1,4 @@
-uuid: 10f4e035-7e9d-48cc-831d-38b0077151ed
+uuid: dbb3593f-b5ba-4604-a48a-6b7f303b7018
 langcode: nl
 status: true
 dependencies: {  }
@@ -8,28 +8,6 @@ weight: 3
 is_admin: null
 permissions:
   - 'access content overview'
-  - 'access toolbar'
-  - 'administer menu'
-  - 'administer menu attributes'
   - 'administer nodes'
-  - 'administer redirects'
-  - 'administer taxonomy'
-  - 'delete terms in municipality'
-  - 'delete terms in municipality'
-  - 'edit any technical_page content'
-  - 'edit own technical_page content'
-  - 'edit terms in municipality'
-  - 'rabbit hole bypass node'
-  - 'schedule publishing of nodes'
-  - 'update any back_link block content'
-  - 'update any basic block content'
-  - 'update any button block content'
-  - 'update any call_to_action_block block content'
-  - 'update any link block content'
-  - 'update fraction_queue entityqueue'
-  - 'use baseline toolbar tray'
-  - 'use text format full_html'
-  - 'use text format restricted_html'
-  - 'view any unpublished content'
-  - 'view scheduled content'
-  - 'view the administration theme'
+  - 'bypass node access'
+  - 'create url aliases'

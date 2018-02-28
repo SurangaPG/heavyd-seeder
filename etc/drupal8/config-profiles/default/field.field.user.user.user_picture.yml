@@ -1,4 +1,4 @@
-uuid: 3bd98585-fab9-447c-afbe-ef6bbc181b42
+uuid: 454e063c-232e-4e03-bd34-8dab82165af8
 langcode: nl
 status: true
 dependencies:
@@ -7,25 +7,23 @@ dependencies:
   module:
     - image
     - user
-_core:
-  default_config_hash: cL7i1kgJvlJa6H00f0E_fZ2KdD1ag0ASpLts0K-KNII
 id: user.user.user_picture
 field_name: user_picture
 entity_type: user
 bundle: user
-label: Afbeelding
-description: 'Uw foto of afbeelding.'
+label: Picture
+description: 'Your virtual face or picture.'
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   file_extensions: 'png gif jpg jpeg'
-  file_directory: generated/user/image
-  max_filesize: '30 KB'
+  file_directory: 'pictures/[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
   alt_field: false
   title_field: false
-  max_resolution: 85x85
+  max_resolution: ''
   min_resolution: ''
   default_image:
     uuid: null

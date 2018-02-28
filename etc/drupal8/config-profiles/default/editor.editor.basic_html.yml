@@ -1,4 +1,4 @@
-uuid: aaa5ed25-f6f9-49d8-9a4f-9254c772d45c
+uuid: b05839dd-09f5-4527-ba00-cf8b5a9ef0dd
 langcode: nl
 status: true
 dependencies:
@@ -6,8 +6,6 @@ dependencies:
     - filter.format.basic_html
   module:
     - ckeditor
-_core:
-  default_config_hash: AqlPmO16LvJI4D0Ih6u4GFQIzqr5OnLgAUSjcUGWk2g
 format: basic_html
 editor: ckeditor
 settings:

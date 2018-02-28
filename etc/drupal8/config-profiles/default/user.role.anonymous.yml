@@ -1,11 +1,11 @@
-uuid: c3078778-aacc-4b29-93d7-ede4379c55fc
+uuid: 41dc5d2b-ce6d-4277-836d-ec9181140021
 langcode: nl
 status: true
 dependencies: {  }
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
-label: 'Anonieme gebruiker'
+label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
@@ -14,10 +14,3 @@ permissions:
   - 'access site-wide contact form'
   - 'search content'
   - 'use text format restricted_html'
-  - 'view paragraph content basic_component'
-  - 'view paragraph content block_component'
-  - 'view paragraph content image_component'
-  - 'view paragraph content row_component'
-  - 'view paragraph content video_component'
-  - 'view paragraph content view_component'
-  - 'view paragraph content vue_component'

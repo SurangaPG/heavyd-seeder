@@ -1,12 +1,10 @@
-uuid: 63b9af30-a4a9-4d85-8ea5-5bfef44a9e0b
+uuid: 54feb3f8-1f66-46ce-bf80-fe24f3b604ab
 langcode: nl
 status: false
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: ElrtInxGjZd7GaapJ5O9n-ugi2hG2IxFivtgn0tHOsk
 id: node.full
-label: 'Volledige inhoud'
+label: 'Full content'
 targetEntityType: node
 cache: true

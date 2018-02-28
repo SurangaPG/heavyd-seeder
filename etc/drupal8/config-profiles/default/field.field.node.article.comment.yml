@@ -1,4 +1,4 @@
-uuid: 5e0ffed0-730f-4bfc-b2a2-837ae9f6396a
+uuid: 164809d1-50fd-4287-925c-101a843d5a7a
 langcode: nl
 status: true
 dependencies:
@@ -7,8 +7,6 @@ dependencies:
     - node.type.article
   module:
     - comment
-_core:
-  default_config_hash: szSOp-8eNsMcuh8usDre1x76RhDKaPhNUuwzRX5cgv4
 id: node.article.comment
 field_name: comment
 entity_type: node

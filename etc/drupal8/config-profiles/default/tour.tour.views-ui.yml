@@ -1,13 +1,11 @@
-uuid: 47419ac0-f4ef-4bd4-93d2-5c3cf186cd08
+uuid: 7592c07b-9613-44b0-b453-ea1f685505cf
 langcode: nl
 status: true
 dependencies:
   module:
     - views_ui
-_core:
-  default_config_hash: c-HMyZwgeP8H6AITDcq4hznePkd7azpe8xl_WTnx2O0
 id: views-ui
-label: 'De bewerkpagina bekijken'
+label: 'View edit page'
 module: views_ui
 routes:
   -
@@ -18,22 +16,22 @@ tips:
   views-main:
     id: views-main
     plugin: text
-    label: 'Overzichtinstellingen beheren'
-    body: 'De configuratie bekijken of bewerken.'
+    label: 'Manage view settings'
+    body: 'View or edit the configuration.'
     weight: 1
   views-ui-displays:
     id: views-ui-displays
     plugin: text
-    label: 'Wordt in dit overzicht weergegeven'
-    body: 'Een weergave is een manier om de resultaten te tonen bijvoorbeeld als een pagina of een blok. Een overzicht kan meerdere weergaven bevatten die hier worden getoond. De actieve weergave is gemarkeerd.'
+    label: 'Displays in this view'
+    body: 'A display is a way of outputting the results, e.g., as a page or a block. A view can contain multiple displays, which are listed here. The active display is highlighted.'
     weight: 2
     attributes:
       data-id: views-display-top
   views-ui-view-admin:
     id: views-ui-view-admin
     plugin: text
-    label: Overzichtbeheer
-    body: 'Voer beheertaken uit, inclusief het toevoegen van een beschrijving en het aanmaken van een duplicaat. Klik op de keuzelijst om de beschikbare opties te zien.'
+    label: 'View administration'
+    body: 'Perform administrative tasks, including adding a description and creating a clone. Click the drop-down button to view the available options.'
     weight: 3
     location: left
     attributes:
@@ -41,56 +39,56 @@ tips:
   views-ui-format:
     id: views-ui-format
     plugin: text
-    label: Weergaveformaat
-    body: 'Kies hoe resultaten uitgevoerd worden. Kies bijvoorbeeld <em>Inhoud</em> om elk item volledig uit te voeren volgens de daarvoor ingestelde weergave. Of kies <em>Velden</em>, om specifieke velden voor elk resultaat weer te geven. Aanvullende formaten kunnen toegevoegd worden door modules te installeren die de basisfunctionaliteit van Drupal <em>uitbreiden</em>.'
+    label: 'Output format'
+    body: 'Choose how to output results. E.g., choose <em>Content</em> to output each item completely, using your configured display settings. Or choose <em>Fields</em>, which allows you to output only specific fields for each result. Additional formats can be added by installing modules to <em>extend</em> Drupal''s base functionality.'
     weight: 4
     attributes:
       data-class: views-ui-display-tab-bucket.format
   views-ui-fields:
     id: views-ui-fields
     plugin: text
-    label: Velden
-    body: 'Als dit overzicht velden gebruikt, worden ze hier weergegeven. U kunt op een veld klikken om het te configureren.'
+    label: Fields
+    body: 'If this view uses fields, they are listed here. You can click on a field to configure it.'
     weight: 5
     attributes:
       data-class: views-ui-display-tab-bucket.field
   views-ui-filter:
     id: views-ui-filter
     plugin: text
-    label: 'Filter het overzicht'
-    body: 'Voeg filters toe om het aantal getoonde resultaten te beperken. Bijvoorbeeld een filter voor <em>Gepubliceerd</em> en selecteer vervolgens <em>Ja</em> om alleen <em>gepubliceerde</em> content te tonen.'
+    label: 'Filter your view'
+    body: 'Add filters to limit the results in the output. E.g., to only show content that is <em>published</em>, you would add a filter for <em>Published</em> and select <em>Yes</em>.'
     weight: 6
     attributes:
       data-class: views-ui-display-tab-bucket.filter
   views-ui-filter-operations:
     id: views-ui-filter-operations
     plugin: text
-    label: Filteracties
-    body: 'Filters toevoegen, herschikken of verwijderen.'
+    label: 'Filter actions'
+    body: 'Add, rearrange or remove filters.'
     weight: 7
     attributes:
       data-class: 'views-ui-display-tab-bucket.filter .dropbutton-widget'
   views-ui-sorts:
     id: views-ui-sorts
     plugin: text
-    label: Sorteercriteria
-    body: 'Beheer de volgorde waarop de resultaten getoond moeten worden. Klik op een actieve sorteer-regel om deze in te stellen.'
+    label: 'Sort Criteria'
+    body: 'Control the order in which the results are output. Click on an active sort rule to configure it.'
     weight: 8
     attributes:
       data-class: views-ui-display-tab-bucket.sort
   views-ui-sorts-operations:
     id: views-ui-sorts-operations
     plugin: text
-    label: 'Acties sorteren'
-    body: 'Sorteerregels toevoegen, herschikken of verwijderen.'
+    label: 'Sort actions'
+    body: 'Add, rearrange or remove sorting rules.'
     weight: 9
     attributes:
       data-class: 'views-ui-display-tab-bucket.sort .dropbutton-widget'
   views-ui-preview:
     id: views-ui-preview
     plugin: text
-    label: Voorbeeldweergave
-    body: 'Een voorbeeld van de overzichts-output weergeven.'
+    label: Preview
+    body: 'Show a preview of the view output.'
     weight: 10
     location: left
     attributes:

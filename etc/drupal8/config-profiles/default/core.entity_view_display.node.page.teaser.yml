@@ -1,4 +1,4 @@
-uuid: bcd54ffa-90a4-4cab-9465-a4df1f1bf5b9
+uuid: bc835adc-98f2-432e-a163-cb9c8d05d3a1
 langcode: nl
 status: true
 dependencies:
@@ -9,8 +9,6 @@ dependencies:
   module:
     - text
     - user
-_core:
-  default_config_hash: rN2zrScZAJ9xB16hm_Deb9QJKy6JXnn0PdI2n5Z3KRs
 id: node.page.teaser
 targetEntityType: node
 bundle: page
@@ -20,15 +18,12 @@ content:
     label: hidden
     type: text_summary_or_trimmed
     weight: 100
+    region: content
     settings:
       trim_length: 600
     third_party_settings: {  }
-    region: content
   links:
     weight: 101
     region: content
 hidden:
-  field_social_share_description: true
-  field_social_share_image: true
-  field_temp: true
   langcode: true

@@ -1,4 +1,4 @@
-uuid: 09a14348-fd22-4323-aac9-20d04853a7f6
+uuid: e88e497f-fe00-47cd-924f-de022f1c1615
 langcode: nl
 status: true
 dependencies:
@@ -7,13 +7,11 @@ dependencies:
     - node.type.page
   module:
     - text
-_core:
-  default_config_hash: rUop-8b6hvxxDYbv-KobTfNIBNbPY9qOPl8f6kBNSpw
 id: node.page.body
 field_name: body
 entity_type: node
 bundle: page
-label: Inhoud
+label: Body
 description: ''
 required: false
 translatable: true

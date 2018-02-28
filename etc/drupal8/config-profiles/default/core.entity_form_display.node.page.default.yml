@@ -1,77 +1,13 @@
-uuid: 9eb1dd2a-d719-44f6-a0c2-7ec60936cd45
+uuid: 8c1bbcda-dec1-450e-acc3-c5ca7ec27510
 langcode: nl
 status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_social_share_description
-    - field.field.node.page.field_social_share_image
-    - image.style.thumbnail
     - node.type.page
   module:
-    - field_group
-    - image
     - path
-    - scheduler
     - text
-third_party_settings:
-  field_group:
-    group_wrapper:
-      children:
-        - group_general
-        - group_content
-        - group_social_media
-      parent_name: ''
-      weight: 0
-      format_type: tabs
-      format_settings:
-        id: ''
-        classes: ''
-        direction: horizontal
-      label: Wrapper
-    group_general:
-      children:
-        - title
-        - status
-      parent_name: group_wrapper
-      weight: 1
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: General
-    group_social_media:
-      children:
-        - field_social_share_image
-        - field_social_share_description
-      parent_name: group_wrapper
-      weight: 3
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: 'Social media'
-    group_content:
-      children:
-        - body
-      parent_name: group_wrapper
-      weight: 2
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: Inhoud
-_core:
-  default_config_hash: KSvzyFhdLuxniTsunUnUfpfMmod2l57GibtVjL8ymHM
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -79,68 +15,68 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 1
+    weight: 31
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
     region: content
-  field_social_share_description:
-    weight: 122
-    settings:
-      rows: 5
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: text_textarea
+  langcode:
+    type: language_select
+    weight: 2
     region: content
-  field_social_share_image:
-    weight: 121
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      include_locked: true
     third_party_settings: {  }
-    type: image_image
-    region: content
   path:
     type: path
-    weight: 3
+    weight: 30
+    region: content
     settings: {  }
     third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
     region: content
-  publish_on:
-    type: datetime_timestamp_no_default
-    weight: 4
-    region: content
-    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 1
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
-  unpublish_on:
-    type: datetime_timestamp_no_default
+  uid:
+    type: entity_reference_autocomplete
     weight: 5
     region: content
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-  url_redirects:
-    weight: 50
-    region: content
-hidden:
-  created: true
-  langcode: true
-  promote: true
-  sticky: true
-  uid: true
+hidden: {  }

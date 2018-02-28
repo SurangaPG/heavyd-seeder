@@ -1,13 +1,11 @@
-uuid: 4202e523-c180-4cab-a61a-c1d28c53a6db
+uuid: 0b948ad6-73f7-48e0-941b-06f766cf946d
 langcode: nl
 status: true
 dependencies:
   module:
     - locale
-_core:
-  default_config_hash: IGyq02Zgyl_6WJczNqeYnXXQR_B_iM-yyOFXOUmVpLk
 id: locale
-label: Vertaling
+label: Translation
 module: locale
 routes:
   -
@@ -16,60 +14,60 @@ tips:
   locale-overview:
     id: locale-overview
     plugin: text
-    label: Gebruikersinterface-vertaling
-    body: 'Deze pagina maakt het mogelijk om de gebruikersinterface te vertalen of bestaande vertalingen aan te passen. Als u de site in eerste instantie in het Engels heeft geïnstalleerd, dan moet u eerst een andere taal toevoegen op de  <a href="[site:url]admin/config/regional/language">Talen pagina</a>, om deze pagina te kunnen gebruiken.'
+    label: 'User interface translation'
+    body: 'This page allows you to translate the user interface or modify existing translations. If you have installed your site initially in English, you must first add another language on the <a href="[site:url]admin/config/regional/language">Languages page</a>, in order to use this page.'
     weight: 1
   locale-language:
     id: locale-language
     plugin: text
-    label: Vertalingstaal
-    body: 'Kies de taal die u wilt vertalen.'
+    label: 'Translation language'
+    body: 'Choose the language you want to translate.'
     weight: 2
     attributes:
       data-id: edit-langcode
   locale-search:
     id: locale-search
     plugin: text
-    label: Zoeken
-    body: 'Geef het specifieke woord of zin op dat u wilt vertalen. U kunt ook alleen een deel van een woord opgeven.'
+    label: Search
+    body: 'Enter the specific word or sentence you want to translate, you can also write just a part of a word.'
     weight: 3
     attributes:
       data-id: edit-string
   locale-filter:
     id: locale-filter
     plugin: text
-    label: 'Zoekresultaten filteren'
-    body: 'U kunt zoeken op onvertaalde tekenreeksen als u iets wilt vertalen dat nog niet is vertaald. Als u een bestaande vertaling wilt aanpassen, dan kunt u ook alleen zoeken op vertaalde tekenreeksen.'
+    label: 'Filter the search'
+    body: 'You can search for untranslated strings if you want to translate something that isn''t translated yet. If you want to modify an existing translation, you might want to search only for translated strings.'
     weight: 4
     attributes:
       data-id: edit-translation
   locale-submit:
     id: locale-submit
     plugin: text
-    label: 'De zoekcriteria toepassen'
-    body: 'Klik op de <em>Filter</em>-knop om de zoekcriteria toe te passen.'
+    label: 'Apply your search criteria'
+    body: 'To apply your search criteria, click on the <em>Filter</em> button.'
     weight: 5
     attributes:
       data-id: edit-submit
   locale-translate:
     id: locale-translate
     plugin: text
-    label: Vertalen
-    body: 'U kunt uw eigen vertaling in de tekstvelden van de rechter kolom schrijven. U kunt het beste proberen te achterhalen in welke context de tekst wordt gebruikt om de meest passende vertaling te geven.'
+    label: Translate
+    body: 'You can write your own translation in the text fields of the right column. Try to figure out in which context the text will be used in order to translate it in the appropriate way.'
     weight: 6
     attributes:
       data-class: js-form-type-textarea
   locale-validate:
     id: locale-validate
     plugin: text
-    label: 'De vertaling valideren'
-    body: 'Als u klaar bent met de vertaling klikt u op de knop <em>Vertalingen opslaan</em>. U moet de vertaling opslaan voordat u de pagina wisselt of een nieuwe zoekopdracht uitvoert.'
+    label: 'Validate the translation'
+    body: 'When you have finished your translations, click on the <em>Save translations</em> button. You must save your translations, each time before changing the page or making a new search.'
     weight: 7
     attributes:
       data-id: edit-submit--2
   locale-continue:
     id: locale-continue
     plugin: text
-    label: 'Wordt vervolgd op'
-    body: 'De vertalingen die u hier heeft gedaan worden gebruikt in de gebruikersinterface van de site. Als u ze op een andere site wilt gebruiken of met een externe vertaaleditor wilt aanpassen dan kunt u deze <a href="[site:url]admin/config/regional/translate/export">exporteren</a> naar een .po-bestand en ze later weer <a href="[site:url]admin/config/regional/translate/import">importeren</a>.'
+    label: 'Continuing on'
+    body: 'The translations you have made here will be used on your site''s user interface. If you want to use them on another site or modify them on an external translation editor, you can <a href="[site:url]admin/config/regional/translate/export">export them</a> to a .po file and <a href="[site:url]admin/config/regional/translate/import">import them</a> later.'
     weight: 8

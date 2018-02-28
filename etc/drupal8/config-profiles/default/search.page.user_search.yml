@@ -1,13 +1,11 @@
-uuid: b705c918-5003-45f5-a869-cb167be04be5
+uuid: 267b0bf5-d284-4f2a-a639-860541a29a78
 langcode: nl
 status: true
 dependencies:
   module:
     - user
-_core:
-  default_config_hash: k3aUaZXGDuhkek2TZIee0PApOPTvYZLadziekdyHA5A
 id: user_search
-label: Gebruikers
+label: Users
 path: user
 weight: 0
 plugin: user_search

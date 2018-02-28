@@ -1,13 +1,11 @@
-uuid: fe65a688-6c8a-4cd9-aa2a-74fe78d3d2bc
+uuid: 94be8b31-e1d6-4199-8419-f12fb3d2b594
 langcode: nl
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: 97tvtzGOa8_flb22CzSjgtm_YkiGMHvEBO-6q2K9V_U
 id: node_search
-label: Inhoud
+label: Content
 path: node
 weight: -10
 plugin: node_search

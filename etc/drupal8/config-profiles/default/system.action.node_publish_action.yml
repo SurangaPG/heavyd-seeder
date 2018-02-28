@@ -1,13 +1,11 @@
-uuid: 12446e4e-3a55-4d26-8eaa-5d14063c76cf
+uuid: 9afff75b-5059-46ea-b4db-cebfcce4040e
 langcode: nl
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: lsQkbo4njZ-Q_oGKCPGXGWFjWF1I7QpgA6m-t9rcRoA
 id: node_publish_action
-label: 'Inhoud publiceren'
+label: 'Publish content'
 type: node
 plugin: node_publish_action
 configuration: {  }

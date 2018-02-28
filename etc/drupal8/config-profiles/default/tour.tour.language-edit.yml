@@ -1,13 +1,11 @@
-uuid: a3878a00-acc7-473c-a670-8d9b1d00b984
+uuid: 1fecedf7-6456-4217-8765-b211ea1c7946
 langcode: nl
 status: true
 dependencies:
   module:
     - language
-_core:
-  default_config_hash: uwUxQwqEzjNphw2r1_eXr3GJkw1uI0gWkmWQ6J5OvPI
 id: language-edit
-label: 'Talen bewerken'
+label: 'Editing languages'
 module: language
 routes:
   -
@@ -16,36 +14,36 @@ tips:
   language-edit-overview:
     id: language-edit-overview
     plugin: text
-    label: 'Talen bewerken'
-    body: '<p> Deze pagina biedt de mogelijkheid om een taal te bewerken op uw site, inclusief aangepaste talen. </p>'
+    label: 'Editing languages'
+    body: '<p>This page provides the ability to edit a language on your site, including custom languages.</p>'
     weight: 1
   language-edit-langcode:
     id: language-edit-langcode
     plugin: text
-    label: Taalcode
-    body: '<p>U kunt de taalcode niet aanpassen op de site omdat deze gebruikt wordt door het systeem om de taal te identificeren.</p>'
+    label: 'Language code'
+    body: '<p>You cannot change the code of a language on the site, since it is used by the system to keep track of the language.</p>'
     weight: 2
     attributes:
       data-id: edit-langcode-view
   language-edit-label:
     id: language-edit-label
     plugin: text
-    label: Taalnaam
-    body: '<p>De naam van de taal wordt site-breed gebruikt voor alle gebruikers en wordt in het Engels weergegeven. Namen van ingebouwde talen kunnen vertaald worden met de Interface Translation-module en namen van zowel ingebouwde als aangepaste talen kunnen met de Configuration Translation-module vertaald worden.</p>'
+    label: 'Language name'
+    body: '<p>The language name is used throughout the site for all users and is written in English. Names of built-in languages can be translated using the Interface Translation module, and names of both built-in and custom languages can be translated using the Configuration Translation module.</p>'
     weight: 3
     attributes:
       data-id: edit-label
   language-edit-direction:
     id: language-edit-direction
     plugin: text
-    label: Taalrichting
-    body: '<p>Kies of de schrijfrichting van de taal ''links naar rechts'' of ''rechts naar links'' is.</p><p>Merk op dat niet alle thema''s ''rechts naar links''-layouts ondersteunen dus test het thema bij het gebruik van ''rechts naar links".</p>'
+    label: 'Language direction'
+    body: '<p>Choose if the language is a "Left to right" or "Right to left" language.</p><p>Note that not all themes support "Right to left" layouts, so test your theme if you are using "Right to left".</p>'
     weight: 4
     attributes:
       data-id: edit-direction--wrapper--description
   language-edit-continue:
     id: language-edit-continue
     plugin: text
-    label: 'Wordt vervolgd op'
-    body: '<p>Na het overzicht van de ''Taal bewerken''-feature, kunt u verder gaan met:<ul><li>Een taal bewerken</li><li><a href="[site:url]admin/config/regional/language">Ingestelde talen bekijken</a></li></ul></p>'
+    label: 'Continuing on'
+    body: '<p>Now that you have an overview of the "Edit language" feature, you can continue by:<ul><li>Editing a language</li><li><a href="[site:url]admin/config/regional/language">Viewing configured languages</a></li></ul></p>'
     weight: 5

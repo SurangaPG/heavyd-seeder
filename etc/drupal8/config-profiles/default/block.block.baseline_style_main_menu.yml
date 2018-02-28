@@ -1,4 +1,4 @@
-uuid: 097dd3b3-cfd4-4b5f-a5c5-837492a6eef3
+uuid: 2878fc3d-7d27-4a89-9545-f03de7428692
 langcode: nl
 status: true
 dependencies:
@@ -8,8 +8,6 @@ dependencies:
     - system
   theme:
     - baseline_style
-_core:
-  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: baseline_style_main_menu
 theme: baseline_style
 region: header

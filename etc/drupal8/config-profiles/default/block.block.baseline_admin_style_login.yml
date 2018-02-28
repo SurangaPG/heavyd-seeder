@@ -1,4 +1,4 @@
-uuid: d8b71f99-812d-4fce-989b-8d1e2d6a9f78
+uuid: 1d8d49da-7eb0-4766-8796-75d1c8489361
 langcode: nl
 status: true
 dependencies:
@@ -6,8 +6,6 @@ dependencies:
     - user
   theme:
     - baseline_admin_style
-_core:
-  default_config_hash: IItlF4SKHgxduIysVQdvirDJ_v3HGuAviOkidAOJYRE
 id: baseline_admin_style_login
 theme: baseline_admin_style
 region: content

@@ -1,11 +1,9 @@
-uuid: c1f6a5cd-0180-433a-ba56-1d68e5e541a8
+uuid: 7e01dfdc-c93a-48c4-a1e2-550233a4e81f
 langcode: nl
 status: true
 dependencies:
   theme:
     - seven
-_core:
-  default_config_hash: HHryZVJbeKi9WnuBGC8FOhBZmBnk2G1H6KxFuy-rC9A
 id: seven_local_actions
 theme: seven
 region: content
@@ -14,7 +12,7 @@ provider: null
 plugin: local_actions_block
 settings:
   id: local_actions_block
-  label: 'Primaire beheeracties'
+  label: 'Primary admin actions'
   provider: core
   label_display: '0'
 visibility: {  }

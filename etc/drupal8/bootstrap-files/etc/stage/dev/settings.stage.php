@@ -10,7 +10,7 @@ assert_options(ASSERT_ACTIVE, TRUE);
 \Drupal\Component\Assertion\Handle::register();
 
 // Use development config in dev environments.
-$config['config_split.config_split.stage_dev']['status'] = TRUE;
+$config['config_split.config_split.dev']['status'] = TRUE;
 
 $settings['container_yamls'][] = __DIR__ . '/services.local.yml';
 

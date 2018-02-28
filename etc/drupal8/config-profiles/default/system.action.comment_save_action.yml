@@ -1,13 +1,11 @@
-uuid: a387cddf-1eca-4c04-ab6f-fe2c7293b79e
+uuid: edd6223f-a868-48e1-890b-40ccf9b852c0
 langcode: nl
 status: true
 dependencies:
   module:
     - comment
-_core:
-  default_config_hash: TSkg_gUZvk-39yXFrIFnKjsxuEzO0qBH82TdDxOMMr4
 id: comment_save_action
-label: 'Reactie opslaan'
+label: 'Save comment'
 type: comment
 plugin: comment_save_action
 configuration: {  }

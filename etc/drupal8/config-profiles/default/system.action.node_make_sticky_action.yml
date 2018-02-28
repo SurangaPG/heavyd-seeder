@@ -1,13 +1,11 @@
-uuid: 818af0da-4663-4496-89db-17cb41352b9e
+uuid: 2bb8c55d-c21e-4ce1-a32a-4963181b42f5
 langcode: nl
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: sOb26JSy3fGpWkvR0WYN6_hMqj_6d1rvbvrkzp1yya0
 id: node_make_sticky_action
-label: 'Inhoud vastgeplakt bovenaan de lijst maken'
+label: 'Make content sticky'
 type: node
 plugin: node_make_sticky_action
 configuration: {  }

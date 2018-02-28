@@ -1,12 +1,10 @@
-uuid: 04ea6f8c-3853-4477-9b65-b1f4d14cefdf
+uuid: 9a898e6f-3bab-4f2d-8499-d6794f3083d7
 langcode: nl
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: NIKBt6kw_uPhNI0qtR2DnRf7mSOgAQdx7Q94SKMjXbQ
-name: 'Platte tekst'
+name: 'Plain text'
 format: plain_text
-weight: -7
+weight: 10
 filters:
   filter_html_escape:
     id: filter_html_escape

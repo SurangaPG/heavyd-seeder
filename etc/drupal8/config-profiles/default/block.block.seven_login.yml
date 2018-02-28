@@ -1,4 +1,4 @@
-uuid: b7331fbd-9df7-44d9-98ed-800ed8232922
+uuid: 659c7bee-d491-4aab-9fba-c1824d2fb7a4
 langcode: nl
 status: true
 dependencies:
@@ -6,8 +6,6 @@ dependencies:
     - user
   theme:
     - seven
-_core:
-  default_config_hash: IItlF4SKHgxduIysVQdvirDJ_v3HGuAviOkidAOJYRE
 id: seven_login
 theme: seven
 region: content
@@ -16,7 +14,7 @@ provider: null
 plugin: user_login_block
 settings:
   id: user_login_block
-  label: Gebruikerslogin
+  label: 'User login'
   provider: user
   label_display: visible
 visibility: {  }

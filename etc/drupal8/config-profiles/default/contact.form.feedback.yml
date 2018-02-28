@@ -1,14 +1,12 @@
-uuid: 09026769-af81-42ed-b407-6934e26957d6
+uuid: e6a8675d-8d75-4953-b6fd-00b346185cbf
 langcode: nl
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
 id: feedback
-label: Website-feedback
+label: 'Website feedback'
 recipients:
   - admin@example.com
 reply: ''
 weight: 0
-message: 'Uw bericht is verzonden.'
+message: 'Your message has been sent.'
 redirect: ''

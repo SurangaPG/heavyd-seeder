@@ -1,15 +1,13 @@
-uuid: 33dab156-6fae-4954-9d26-8af6f6c6c5fd
+uuid: e5ed4634-87d6-407d-abba-1be15ddee177
 langcode: nl
 status: true
 dependencies:
   module:
     - user
-_core:
-  default_config_hash: m0vmYmhrzMR6S_IC0UlK0Cl-q5lEvL8-EbxbbcDtk34
 id: who_s_online
-label: '''Wie is online''-blok'
+label: 'Who''s online block'
 module: user
-description: 'Toont de gebruikersnamen van de meest recente actieve gebruikers, en het totale aantal actieve gebruikers.'
+description: 'Shows the user names of the most recently active users, and the total number of active users.'
 tag: default
 base_table: users_field_data
 base_field: uid
@@ -18,7 +16,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: Hoofd
+    display_title: Master
     position: 0
     display_options:
       access:
@@ -39,13 +37,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Toepassen
+          submit_button: Apply
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sorteren op'
+          exposed_sorts_label: 'Sort by'
           expose_sort_order: true
-          sort_asc_label: Oplopend
-          sort_desc_label: Aflopend
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       pager:
         type: some
         options:
@@ -126,8 +124,8 @@ display:
           exposed: false
           expose:
             operator_id: access_op
-            label: 'Laatste toegang'
-            description: 'Een gebruiker wordt online verondersteld voor deze tijd nadat hij voor een laatste keer een pagina heeft bekeken.'
+            label: 'Last access'
+            description: 'A user is considered online for this long after they have last viewed a page.'
             use_operator: false
             operator: access_op
             identifier: access
@@ -169,7 +167,7 @@ display:
           plugin_id: date
           entity_type: user
           entity_field: access
-      title: 'Wie is online'
+      title: 'Who''s online'
       header:
         result:
           id: result
@@ -179,7 +177,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: 'Er zijn nu @total gebruikers online.'
+          content: 'There are currently @total users online.'
           plugin_id: result
       footer: {  }
       empty:
@@ -192,7 +190,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'Er zijn nu 0 gebruikers online.'
+          content: 'There are currently 0 users online.'
           plugin_id: text_custom
       relationships: {  }
       arguments: {  }
@@ -207,11 +205,11 @@ display:
   who_s_online_block:
     display_plugin: block
     id: who_s_online_block
-    display_title: 'Wie is online'
+    display_title: 'Who''s online'
     position: 1
     display_options:
-      block_description: 'Wie is online'
-      display_description: 'Een lijst van gebruikers die nu zijn ingelogd.'
+      block_description: 'Who''s online'
+      display_description: 'A list of users that are currently logged in.'
       display_extenders: {  }
     cache_metadata:
       contexts:

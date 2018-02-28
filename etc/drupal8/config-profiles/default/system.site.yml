@@ -1,14 +1,12 @@
-uuid: 0d7aa206-1167-48a6-9885-3fb134f107d9
-name: Limburg.net
+name: Site-Install
 mail: admin@example.com
 slogan: ''
 page:
-  403: /node/1
-  404: /node/2
-  front: /node/3
+  403: ''
+  404: ''
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 langcode: nl
 default_langcode: nl
-_core:
-  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: ''

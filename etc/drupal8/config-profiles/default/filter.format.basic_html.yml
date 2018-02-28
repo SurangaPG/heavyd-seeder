@@ -1,14 +1,12 @@
-uuid: 79732bb0-b535-4055-98b3-6abf35efee3c
+uuid: b303af61-7032-4eb6-8175-dd1a2e181870
 langcode: nl
 status: true
 dependencies:
   module:
     - editor
-_core:
-  default_config_hash: P8ddpAIKtawJDi5SzOwCzVnnNYqONewSTJ6Xn0dW_aQ
-name: 'Eenvoudige HTML'
+name: 'Basic HTML'
 format: basic_html
-weight: -9
+weight: 0
 filters:
   filter_html:
     id: filter_html

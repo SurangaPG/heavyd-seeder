@@ -1,10 +1,10 @@
-uuid: 9872a6a3-d9a7-4649-85c6-c8d9c1186210
+uuid: d9bfd1be-f501-4ada-9593-d0f76a8fb549
 langcode: nl
 status: true
 dependencies: {  }
 _core:
   default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
 id: footer
-label: Voet
-description: Websitegegevens-links
+label: Footer
+description: 'Site information links'
 locked: true

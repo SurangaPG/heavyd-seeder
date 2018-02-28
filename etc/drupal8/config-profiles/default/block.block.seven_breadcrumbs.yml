@@ -1,4 +1,4 @@
-uuid: e6914e17-efaa-4da9-8d69-16220c55dd67
+uuid: b81d5e32-6748-4dad-8610-4e023f6260fe
 langcode: nl
 status: true
 dependencies:
@@ -6,8 +6,6 @@ dependencies:
     - system
   theme:
     - seven
-_core:
-  default_config_hash: WWu2OQswgCztl9OeXjD1stexIEMZsSgPMYIdC-JHx9c
 id: seven_breadcrumbs
 theme: seven
 region: breadcrumb
@@ -16,7 +14,7 @@ provider: null
 plugin: system_breadcrumb_block
 settings:
   id: system_breadcrumb_block
-  label: Kruimelpad
+  label: Breadcrumbs
   provider: system
   label_display: '0'
 visibility: {  }

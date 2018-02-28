@@ -1,20 +1,18 @@
-uuid: 459007ff-1adb-4031-9a9c-c111be8b963e
+uuid: 65ac2cd0-5a50-4d10-a30d-c9aa0fcf3fc1
 langcode: nl
 status: true
 dependencies:
   theme:
     - baseline_style
-_core:
-  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
 id: baseline_style_local_actions
 theme: baseline_style
 region: content
-weight: -15
+weight: -20
 provider: null
 plugin: local_actions_block
 settings:
   id: local_actions_block
-  label: 'Primaire beheeracties'
+  label: 'Primary admin actions'
   provider: core
   label_display: '0'
 visibility: {  }
