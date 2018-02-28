@@ -9,7 +9,7 @@ use Symfony\Component\Yaml\Yaml;
 /**
  * Class ListCommandTest
  */
-class ProjectHelpCommandTest extends AbstractDefaultDrupal8BaseTestCase {
+class ProjectHelpTest extends AbstractDefaultDrupal8BaseTestCase {
 
   /**
    * Checks or the heavyd.project.xml exists.
@@ -48,11 +48,13 @@ class ProjectHelpCommandTest extends AbstractDefaultDrupal8BaseTestCase {
 
       "drupal:env:activate-etc-files",
       "drupal:env:settings-file",
+      // @TODO Remove these in favor of the standard seeder.
       "drupal:init:baseline-module",
       "drupal:init:baseline-theme",
       "drupal:init:cleanup",
       "drupal:init:config",
       "drupal:init:site-dir",
+
       "drupal:stage:activate-etc-files",
       "drupal:stage:htaccess",
       "drupal:stage:htpasswd",
@@ -68,6 +70,7 @@ class ProjectHelpCommandTest extends AbstractDefaultDrupal8BaseTestCase {
       "project:activate-site",
       "project:activate-stage",
       "project:build",
+      // @TODO remove this in favor of the seeder.
       "project:init",
       "project:install",
       "project:install-dependencies",
