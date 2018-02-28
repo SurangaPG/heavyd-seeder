@@ -27,8 +27,6 @@ pipelines:
           script:
             - composer install
             - ./vendor/bin/phpunit tests/phpunit/DefaultDrupal8
-          artifacts:
-            - build/**
 #      - step:
 #          name: Validate filebased phing commands
 #          caches:
@@ -67,8 +65,6 @@ pipelines:
           image: surangagamage/heavyd-php-apache:7.1
           script:
             - echo "@TODO - Should runs all the phing commands that require the project to be installed."
-          artifacts:
-            - build/**
 definitions:
   services:
     selenium:
