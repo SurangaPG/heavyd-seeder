@@ -23,7 +23,7 @@ class ProjectActivateEnvTest extends AbstractDefaultDrupal8BaseTestCase {
   /**
    * Checks or an environment fails to activate when the env is missing.
    */
-  public function testActivateEnvWithoutNonExistingEnv() {
+  public function testActivateEnvWithNonExistingEnv() {
     $this->markTestIncomplete('To be completed, pointing at an environment that does not have a dir should fail.');
   }
 
