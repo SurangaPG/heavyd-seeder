@@ -27,6 +27,8 @@ pipelines:
           script:
             - composer install
             - ./vendor/bin/phpunit tests/phpunit/DefaultDrupal8
+          artifacts:
+            - build/**
 #      - step:
 #          name: Validate filebased phing commands
 #          caches:
