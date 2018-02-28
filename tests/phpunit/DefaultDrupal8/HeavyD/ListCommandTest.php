@@ -1,6 +1,6 @@
 <?php
 
-namespace surangapg\Test\DefaultDrupal8\Seeder;
+namespace surangapg\Test\DefaultDrupal8\HeavyD;
 
 use PHPUnit\Framework\TestCase;
 use surangapg\Test\DefaultDrupal8\AbstractDefaultDrupal8BaseTestCase;
@@ -17,5 +17,9 @@ class ListCommandTest extends AbstractDefaultDrupal8BaseTestCase {
   public function testListCommand() {
     $output = [];
     $this->projectRunHeavyd('list', $output);
+
+    // Assert some basic commands:
+    $this->assertContains('list', $output['stdout'], 'The command should have been visible in the outputted list');
+    $this->assertContains('help', $output['stdout'], 'The command should have been visible in the outputted list');
   }
 }

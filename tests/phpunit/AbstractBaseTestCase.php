@@ -103,7 +103,6 @@ abstract class AbstractBaseTestCase extends TestCase {
 
     $command .= ' >' . $tempFile . ' 2>' . $tempErrorFile;
 
-    var_dump(sprintf("cd %s && %s", $dir, $command), $output);
     exec(sprintf("cd %s && %s", $dir, $command), $output, $return);
 
     $output['stderr'] = file_get_contents($tempErrorFile);
