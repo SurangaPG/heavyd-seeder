@@ -83,8 +83,9 @@ class ProjectActivateStageTest extends AbstractDefaultDrupal8BaseTestCase {
     // Ensure all the property files are correct.
     $this->assertFileEquals($this->getProjectDirectory() . '/etc/stage/install/properties/project.yml', $this->getProjectDirectory() . '/properties/stage/project.yml');
 
-    // Ensure the services.yml doesn't exist.
-    $this->assertFileNot($this->getProjectDirectory() . '/web/sites/default/services.stage.yml');
+    // Ensure the services.yml file is correct exist.
+    $this->assertFileEquals($this->getProjectDirectory() . '/etc/stage/install/services.stage.yml', $this->getProjectDirectory() . '/web/sites/default/services.stage.yml');
+
 
     // Validate the count of items.
     $items = glob($this->getProjectDirectory() . '/properties/site/*.yml');
