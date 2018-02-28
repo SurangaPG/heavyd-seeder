@@ -29,36 +29,36 @@ pipelines:
             - ./vendor/bin/phpunit tests/phpunit/DefaultDrupal8
           artifacts:
             - build/**
-      - step:
-          name: Validate filebased phing commands
-          caches:
-            - composer
-          # @TODO Setup a more optimized container.
-          image: surangagamage/heavyd-php-apache:7.1
-          script:
-            - echo "@TODO"
-          artifacts:
-            - build/**
-      - step:
-          name: Validate heavyD commands
-          caches:
-            - composer
-          # @TODO Setup a more optimized container.
-          image: surangagamage/heavyd-php-apache:7.1
-          script:
-            - echo "@TODO - Should run all the differen (non install connected heavyD commands)"
-          artifacts:
-            - build/**
-      - step:
-          name: Validate project setup
-          caches:
-            - composer
-          # @TODO Setup a more optimized container.
-          image: surangagamage/heavyd-php-apache:7.1
-          script:
-            - echo "@TODO - Should run project install and all the connected default behats"
-          artifacts:
-            - build/**
+#      - step:
+#          name: Validate filebased phing commands
+#          caches:
+#            - composer
+#          # @TODO Setup a more optimized container.
+#          image: surangagamage/heavyd-php-apache:7.1
+#          script:
+#            - echo "@TODO"
+#          artifacts:
+#            - build/**
+#      - step:
+#          name: Validate heavyD commands
+#          caches:
+#            - composer
+#          # @TODO Setup a more optimized container.
+#          image: surangagamage/heavyd-php-apache:7.1
+#          script:
+#            - echo "@TODO - Should run all the differen (non install connected heavyD commands)"
+#          artifacts:
+#            - build/**
+#      - step:
+#          name: Validate project setup
+#          caches:
+#            - composer
+#          # @TODO Setup a more optimized container.
+#          image: surangagamage/heavyd-php-apache:7.1
+#          script:
+#            - echo "@TODO - Should run project install and all the connected default behats"
+#          artifacts:
+#            - build/**
       - step:
           name: Validate project phing
           caches:
