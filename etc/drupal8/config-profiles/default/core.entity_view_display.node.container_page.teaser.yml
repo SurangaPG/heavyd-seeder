@@ -1,22 +1,29 @@
-uuid: 8504e9ab-8aeb-4086-9af0-5f068fdab486
+uuid: ff3ff532-36ba-4ea3-8282-5ad4f8e76161
 langcode: nl
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.container_page.body
     - node.type.container_page
   module:
+    - text
     - user
 id: node.container_page.teaser
 targetEntityType: node
 bundle: container_page
 mode: teaser
 content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     region: content
 hidden:
-  field_main_components: true
-  field_social_share_description: true
-  field_social_share_image: true
   langcode: true

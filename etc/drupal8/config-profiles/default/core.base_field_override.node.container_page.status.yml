@@ -1,14 +1,14 @@
-uuid: fcf2fc76-4f4b-4020-8db2-21ac995b178b
+uuid: 01f6f713-d1c1-413c-9390-97d2863af4ca
 langcode: nl
 status: true
 dependencies:
   config:
     - node.type.container_page
-id: node.container_page.promote
-field_name: promote
+id: node.container_page.status
+field_name: status
 entity_type: node
 bundle: container_page
-label: 'Promoted to front page'
+label: Published
 description: ''
 required: false
 translatable: true

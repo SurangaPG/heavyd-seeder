@@ -1,7 +1,0 @@
-# Redirects
-baseline.redirects:
-  title: 'URL Redirects'
-  route_name: redirect.list
-  description: 'Overzicht van URL redirects'
-  menu_name: baseline-toolbar
-  weight: 100

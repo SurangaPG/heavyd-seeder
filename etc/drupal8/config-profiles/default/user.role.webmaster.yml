@@ -9,5 +9,7 @@ is_admin: null
 permissions:
   - 'access content overview'
   - 'administer nodes'
+  - 'administer redirects'
   - 'bypass node access'
   - 'create url aliases'
+  - 'use text format basic_html'

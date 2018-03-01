@@ -1,31 +1,18 @@
-uuid: eb8dd619-5537-4dd2-a4c3-d3b083ed8530
+uuid: e22f9398-2a50-4a4c-977d-7fc17dd3930d
 langcode: nl
 status: true
 dependencies:
   module:
     - menu_ui
-    - scheduler
 third_party_settings:
   menu_ui:
     available_menus:
       - main
-      - mijn-limburg
     parent: 'main:'
-  scheduler:
-    expand_fieldset: when_required
-    fields_display_mode: vertical_tab
-    publish_enable: false
-    publish_past_date: error
-    publish_required: false
-    publish_revision: false
-    publish_touch: false
-    unpublish_enable: false
-    unpublish_required: false
-    unpublish_revision: false
 name: 'Container page'
 type: container_page
-description: 'Dynamic page to hold structural elements for the site that can''t be deleted. '
+description: 'Used for pages that should be editable (but not deletable) by the end user. Such as overview pages, the home page etc. '
 help: ''
-new_revision: false
+new_revision: true
 preview_mode: 1
 display_submitted: false

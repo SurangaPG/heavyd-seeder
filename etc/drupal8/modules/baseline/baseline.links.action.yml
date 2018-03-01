@@ -4,8 +4,8 @@ baseline_toolbar.node.add_page:
   appears_on:
     - view.toolbar_pages.main
 
-baseline.municipality.taxonomy_term.add_form:
-  route_name: baseline.entity.taxonomy_term.add_form
-  title: 'Add term'
+baseline_toolbar.redirect.add_redirect:
+  route_name: redirect.add
+  title: 'Add redirect'
   appears_on:
-    - baseline.entity.taxonomy_vocabulary.overview_form
+    - view.toolbar_redirects.main

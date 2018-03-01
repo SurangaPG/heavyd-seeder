@@ -9,3 +9,4 @@ is_admin: null
 permissions:
   - 'access toolbar'
   - 'use baseline toolbar tray'
+  - 'use text format basic_html'

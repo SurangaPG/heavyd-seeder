@@ -1,13 +1,13 @@
-uuid: fcf2fc76-4f4b-4020-8db2-21ac995b178b
+uuid: 725cd0ee-48df-46ff-80fc-2fe3710399fb
 langcode: nl
 status: true
 dependencies:
   config:
-    - node.type.container_page
-id: node.container_page.promote
+    - node.type.technical_page
+id: node.technical_page.promote
 field_name: promote
 entity_type: node
-bundle: container_page
+bundle: technical_page
 label: 'Promoted to front page'
 description: ''
 required: false

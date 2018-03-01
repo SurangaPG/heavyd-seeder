@@ -1,16 +1,16 @@
-uuid: e9051003-0abf-44f3-8c47-6b6f2fbd9beb
+uuid: a576911a-2516-41f4-b1b2-93eac0a7aa4c
 langcode: nl
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.technical_page
+    - node.type.container_page
   module:
     - text
-id: node.technical_page.body
+id: node.container_page.body
 field_name: body
 entity_type: node
-bundle: technical_page
+bundle: container_page
 label: Body
 description: ''
 required: false

@@ -56,3 +56,6 @@ vendor
 
 # Ignore generated docker-compose.yml
 /docker-compose.yml
+
+# Ignore the auto generated behat.yml file
+/tests/behat/behat.yml

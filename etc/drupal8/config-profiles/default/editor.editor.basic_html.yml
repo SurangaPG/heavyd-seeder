@@ -17,6 +17,9 @@ settings:
           items:
             - Bold
             - Italic
+            - Superscript
+            - Subscript
+            - RemoveFormat
         -
           name: Linking
           items:
@@ -31,23 +34,37 @@ settings:
           name: Media
           items:
             - Blockquote
-            - DrupalImage
         -
           name: 'Block Formatting'
           items:
             - Format
+            - '-'
+            - Styles
         -
           name: Tools
           items:
+            - Paste
+            - PasteText
+            - PasteFromWord
+            - '-'
             - Source
+        -
+          name: alignment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
   plugins:
+    language:
+      language_list: un
     stylescombo:
       styles: ''
 image_upload:
-  status: true
+  status: false
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

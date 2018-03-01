@@ -1,22 +1,11 @@
-uuid: 2895e69c-c52e-4523-9f33-3e436e454f88
+uuid: e3219935-d031-44b0-b848-a7cd70424466
 langcode: nl
 status: true
 dependencies:
   config:
-    - field.field.node.dynamic_page.field_display_side_anchors
-    - field.field.node.dynamic_page.field_intro_components
-    - field.field.node.dynamic_page.field_main_components
-    - field.field.node.dynamic_page.field_side_links
-    - field.field.node.dynamic_page.field_social_share_description
-    - field.field.node.dynamic_page.field_social_share_image
-    - field.field.node.dynamic_page.field_tags
-    - field.field.node.dynamic_page.field_teaser_list
-    - field.field.node.dynamic_page.field_teaser_title
+    - field.field.node.dynamic_page.body
     - node.type.dynamic_page
   module:
-    - entity_reference_revisions
-    - image
-    - link
     - text
     - user
 id: node.dynamic_page.default
@@ -24,83 +13,15 @@ targetEntityType: node
 bundle: dynamic_page
 mode: default
 content:
-  field_display_side_anchors:
-    weight: 108
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_intro_components:
-    type: entity_reference_revisions_entity_view
-    weight: 103
+  body:
     label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
-  field_main_components:
-    type: entity_reference_revisions_entity_view
-    weight: 104
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
-  field_side_links:
-    weight: 105
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_social_share_description:
-    weight: 111
-    label: above
+    type: text_default
+    weight: 101
     settings: {  }
     third_party_settings: {  }
-    type: text_default
-    region: content
-  field_social_share_image:
-    weight: 109
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_teaser_list:
-    weight: 107
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_teaser_title:
-    weight: 106
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
   links:
     weight: 100
     region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
-  field_tags: true
   langcode: true

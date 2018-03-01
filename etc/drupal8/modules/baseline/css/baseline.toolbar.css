@@ -19,12 +19,12 @@ a.toolbar-icon-baseline-tray-tab.is-active::before,
 }
 
 /* Redirect icon */
-#toolbar-link-redirect-list:before {
+#toolbar-link-view-toolbar_redirects-main:before {
     background-image: url(../assets/svg/787878/link.svg);
 }
 
-#toolbar-link-redirect-list:active:before,
-#toolbar-link-redirect-list.is-active:before {
+#toolbar-link-view-toolbar_redirects-main:active:before,
+#toolbar-link-view-toolbar_redirects-main.is-active:before {
     background-image: url(../assets/svg/000000/link.svg);
 }
 
