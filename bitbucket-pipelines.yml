@@ -60,13 +60,30 @@ pipelines:
 #          artifacts:
 #            - build/**
       - step:
-          name: Validate project phing
+          name: Test drupal installation
           caches:
             - composer
-          # @TODO Setup a more optimized container.
-          image: surangagamage/heavyd-php-apache:7.1
+            - node
+          # image: susa4ostec/bitbucket-pipelines-php7.1-mysql
+          image: surangagamage/heavyd-php-apache:7.0
           script:
-            - echo "@TODO - Should runs all the phing commands that require the project to be installed."
+            - apachectl start
+            - cd .phing
+            - composer install
+            - cd ..
+            - rm -rf /var/www/html
+            - ln -s /opt/atlassian/pipelines/agent/build/web /var/www/html
+            - ls -la /var/www/html
+            - ./.heavyd/vendor/bin/phing project:write-property-files
+            - ./.heavyd/vendor/bin/phing project:install-dependencies
+            - ./.heavyd/vendor/bin/phing project:install -Denv.to.activate=pipeline -Dsite.to.activate=default -Dstage.to.activate=test -Ddomain.for.install=http://localhost
+            - ./.heavyd/vendor/bin/phing project:write-property-files
+            - cd tests/behat
+            - ../../vendor/bin/behat features/ --tags=~@excludePipeline
+
+          services:
+            - selenium
+            - mysql
 definitions:
   services:
     selenium:
