@@ -78,6 +78,7 @@ pipelines:
             - ./.heavyd/vendor/bin/phing project:install-dependencies
             - ./.heavyd/vendor/bin/phing project:install -Denv.to.activate=pipeline -Dsite.to.activate=default -Dstage.to.activate=test -Ddomain.for.install=http://localhost
             - ./.heavyd/vendor/bin/phing project:write-property-files
+            - ./.heavyd/vendor/bin/phing project:run-behat
             - cd tests/behat
             - ../../vendor/bin/behat features/ --tags=~@excludePipeline
 
