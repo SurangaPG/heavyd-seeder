@@ -3,21 +3,23 @@ langcode: nl
 status: true
 dependencies:
   config:
-    - field.field.node.container_page.body
+    - field.field.node.container_page.field_main_component
     - node.type.container_page
   module:
-    - text
+    - entity_reference_revisions
     - user
 id: node.container_page.default
 targetEntityType: node
 bundle: container_page
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
+  field_main_component:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     region: content
   links:

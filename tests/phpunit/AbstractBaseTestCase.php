@@ -2,8 +2,10 @@
 
 namespace surangapg\Test;
 
+use PHPUnit\Framework\AssertionFailedError;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
 
 abstract class AbstractBaseTestCase extends TestCase {
@@ -47,6 +49,83 @@ abstract class AbstractBaseTestCase extends TestCase {
   public function assertCommandSuccessful($return, $message = '') {
     $message = 'Command failed: ' . PHP_EOL . $message;
     $this->assertEquals(0, $return, $message);
+  }
+
+  /**
+   * Check all the underlying items in a folder.
+   *
+   * @param string $globPattern
+   *   Glob pattern to use relative from the project root.
+   * @param int $expectation
+   *   Number of expected subdirectories.
+   * @param string $globOptions
+   *   Options for the globbing.
+   */
+  public function assertNumberOfSubDirectories(string $globPattern, int $expectation, string $globOptions = '') {
+    $underlyingItems = glob($this->getProjectDirectory() . '/' . $globPattern, $globOptions);
+    $this->assertEquals($expectation, count($underlyingItems), sprintf('Only underlying file was expected for "%s".', $globPattern));
+  }
+
+
+  /**
+   * Check all the underlying items in a folder.
+   *
+   * @param string $globPattern
+   *   Glob pattern to use relative from the project root.
+   * @param string[] $expectations
+   *   Array of all the expectations.
+   * @param string $globOptions
+   *   Options for the globbing.
+   */
+  public function assertListOfSubDirectories(string $globPattern, array $expectations, string $globOptions = '') {
+    $underlyingItems = glob($this->getProjectDirectory() . '/' . $globPattern, $globOptions);
+    foreach ($underlyingItems as &$underlyingItem) {
+      $underlyingItem = basename($underlyingItem);
+    }
+
+    sort($underlyingItems);
+
+    // Remove duplicates.
+    $expectations = array_flip(array_flip($expectations));
+    sort($expectations);
+
+    $this->assertEquals($expectations, $underlyingItems, sprintf('Only the following underlying files were expected: "%s". Also found: "%s".', implode(', ', $expectations), implode(', ', $underlyingItems)));
+  }
+
+
+  /**
+   * Does a file contain a valid array of yaml data.
+   *
+   * @param $file
+   *   The file to check.
+   */
+  public function assertFileContainsValidYml($file) {
+    $this->assertFile($file);
+
+    try {
+      Yaml::parseFile($file);
+    }
+    catch(ParseException $e) {
+      throw new AssertionFailedError(
+        \sprintf(
+          'Failed asserting that "%s" contains a valid yaml array.',
+          $file
+        )
+      );
+    }
+  }
+
+  /**
+   * Checks that a file has been completely replaced.
+   *
+   * @param $file
+   *   This file contains no placeholders for phing variables etc.
+   */
+  public function assertFileHasNoPlaceholders($file) {
+    $this->assertFile($file);
+
+    $content = file_get_contents($file);
+    $this->markIncomplete('Validate via regex here!');
   }
 
   /**

@@ -46,6 +46,9 @@ class EtcStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $propertyFiles = glob($this->getProjectDirectory() . '/etc/stage/acc/properties/*.yml');
     $this->assertEquals(1, count($propertyFiles), 'Only 1 property file should exist.');
     $this->assertFileExists($this->getProjectDirectory() . '/etc/stage/acc/settings.stage.php');
+
+    // 3 types of default content should have been injected.
+    $this->assertListOfSubDirectories('/etc/stage/acc/default_content', ['node', 'user', 'paragraph'], GLOB_ONLYDIR);
   }
 
   /**
@@ -58,6 +61,9 @@ class EtcStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $this->assertEquals(1, count($propertyFiles), 'Only 1 property file should exist.');
     $this->assertFileExists($this->getProjectDirectory() . '/etc/stage/dev/settings.stage.php');
     $this->assertFileExists($this->getProjectDirectory() . '/etc/stage/dev/services.stage.yml');
+
+    // 3 types of default content should have been injected.
+    $this->assertListOfSubDirectories('/etc/stage/dev/default_content', ['node', 'user', 'paragraph'], GLOB_ONLYDIR);
   }
 
   /**
@@ -80,6 +86,9 @@ class EtcStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $propertyFiles = glob($this->getProjectDirectory() . '/etc/stage/prod/properties/*.yml');
     $this->assertEquals(1, count($propertyFiles), 'Only 1 property file should exist.');
     $this->assertFileExists($this->getProjectDirectory() . '/etc/stage/prod/settings.stage.php');
+
+    // 3 types of default content should have been injected.
+    $this->assertListOfSubDirectories('/etc/stage/prod/default_content', ['node', 'user', 'paragraph'], GLOB_ONLYDIR);
   }
 
   /**
@@ -91,5 +100,8 @@ class EtcStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $propertyFiles = glob($this->getProjectDirectory() . '/etc/stage/test/properties/*.yml');
     $this->assertEquals(1, count($propertyFiles), 'Only 1 property file should exist.');
     $this->assertFileExists($this->getProjectDirectory() . '/etc/stage/test/settings.stage.php');
+
+    // 3 types of default content should have been injected.
+    $this->assertListOfSubDirectories('/etc/stage/test/default_content', ['node', 'user', 'paragraph'], GLOB_ONLYDIR);
   }
 }

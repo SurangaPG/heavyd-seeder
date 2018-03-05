@@ -1,9 +1,11 @@
-uuid: ccafb2dc-c8d6-4dc1-ba64-5a2a37d95e4f
+uuid: 34e7df48-5a9d-408d-aaa7-25ea4e9573fc
 langcode: nl
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:bdf0ff73-9621-401f-a27c-cc83c371d3c6'
 id: basic_component
-label: 'Basic component'
-icon_uuid: null
-description: 'Simple text component with text and a title.'
+label: 'Simpele tekst'
+icon_uuid: bdf0ff73-9621-401f-a27c-cc83c371d3c6
+description: 'Een basis paragraph item met een optionele titel en tekst.'
 behavior_plugins: {  }
