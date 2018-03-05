@@ -67,7 +67,8 @@
   "autoload": {
     "psr-4": {
       "Drupal\\DrupalProject\\": "tests/src",
-      "DrupalProject\\": "src"
+      "DrupalProject\\": "src",
+      "DrupalProject\\Behat\\": "tests/behat/features/bootstrap"
     }
   },
   "scripts": {
