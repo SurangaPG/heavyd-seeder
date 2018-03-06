@@ -48,7 +48,7 @@ class EtcStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $this->assertFileExists($this->getProjectDirectory() . '/etc/stage/acc/settings.stage.php');
 
     // 3 types of default content should have been injected.
-    $this->assertListOfSubDirectories('/etc/stage/acc/default_content', ['node', 'user', 'paragraph'], GLOB_ONLYDIR);
+    $this->assertListOfSubDirectories('etc/stage/acc/default_content/*', ['node', 'user', 'paragraph'], GLOB_ONLYDIR);
   }
 
   /**
@@ -63,7 +63,7 @@ class EtcStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $this->assertFileExists($this->getProjectDirectory() . '/etc/stage/dev/services.stage.yml');
 
     // 3 types of default content should have been injected.
-    $this->assertListOfSubDirectories('/etc/stage/dev/default_content', ['node', 'user', 'paragraph'], GLOB_ONLYDIR);
+    $this->assertListOfSubDirectories('etc/stage/dev/default_content/*', ['node', 'user', 'paragraph'], GLOB_ONLYDIR);
   }
 
   /**
@@ -88,7 +88,7 @@ class EtcStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $this->assertFileExists($this->getProjectDirectory() . '/etc/stage/prod/settings.stage.php');
 
     // 3 types of default content should have been injected.
-    $this->assertListOfSubDirectories('/etc/stage/prod/default_content', ['node', 'user', 'paragraph'], GLOB_ONLYDIR);
+    $this->assertListOfSubDirectories('etc/stage/prod/default_content/*', ['node', 'user', 'paragraph'], GLOB_ONLYDIR);
   }
 
   /**
@@ -102,6 +102,6 @@ class EtcStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $this->assertFileExists($this->getProjectDirectory() . '/etc/stage/test/settings.stage.php');
 
     // 3 types of default content should have been injected.
-    $this->assertListOfSubDirectories('/etc/stage/test/default_content', ['node', 'user', 'paragraph'], GLOB_ONLYDIR);
+    $this->assertListOfSubDirectories('etc/stage/test/default_content/*', ['node', 'user', 'paragraph'], GLOB_ONLYDIR);
   }
 }
