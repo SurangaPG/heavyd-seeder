@@ -1,8 +1,15 @@
 <project name="Seed test tasks" default="help" description="">
+    <property file="build.test.properties.local" />
     <property file="build.test.properties.dist" />
 
     <target name="setup:seed-file" description="Sets up a seed file for the test build to use.">
         <copy file="${dir.fixtures}/seed-d8.yml" tofile="${project.basedir}/seed.yml" />
     </target>
 
+    <target name="local:sync-dev-version" description="Sync over the local dev version to the build">
+        <fail unless="dir.local-dev-version" description="Local absolute path to dev version should be specified"/>
+        <delete dir="${dir.build}/.heavyd/vendor/heavyd" />
+        <mkdir dir="${dir.build}/.heavyd/vendor/heavyd" />
+        <exec command="rsync -vr ${dir.local-dev-version}/ ${dir.build}/.heavyd/vendor/heavyd/platform/ --exclude='vendor' --exclude='.git'  --exclude='.idea'" passthru="true"/>
+    </target>
 </project>

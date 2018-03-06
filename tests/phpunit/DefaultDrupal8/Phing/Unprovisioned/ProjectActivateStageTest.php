@@ -12,6 +12,19 @@ use Symfony\Component\Yaml\Yaml;
 class ProjectActivateStageTest extends AbstractDefaultDrupal8BaseTestCase {
 
   /**
+   * Checks or an environment can activate a stage.
+   */
+  public function testActivateStage() {
+
+    // Ensure the stage dir exists.
+    $this->provideDummyDir('etc/stage/temp');
+
+    $output = [];
+    $return = $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
+    $this->assertCommandSuccessful($return, 'project:activate-stage should have been able to run without specifying an environment.');
+  }
+
+  /**
    * Checks or an environment fails to activate when properties are missing.
    */
   public function testActivateStageWithoutProperties() {
@@ -28,7 +41,121 @@ class ProjectActivateStageTest extends AbstractDefaultDrupal8BaseTestCase {
   }
 
   /**
-   * Checks or an the docker env is activated correctly.
+   * Checks or a settings.stage.php file is copied over as expected.
+   */
+  public function testActivationSettingsPhp() {
+    $this->provideDummyFile('etc/stage/temp/settings.stage.php');
+    $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
+
+    $this->assertFileEquals($this->getProjectDirectory() . '/etc/stage/temp/settings.stage.php', $this->getProjectDirectory() . '/web/sites/default/settings.stage.php');
+    $this->fs->remove($this->getProjectDirectory() . '/' . 'etc/stage/temp/settings.stage.php');
+  }
+
+  /**
+   * Checks or a settings.stage.php file is deleted correctly if none exists in the stage.
+   */
+  public function testActivationDeleteSettingsPhp() {
+    $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
+
+    $this->assertFileNot($this->getProjectDirectory() . '/web/sites/default/settings.stage.php');
+    $this->fs->remove($this->getProjectDirectory() . '/' . 'etc/stage/temp/settings.stage.php');
+  }
+
+  /**
+   * Checks or a settings.stage.php file is copied over as expected.
+   */
+  public function testActivationServicesYml() {
+    $this->provideDummyFile('etc/stage/temp/services.stage.yml');
+    $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
+
+    $this->assertFileEquals($this->getProjectDirectory() . '/etc/stage/temp/services.stage.yml', $this->getProjectDirectory() . '/web/sites/default/services.stage.yml');
+    $this->fs->remove($this->getProjectDirectory() . '/' . 'etc/stage/temp/services.stage.yml');
+  }
+
+  /**
+   * Checks or a services.stage.yml file is deleted correctly if none exists in the stage.
+   */
+  public function testActivationDeleteServicesYml() {
+    $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
+    $this->assertFileNot($this->getProjectDirectory() . '/web/sites/default/services.stage.yml');
+  }
+
+  /**
+   * Checks or a robots.txt file is copied over as expected.
+   */
+  public function testActivationRobotsTxt() {
+    $this->provideDummyFile('etc/stage/temp/robots.txt');
+    $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
+
+    $this->assertFileEquals($this->getProjectDirectory() . '/etc/stage/temp/robots.txt', $this->getProjectDirectory() . '/web/robots.txt');
+    $this->fs->remove($this->getProjectDirectory() . '/' . 'etc/stage/temp/robots.txt');
+  }
+
+  /**
+   * Checks or a services.stage.yml file is reset correctly if none exists in the stage.
+   */
+  public function testActivationResetRobotsTxt() {
+    $this->markTestIncomplete('To be completed, Should we backup the "default" robots.txt.');
+  }
+
+  /**
+   * Checks or a .htaccess file is copied over as expected.
+   */
+  public function testActivationHtaccess() {
+    $this->provideDummyFile('etc/stage/temp/.htaccess');
+    $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
+
+    $this->assertFileEquals($this->getProjectDirectory() . '/etc/stage/temp/.htaccess', $this->getProjectDirectory() . '/web/.htaccess');
+    $this->fs->remove($this->getProjectDirectory() . '/' . 'etc/stage/temp/.htaccess');
+  }
+
+  /**
+   * Checks or a .htaccess file is reset correctly if none exists in the stage.
+   */
+  public function testActivationResetHtaccess() {
+    $this->markTestIncomplete('To be completed, Should we backup the "default" .htaccess?');
+  }
+
+  /**
+   * Checks or a .htpasswd file is copied over as expected.
+   */
+  public function testActivationHtpasswd() {
+    $this->provideDummyFile('etc/stage/temp/.htpasswd');
+    $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
+
+    $this->assertFileEquals($this->getProjectDirectory() . '/etc/stage/temp/.htpasswd', $this->getProjectDirectory() . '/.htpasswd');
+    $this->fs->remove($this->getProjectDirectory() . '/' . 'etc/stage/temp/.htpasswd');
+  }
+
+  /**
+   * Checks or a .htaccess file is reset correctly if none exists in the stage.
+   */
+  public function testActivationDeleteHtpasswd() {
+    $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
+    $this->assertFileNot($this->getProjectDirectory() . '/.htpasswd');
+  }
+
+  /**
+   * Checks or a sites.stage.php file is copied over as expected.
+   */
+  public function testActivationSitesPhp() {
+    $this->provideDummyFile('etc/stage/temp/sites.stage.php');
+    $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
+
+    $this->assertFileEquals($this->getProjectDirectory() . '/etc/stage/temp/sites.stage.php', $this->getProjectDirectory() . '/web/sites/sites.stage.php');
+    $this->fs->remove($this->getProjectDirectory() . '/etc/stage/temp/sites.stage.php');
+  }
+
+  /**
+   * Checks or a sites.stage.php file is reset correctly if none exists in the stage.
+   */
+  public function testActivationDeleteSitesPhp() {
+    $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
+    $this->assertFileNot($this->getProjectDirectory() . '/web/sites/sites.stage.php');
+  }
+
+  /**
+   * Checks or an the docker stage is activated correctly.
    */
   public function testActivateStageAcc() {
     $return = $this->projectRunPhing('project:activate-stage -Dstage.to.activate=acc', $output);
@@ -68,7 +195,6 @@ class ProjectActivateStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $items = glob($this->getProjectDirectory() . '/properties/site/*.yml');
     $this->assertEquals(1, count($items), 'Incorrect number of items found.');
   }
-
 
   /**
    * Checks or an the install stage is activated correctly.

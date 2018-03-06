@@ -59,3 +59,5 @@ vendor
 
 # Ignore the auto generated behat.yml file
 /tests/behat/behat.yml
+
+/.htpasswd

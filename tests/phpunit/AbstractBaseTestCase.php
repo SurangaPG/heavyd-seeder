@@ -116,6 +116,64 @@ abstract class AbstractBaseTestCase extends TestCase {
   }
 
   /**
+   * Provide a dummy file in a given location.
+   *
+   * @param $path
+   *   Relative path for this dir.
+   * @param boolean $overwrite
+   *   Variable to check or a file should be overwritten.
+   */
+  public function provideDummyDir($path, $overwrite = false) {
+
+    $fullPath = $this->getProjectDirectory() . '/' . $path;
+    if (!file_exists($fullPath) || $overwrite) {
+      $this->fs->mkdir($fullPath);
+    }
+  }
+
+  /**
+   * Provide a dummy file in a given location.
+   *
+   * @param $path
+   *   Relative path for this file.
+   * @param array $content
+   *   Content to write in the file.
+   * @param boolean $overwrite
+   *   Variable to check or a file should be overwritten.
+   */
+  public function provideDummyFile($path, $content = NULL, $overwrite = false) {
+
+    // Assign random value to allow for the checking of a copied file.
+    if (!isset($content)) {
+      $content = rand(0, 10000000000);
+    }
+
+    $fullPath = $this->getProjectDirectory() . '/' . $path;
+    if (!file_exists($fullPath) || $overwrite) {
+      $this->fs->dumpFile($fullPath, $content);
+    }
+  }
+
+  /**
+   * Provide a dummy yaml file in a given location.
+   *
+   * @param $path
+   *   Relative path for this file.
+   * @param array $content
+   *   Content to write in the file.
+   * @param boolean $overwrite
+   *   Variable to check or a file should be overwritten.
+   */
+  public function provideDummyYamlFile($path, $content = NULL, $overwrite = false) {
+
+    // Assign random value to allow for the checking of a copied file.
+    if (!isset($content)) {
+      $content['dummy'] = rand(0, 10000000000);
+    }
+    $this->provideDummyFile($path, Yaml::dump($content), $overwrite);
+  }
+
+  /**
    * Checks that a file has been completely replaced.
    *
    * @param $file
