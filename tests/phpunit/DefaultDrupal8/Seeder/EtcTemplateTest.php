@@ -22,7 +22,7 @@ class EtcTemplateTest extends AbstractDefaultDrupal8BaseTestCase {
    */
   public function testEtcTemplateDirExists() {
     $this->assertFileExists($this->getProjectDirectory() . '/etc/template');
-    $subDir = glob($this->getProjectDirectory() . '/etc/template/*');
-    $this->assertEquals(2, count($subDir), 'Only 2 files should exist in the etc/template folder.');
+
+    $this->assertListOfSubDirectories('etc/template/*', ['docker-compose.template.yml']);
   }
 }

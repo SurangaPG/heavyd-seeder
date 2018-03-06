@@ -26,14 +26,11 @@ class EtcStageTest extends AbstractDefaultDrupal8BaseTestCase {
   public function testEtcStageDirExists() {
 
     // Only 3 files should exist.
-    $subDirs = glob($this->getProjectDirectory() . '/etc/stage/*', GLOB_ONLYDIR);
-    $this->assertEquals(5, count($subDirs), 'Only 5 sub directories should exist.');
-
-    $this->assertFileExists($this->getProjectDirectory() . '/etc/stage/acc');
-    $this->assertFileExists($this->getProjectDirectory() . '/etc/stage/dev');
-    $this->assertFileExists($this->getProjectDirectory() . '/etc/stage/install');
-    $this->assertFileExists($this->getProjectDirectory() . '/etc/stage/prod');
-    $this->assertFileExists($this->getProjectDirectory() . '/etc/stage/test');
+    $this->assertNumberOfSubDirectories('etc/stage/*', 6, GLOB_ONLYDIR);
+    $this->assertListOfSubDirectories('etc/stage/*',
+      ['acc', 'dev', 'install', 'prod', 'test'],
+      GLOB_ONLYDIR
+    );
 
   }
 

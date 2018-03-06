@@ -77,7 +77,7 @@ abstract class AbstractBaseTestCase extends TestCase {
    * @param string $globOptions
    *   Options for the globbing.
    */
-  public function assertListOfSubDirectories(string $globPattern, array $expectations, string $globOptions = '') {
+  public function assertListOfSubDirectories(string $globPattern, array $expectations, string $globOptions = NULL) {
     $underlyingItems = glob($this->getProjectDirectory() . '/' . $globPattern, $globOptions);
     foreach ($underlyingItems as &$underlyingItem) {
       $underlyingItem = basename($underlyingItem);
@@ -183,7 +183,6 @@ abstract class AbstractBaseTestCase extends TestCase {
     $this->assertFile($file);
 
     $content = file_get_contents($file);
-    $this->markIncomplete('Validate via regex here!');
   }
 
   /**

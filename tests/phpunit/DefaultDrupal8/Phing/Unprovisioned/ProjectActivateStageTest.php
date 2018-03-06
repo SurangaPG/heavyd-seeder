@@ -22,6 +22,8 @@ class ProjectActivateStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $output = [];
     $return = $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
     $this->assertCommandSuccessful($return, 'project:activate-stage should have been able to run without specifying an environment.');
+
+    $this->fs->remove($this->getProjectDirectory() . '/etc/stage/temp');
   }
 
   /**
@@ -48,7 +50,7 @@ class ProjectActivateStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
 
     $this->assertFileEquals($this->getProjectDirectory() . '/etc/stage/temp/settings.stage.php', $this->getProjectDirectory() . '/web/sites/default/settings.stage.php');
-    $this->fs->remove($this->getProjectDirectory() . '/' . 'etc/stage/temp/settings.stage.php');
+    $this->fs->remove($this->getProjectDirectory() . '/etc/stage/temp');
   }
 
   /**
@@ -58,7 +60,7 @@ class ProjectActivateStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
 
     $this->assertFileNot($this->getProjectDirectory() . '/web/sites/default/settings.stage.php');
-    $this->fs->remove($this->getProjectDirectory() . '/' . 'etc/stage/temp/settings.stage.php');
+    $this->fs->remove($this->getProjectDirectory() . '/etc/stage/temp');
   }
 
   /**
@@ -69,7 +71,7 @@ class ProjectActivateStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
 
     $this->assertFileEquals($this->getProjectDirectory() . '/etc/stage/temp/services.stage.yml', $this->getProjectDirectory() . '/web/sites/default/services.stage.yml');
-    $this->fs->remove($this->getProjectDirectory() . '/' . 'etc/stage/temp/services.stage.yml');
+    $this->fs->remove($this->getProjectDirectory() . '/etc/stage/temp');
   }
 
   /**
@@ -88,7 +90,7 @@ class ProjectActivateStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
 
     $this->assertFileEquals($this->getProjectDirectory() . '/etc/stage/temp/robots.txt', $this->getProjectDirectory() . '/web/robots.txt');
-    $this->fs->remove($this->getProjectDirectory() . '/' . 'etc/stage/temp/robots.txt');
+    $this->fs->remove($this->getProjectDirectory() . '/etc/stage/temp');
   }
 
   /**
@@ -106,7 +108,7 @@ class ProjectActivateStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
 
     $this->assertFileEquals($this->getProjectDirectory() . '/etc/stage/temp/.htaccess', $this->getProjectDirectory() . '/web/.htaccess');
-    $this->fs->remove($this->getProjectDirectory() . '/' . 'etc/stage/temp/.htaccess');
+    $this->fs->remove($this->getProjectDirectory() . '/etc/stage/temp');
   }
 
   /**
@@ -124,7 +126,7 @@ class ProjectActivateStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
 
     $this->assertFileEquals($this->getProjectDirectory() . '/etc/stage/temp/.htpasswd', $this->getProjectDirectory() . '/.htpasswd');
-    $this->fs->remove($this->getProjectDirectory() . '/' . 'etc/stage/temp/.htpasswd');
+    $this->fs->remove($this->getProjectDirectory() . '/etc/stage/temp');
   }
 
   /**
@@ -143,7 +145,7 @@ class ProjectActivateStageTest extends AbstractDefaultDrupal8BaseTestCase {
     $this->projectRunPhing('project:activate-stage -Dstage.to.activate=temp', $output);
 
     $this->assertFileEquals($this->getProjectDirectory() . '/etc/stage/temp/sites.stage.php', $this->getProjectDirectory() . '/web/sites/sites.stage.php');
-    $this->fs->remove($this->getProjectDirectory() . '/etc/stage/temp/sites.stage.php');
+    $this->fs->remove($this->getProjectDirectory() . '/etc/stage/temp');
   }
 
   /**

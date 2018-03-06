@@ -26,7 +26,8 @@ pipelines:
           image: surangagamage/heavyd-php-apache:7.1
           script:
             - composer install
-            - ./vendor/bin/phpunit tests/phpunit/DefaultDrupal8
+            - ./vendor/bin/phpunit tests/phpunit/DefaultDrupal8/Seeder
+            - ./vendor/bin/phpunit tests/phpunit/DefaultDrupal8/Phing/Unprovisioned
           artifacts:
             - build/**
 #      - step:
