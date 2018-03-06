@@ -2,6 +2,9 @@
 
 namespace DrupalProject\Behat\Helpers;
 
+use Behat\Gherkin\Node\TableNode;
+use Behat\Mink\Element\DocumentElement;
+
 /**
  * Class ElementSetHelper
  *
@@ -33,6 +36,32 @@ class ElementSetHelper {
    *   The nods elements.
    */
   protected $elements;
+
+  /**
+   * @param string $selector
+   *   The selector to use.
+   * @param \Behat\Gherkin\Node\TableNode $expectedData
+   *   Table node with singular text data to use.
+   * @param string $selectorType
+   *   Selector type, defaults to css.
+   * @param \Behat\Mink\Element\DocumentElement $document
+   *   Document to get the set from.
+   *
+   * @return \DrupalProject\Behat\Helpers\ElementSetHelper
+   *   A new helper with some data preloaded.
+   */
+  public static function createSetHelperFromSelectorAndTableNode(string $selector, TableNode $expectedData, DocumentElement $document, $selectorType = 'css') {
+    $extractedExpectations = [];
+    foreach ($expectedData->getRows() as $row) {
+      $extractedExpectations[] = reset($row);
+    }
+    $extractedExpectations = array_filter($extractedExpectations);
+
+    $elements = $document->findAll($selectorType, $selector);
+    $elements = isset($elements) ? $elements : [];
+
+    return new static($elements, $extractedExpectations);
+  }
 
   /**
    * ElementSetHelper constructor.

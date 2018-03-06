@@ -12,17 +12,14 @@ namespace DrupalProject\Behat;
 
 use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Gherkin\Node\TableNode;
-use Behat\Mink\Element\NodeElement;
 use Behat\Mink\Exception\ExpectationException;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
-use DrupalProject\Behat\Traits\ElementSetHelperTrait;
+use DrupalProject\Behat\Helpers\ElementSetHelper;
 
 /**
  * Defines generic step definitions.
  */
 class ToolbarContext extends RawDrupalContext implements SnippetAcceptingContext {
-
-  use ElementSetHelperTrait;
 
   /**
    * @var array
@@ -62,9 +59,10 @@ class ToolbarContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function theToolbarShouldContain(TableNode $expectedTabs)
   {
-    $tabHelper = $this->createSetHelperFromSelectorAndTableNode(
+    $tabHelper = ElementSetHelper::createSetHelperFromSelectorAndTableNode(
       $this->getIdentifier('admin_toolbar_main_tab'),
-      $expectedTabs
+      $expectedTabs,
+      $this->getSession()->getPage()
     );
 
     // One item is always expected to be the current user.
