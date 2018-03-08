@@ -26,7 +26,6 @@ class EtcStageTest extends AbstractDefaultDrupal8BaseTestCase {
   public function testEtcStageDirExists() {
 
     // Only 3 files should exist.
-    $this->assertNumberOfSubDirectories('etc/stage/*', 6, GLOB_ONLYDIR);
     $this->assertListOfSubDirectories('etc/stage/*',
       ['acc', 'dev', 'install', 'prod', 'test'],
       GLOB_ONLYDIR
