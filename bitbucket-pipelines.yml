@@ -72,7 +72,11 @@ pipelines:
             - rm -rf /var/www/html
             - ln -s /opt/atlassian/pipelines/agent/build/default-d8/web /var/www/html
             - cd build/default-d8
-            - ls -la
+            # @TODO, Why is this not in the artifact? 
+            - composer install
+            - cd .heavyd
+            - composer install
+            - cd ..
             - ./.heavyd/vendor/bin/phing project:write-property-files
             - ./.heavyd/vendor/bin/phing project:install-dependencies
             - ./.heavyd/vendor/bin/phing project:install -Denv.to.activate=pipeline -Dsite.to.activate=default -Dstage.to.activate=test -Ddomain.for.install=http://localhost
