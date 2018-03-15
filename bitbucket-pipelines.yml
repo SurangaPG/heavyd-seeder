@@ -69,7 +69,7 @@ pipelines:
           image: surangagamage/heavyd-php-apache:7.0
           script:
             - apachectl start
-            - cd .phing
+            - cd .heavyd
             - composer install
             - cd ..
             - rm -rf /var/www/html
