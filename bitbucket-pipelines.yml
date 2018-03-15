@@ -68,11 +68,12 @@ pipelines:
           # image: susa4ostec/bitbucket-pipelines-php7.1-mysql
           image: surangagamage/heavyd-php-apache:7.0
           script:
+            - which git
             - apachectl start
             - rm -rf /var/www/html
             - ln -s /opt/atlassian/pipelines/agent/build/default-d8/web /var/www/html
             - cd build/default-d8
-            # @TODO, Why is this not in the artifact? 
+            # @TODO, Why is this not in the artifact?
             - composer install
             - cd .heavyd
             - composer install
@@ -91,7 +92,7 @@ pipelines:
 definitions:
   services:
     selenium:
-      image: selenium/standalone-firefox-debug:2.53.1-beryllium
+      image: selenium/standalone-chrome:2.53.1-beryllium
     mysql:
       image: mysql:5.6
       environment:
