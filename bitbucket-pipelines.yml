@@ -71,7 +71,7 @@ pipelines:
             - apachectl start
             - rm -rf /var/www/html
             - ln -s /opt/atlassian/pipelines/agent/build/web /var/www/html
-            - ls -la /var/www/html
+            - cd build/default-d8
             - ./.heavyd/vendor/bin/phing project:write-property-files
             - ./.heavyd/vendor/bin/phing project:install-dependencies
             - ./.heavyd/vendor/bin/phing project:install -Denv.to.activate=pipeline -Dsite.to.activate=default -Dstage.to.activate=test -Ddomain.for.install=http://localhost
