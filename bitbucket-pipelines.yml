@@ -18,18 +18,18 @@ pipelines:
             - ./vendor/bin/phing seed:drupal8 -Ddir.build=/opt/atlassian/pipelines/agent/build/build/default-d8
           artifacts:
             - build/**
-      - step:
-          name: Validate seeder builds
-          caches:
-            - composer
-          # @TODO Setup a more optimized container.
-          image: surangagamage/heavyd-php-apache:7.1
-          script:
-            - composer install
-            - ./vendor/bin/phpunit tests/phpunit/DefaultDrupal8/Seeder
-            - ./vendor/bin/phpunit tests/phpunit/DefaultDrupal8/Phing/Unprovisioned
-          artifacts:
-            - build/**
+#     - step:
+#         name: Validate seeder builds
+#         caches:
+#           - composer
+#         # @TODO Setup a more optimized container.
+#         image: surangagamage/heavyd-php-apache:7.1
+#         script:
+#           - composer install
+#           - ./vendor/bin/phpunit tests/phpunit/DefaultDrupal8/Seeder
+#           - ./vendor/bin/phpunit tests/phpunit/DefaultDrupal8/Phing/Unprovisioned
+#         artifacts:
+#           - build/**
 #      - step:
 #          name: Validate filebased phing commands
 #          caches:
@@ -68,7 +68,9 @@ pipelines:
           # image: susa4ostec/bitbucket-pipelines-php7.1-mysql
           image: surangagamage/heavyd-php-apache:7.0
           script:
-            - apachectl start
+#            - apachectl start
+            - ls -al
+            - ls /opt/atlassian/pipelines/agent/build
             - cd build/.heavyd
             - composer install
             - cd ..
