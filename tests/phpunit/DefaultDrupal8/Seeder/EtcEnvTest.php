@@ -25,6 +25,25 @@ class EtcEnvTest extends AbstractDefaultDrupal8BaseTestCase {
   }
 
   /**
+   * Checks or the pipeline basic files exist.
+   */
+  public function testEtcEnvDirDockerExists() {
+    $this->assertFileExists($this->getProjectDirectory() . '/etc/env/pipeline');
+
+    // Only 3 files should exist.
+    $propertyFiles = glob($this->getProjectDirectory() . '/etc/env/pipeline/properties/*.yml');
+    $this->assertEquals(3, count($propertyFiles), 'Only 3 files should exist.');
+
+    // Check the actual file names.
+    $this->assertFileExists($this->getProjectDirectory() . '/etc/env/pipeline/properties/docker.yml');
+    $this->assertFileExists($this->getProjectDirectory() . '/etc/env/pipeline/properties/host.yml');
+    $this->assertFileExists($this->getProjectDirectory() . '/etc/env/pipeline/properties/project.yml');
+
+    // Check that the settings.env file was added.
+    $this->assertFileExists($this->getProjectDirectory() . '/etc/env/pipeline/settings.env.php');
+  }
+
+  /**
    * Checks or the docker basic files exist.
    */
   public function testEtcEnvDirDockerExists() {

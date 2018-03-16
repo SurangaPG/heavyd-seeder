@@ -1,2 +1,2 @@
 default:
-  domain: 'http://${project.machineName}.${project.group}.mamp'
+  domain: 'http://${project.machineName}.${project.group}.local'

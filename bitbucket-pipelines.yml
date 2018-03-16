@@ -68,7 +68,6 @@ pipelines:
           # image: susa4ostec/bitbucket-pipelines-php7.1-mysql
           image: surangagamage/heavyd-php-apache:7.0
           script:
-            - which git
             - apachectl start
             - rm -rf /var/www/html
             - ln -s /opt/atlassian/pipelines/agent/build/default-d8/web /var/www/html
