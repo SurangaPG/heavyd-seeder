@@ -46,7 +46,7 @@ class EtcEnvTest extends AbstractDefaultDrupal8BaseTestCase {
   /**
    * Checks or the docker basic files exist.
    */
-  public function testEtcEnvDirDockerExists() {
+  public function testEtcEnvDirPipelineExists() {
     $this->assertFileExists($this->getProjectDirectory() . '/etc/env/docker');
 
     // Only 3 files should exist.
