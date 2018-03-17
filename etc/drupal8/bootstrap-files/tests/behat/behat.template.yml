@@ -11,7 +11,7 @@ default:
         tags: '~@wip'
   extensions:
     Behat\MinkExtension:
-      base-url: '${host.default.domain}'
+      base-url: '${host.default.domain}/'
       files_path: '${behat.fixtures.files}'
       goutte: ~
       selenium2: ~
