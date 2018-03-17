@@ -70,7 +70,7 @@ pipelines:
           script:
             - apachectl start
             - rm -rf /var/www/html
-            - ln -s /opt/atlassian/pipelines/agent/build/default-d8/web /var/www/html
+            - ln -s /opt/atlassian/pipelines/agent/build/build/default-d8/web /var/www/html
             - cd build/default-d8
             # @TODO, Why is this not in the artifact?
             - composer install
