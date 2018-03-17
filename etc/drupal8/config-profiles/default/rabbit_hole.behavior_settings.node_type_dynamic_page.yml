@@ -1,9 +1,0 @@
-uuid: ccbdcc6b-6e44-4f96-b049-b778926754ae
-langcode: nl
-status: true
-dependencies: {  }
-id: node_type_dynamic_page
-action: display_page
-allow_override: 1
-redirect: ''
-redirect_code: 301

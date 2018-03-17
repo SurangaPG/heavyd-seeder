@@ -1,8 +1,0 @@
-uuid: 90691e0c-12eb-4815-8518-473ac02cf922
-langcode: nl
-status: true
-dependencies: {  }
-id: short_date_only
-label: 'Enkel datum - kort'
-locked: false
-pattern: d/m/Y

@@ -1,9 +1,0 @@
-uuid: a72d0907-0029-4304-a484-ab2a17b31d95
-langcode: nl
-status: true
-dependencies: {  }
-id: node_type_cleanest_magazine
-action: page_not_found
-allow_override: 1
-redirect: ''
-redirect_code: 301

@@ -1,9 +1,0 @@
-uuid: 8a26d64f-da44-4de1-a7b0-4a7ce28a37d2
-langcode: nl
-status: true
-dependencies: {  }
-id: node_type_page
-action: display_page
-allow_override: 1
-redirect: ''
-redirect_code: 301

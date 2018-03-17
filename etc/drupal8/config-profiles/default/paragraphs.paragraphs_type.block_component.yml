@@ -1,9 +1,0 @@
-uuid: 58a34ba8-bc60-4eed-9d39-a6fcdf475819
-langcode: nl
-status: true
-dependencies: {  }
-id: block_component
-label: 'Block component'
-icon_uuid: null
-description: 'Embed a block into the content of the page.'
-behavior_plugins: {  }

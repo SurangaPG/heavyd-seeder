@@ -1,4 +1,4 @@
-uuid: a7f56d45-a77c-42a0-ae7f-699f26fbbff7
+uuid: f0e52ea4-e187-4b08-86d9-08981afc728a
 langcode: nl
 status: true
 dependencies:
@@ -15,13 +15,12 @@ bundle: basic_component
 mode: preview
 content:
   field_content:
-    type: text_trimmed
     weight: 1
-    region: content
     label: hidden
-    settings:
-      trim_length: 40
+    settings: {  }
     third_party_settings: {  }
+    type: text_default
+    region: content
   field_title:
     weight: 0
     label: hidden
@@ -30,5 +29,4 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden:
-  field_icon: true
+hidden: {  }

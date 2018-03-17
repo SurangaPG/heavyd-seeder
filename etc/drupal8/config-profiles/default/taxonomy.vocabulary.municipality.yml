@@ -1,9 +1,0 @@
-uuid: b4cbe031-bbfc-4c67-855d-fa3ec85965ea
-langcode: nl
-status: true
-dependencies: {  }
-name: Gemeente
-vid: municipality
-description: 'Alle gemeentes in limburg.'
-hierarchy: 0
-weight: 0

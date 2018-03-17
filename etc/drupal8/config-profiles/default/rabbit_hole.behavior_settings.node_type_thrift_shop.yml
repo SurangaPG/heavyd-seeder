@@ -1,9 +1,0 @@
-uuid: cb45af38-0079-49a4-be80-8f7e32e78ce0
-langcode: nl
-status: true
-dependencies: {  }
-id: node_type_thrift_shop
-action: page_not_found
-allow_override: 1
-redirect: ''
-redirect_code: 301

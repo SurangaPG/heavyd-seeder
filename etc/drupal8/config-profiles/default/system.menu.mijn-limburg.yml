@@ -1,8 +1,0 @@
-uuid: 5a61d272-9817-4ccb-a529-11eaeb809cf6
-langcode: nl
-status: true
-dependencies: {  }
-id: mijn-limburg
-label: 'Mijn Limburg'
-description: my-limburg
-locked: false

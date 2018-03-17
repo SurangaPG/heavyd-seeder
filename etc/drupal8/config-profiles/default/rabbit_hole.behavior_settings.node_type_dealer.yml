@@ -1,9 +1,0 @@
-uuid: bc8d905d-2f74-4676-acfd-5ebd5d3b187e
-langcode: nl
-status: true
-dependencies: {  }
-id: node_type_dealer
-action: page_not_found
-allow_override: 1
-redirect: ''
-redirect_code: 301

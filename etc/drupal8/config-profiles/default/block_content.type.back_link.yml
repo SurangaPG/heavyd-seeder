@@ -1,8 +1,0 @@
-uuid: cd6cf821-423e-467c-b0f9-a6cf15847ef2
-langcode: nl
-status: true
-dependencies: {  }
-id: back_link
-label: 'Back link'
-revision: 0
-description: 'Back link placeholder for easy navigation'

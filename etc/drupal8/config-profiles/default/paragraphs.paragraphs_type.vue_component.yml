@@ -1,9 +1,0 @@
-uuid: e17c766b-90fb-4e73-97fd-d480bd047c62
-langcode: nl
-status: true
-dependencies: {  }
-id: vue_component
-label: 'Vue Component'
-icon_uuid: null
-description: 'Een integratie met de vue js componenten.'
-behavior_plugins: {  }

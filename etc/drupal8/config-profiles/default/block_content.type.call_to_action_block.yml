@@ -1,8 +1,0 @@
-uuid: 51760963-16aa-4d45-9f1d-f674327a74a7
-langcode: nl
-status: true
-dependencies: {  }
-id: call_to_action_block
-label: 'Call To Action Block'
-revision: 0
-description: ''

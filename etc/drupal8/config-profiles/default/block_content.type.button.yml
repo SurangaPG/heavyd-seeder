@@ -1,8 +1,0 @@
-uuid: b7b17c43-02e8-409c-8aef-a321f05292c5
-langcode: nl
-status: true
-dependencies: {  }
-id: button
-label: Button
-revision: 0
-description: 'Block om een link te tonen als een knop.'

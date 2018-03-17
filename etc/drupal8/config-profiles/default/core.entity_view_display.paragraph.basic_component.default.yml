@@ -1,15 +1,12 @@
-uuid: 95d17642-c362-49db-95c3-eeaf5337319e
+uuid: 62abc643-f0df-4d91-9b82-b084716cd873
 langcode: nl
 status: true
 dependencies:
   config:
     - field.field.paragraph.basic_component.field_content
-    - field.field.paragraph.basic_component.field_icon
     - field.field.paragraph.basic_component.field_title
     - paragraphs.paragraphs_type.basic_component
   module:
-    - baseline
-    - icon_set
     - text
 id: paragraph.basic_component.default
 targetEntityType: paragraph
@@ -17,24 +14,18 @@ bundle: basic_component
 mode: default
 content:
   field_content:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_icon:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: icon_default
-    region: content
   field_title:
     weight: 0
     label: hidden
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: anchor_target
+    type: string
     region: content
 hidden: {  }

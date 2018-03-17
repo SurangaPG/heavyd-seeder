@@ -1,4 +1,4 @@
-uuid: 39adf69d-3087-4233-9fc0-cf9346d341b8
+uuid: 3a47c1b7-04ed-49da-890f-8598944cb801
 langcode: nl
 status: true
 dependencies:
@@ -12,7 +12,7 @@ bundle: basic_component
 label: Titel
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

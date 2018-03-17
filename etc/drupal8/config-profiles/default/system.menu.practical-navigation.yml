@@ -1,8 +1,0 @@
-uuid: 8fa925c0-3e88-43f3-9816-55d464111aad
-langcode: nl
-status: true
-dependencies: {  }
-id: practical-navigation
-label: Praktisch
-description: 'Praktische navigatie (footer)'
-locked: false

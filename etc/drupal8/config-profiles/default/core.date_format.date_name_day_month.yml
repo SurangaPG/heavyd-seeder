@@ -1,8 +1,0 @@
-uuid: b1a13722-1a5e-4c6f-9854-6f225c7015cc
-langcode: nl
-status: true
-dependencies: {  }
-id: date_name_day_month
-label: 'Datum naam dag maand'
-locked: false
-pattern: 'l j F'

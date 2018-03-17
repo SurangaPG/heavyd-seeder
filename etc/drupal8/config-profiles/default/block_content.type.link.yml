@@ -1,8 +1,0 @@
-uuid: 5ef5407a-8ae0-430f-8150-e2cc7fa89d8b
-langcode: nl
-status: true
-dependencies: {  }
-id: link
-label: Link
-revision: 0
-description: 'Link blok, bevat een simpele link die op een pagina kan worden geplaatst. '
