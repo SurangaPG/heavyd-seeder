@@ -11,8 +11,8 @@ default:
         tags: '~@wip'
   extensions:
     Behat\MinkExtension:
-      base-url: '${site.url.base}'
-      files_path: '${site.path.files}'
+      base-url: '${host.default.domain}'
+      files_path: '${behat.fixtures.files}'
       goutte: ~
       selenium2: ~
       javascript_session: '${behat.javascript_session}'
@@ -24,10 +24,6 @@ default:
       blackbox: ~
       drupal:
         drupal_root: '${dir.web.root}'
-      drush:
-        root: '${dir.web.root}'
-        alias: '${dir.drush.alias}'
-        binary: '${bin.drush}'
       selectors:
         message_selector: '.messages'
         error_message_selector: '.messages--error'
