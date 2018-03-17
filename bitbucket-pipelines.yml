@@ -91,7 +91,7 @@ pipelines:
 definitions:
   services:
     selenium:
-      image: selenium/standalone-chrome:2.53.1-beryllium
+      image: selenium/standalone-firefox:2.53.1-beryllium
     mysql:
       image: mysql:5.6
       environment:
