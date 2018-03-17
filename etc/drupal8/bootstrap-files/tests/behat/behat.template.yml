@@ -2,8 +2,8 @@ default:
   suites:
     default:
       contexts:
-        - FeatureContext
-        - Drupal\DrupalExtension\Context\DrupalContext
+        - DrupalProject\Behat\BaselineContext
+        - DrupalProject\Behat\ToolbarContext
         - Drupal\DrupalExtension\Context\DrushContext
         - Drupal\DrupalExtension\Context\MessageContext
         - Drupal\DrupalExtension\Context\MinkContext
@@ -30,7 +30,22 @@ default:
         binary: '${bin.drush}'
       selectors:
         message_selector: '.messages'
-        error_message_selector: '.messages.messages--error'
-        success_message_selector: '.messages.messages--status'
+        error_message_selector: '.messages--error'
+        # @TODO Make this the same in the back and the front end.
+        success_message_selector: '.alert-success'
+      text:
+        log_in: 'edit-submit'
+        log_out: 'edit-submit'
+        password_field: 'edit-pass'
+        username_field: 'edit-name'
+      # @see vendor/drupal/drupal-extension/src/Drupal/DrupalExtension/ServiceContainer/config/services.yml
+      # Used to easily detect regions via: $regionObj = $this->getRegion($region);
+      region_map:
+        sidebar: '.layout-region--content-aside'
   formatters:
-    ${behat.formatter.name}: ~
+    pretty: ~
+  # Fix can't run individual features
+  # https://github.com/Behat/Gherkin/issues/97#issuecomment-169134216
+  # https://github.com/Behat/Behat/issues/1076
+  gherkin:
+    cache: ~
