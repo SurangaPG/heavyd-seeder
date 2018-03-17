@@ -21,4 +21,4 @@ webdriver:
 browser_name: firefox
 # The driver for javascript sessions.
 javascript_session: selenium2
-api_driver: drush
+api_driver: drupal
