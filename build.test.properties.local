@@ -1,3 +1,0 @@
-dir.build = ${project.basedir}/build/default-d8/
-dir.fixtures = ${project.basedir}/tests/fixtures
-dir.local-dev-version=/Users/suranga/tools/heavyd/heavyd-dev-suite/components/platform

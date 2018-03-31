@@ -38,7 +38,7 @@ class ToolbarContext extends RawDrupalContext implements SnippetAcceptingContext
     $toolbar = $this->getSession()->getPage()->find('css', $this->getIdentifier('admin_toolbar'));
 
     if (isset($toolbar)) {
-      new ExpectationException('The toolbar should not have been visible', $this->getDriver());
+      new ExpectationException('The toolbar should not have been visible', $this->getSession()->getDriver());
     }
   }
 
@@ -50,7 +50,7 @@ class ToolbarContext extends RawDrupalContext implements SnippetAcceptingContext
     $toolbar = $this->getSession()->getPage()->find('css', $this->getIdentifier('admin_toolbar'));
 
     if (!isset($toolbar)) {
-      new ExpectationException('The toolbar should have been visible', $this->getDriver());
+      new ExpectationException('The toolbar should have been visible', $this->getSession()->getDriver());
     }
   }
 
@@ -74,7 +74,7 @@ class ToolbarContext extends RawDrupalContext implements SnippetAcceptingContext
           'Only expected the provided tabs and a user tab, also found: %s',
           implode(', ', $existingNotExpected)
         ),
-        $this->getSession()
+        $this->getSession()->getDriver()
       );
     }
 
@@ -84,7 +84,7 @@ class ToolbarContext extends RawDrupalContext implements SnippetAcceptingContext
           'The following tabs were expected but could not be found: %s',
           implode(', ', $tabHelper->expectedNotExisting())
         ),
-        $this->getSession()
+        $this->getSession()->getDriver()
       );
     }
   }
