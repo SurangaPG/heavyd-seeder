@@ -2,6 +2,6 @@
 <!-- Dummy xml in case it doesn't exist, will just load in the more apptly named 'core' file -->
 <project name="HeavyD" default="project:help">
 
-    <import file=".heavyd/vendor/heavyd/platform/heavyd.project.xml" />
+    <import file=".heavyd/vendor/surangapg/heavyd-project/heavyd.project.xml" />
 
 </project>

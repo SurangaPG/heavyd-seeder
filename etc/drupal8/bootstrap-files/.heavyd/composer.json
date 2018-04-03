@@ -1,12 +1,16 @@
 {
   "name": "webct/platform",
   "require": {
-    "heavyd/platform": "dev-master"
+    "surangapg/heavyd-project": "dev-master"
   },
   "repositories": [
     {
       "type": "vcs",
-      "url":  "git@github.com:SurangaPG/heavyd.git"
+      "url":  "git@github.com:SurangaPG/heavyd-project.git"
+    },
+    {
+      "type": "vcs",
+      "url":  "git@github.com:SurangaPG/heavyd-components.git"
     }
   ],
   "authors": [
