@@ -26,7 +26,7 @@ class PropertiesTest extends AbstractDefaultDrupal8BaseTestCase {
 
     // Only 3 files should exist.
     $propertyFiles = glob($this->getProjectDirectory() . '/properties/dist/*.yml');
-    $this->assertEquals(7, count($propertyFiles), 'Only 7 files should exist.');
+    $this->assertEquals(8, count($propertyFiles), 'Only 8 files should exist.');
 
     $this->assertFileExists($this->getProjectDirectory() . '/properties/dist/behat.yml');
     $this->assertFileExists($this->getProjectDirectory() . '/properties/dist/bin.yml');
@@ -35,6 +35,7 @@ class PropertiesTest extends AbstractDefaultDrupal8BaseTestCase {
     $this->assertFileExists($this->getProjectDirectory() . '/properties/dist/jira.yml');
     $this->assertFileExists($this->getProjectDirectory() . '/properties/dist/project.yml');
     $this->assertFileExists($this->getProjectDirectory() . '/properties/dist/server.yml');
+    $this->assertFileExists($this->getProjectDirectory() . '/properties/dist/host.yml');
   }
 
   /**
