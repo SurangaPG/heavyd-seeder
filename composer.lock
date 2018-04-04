@@ -1560,37 +1560,36 @@
         },
         {
             "name": "surangapg/heavyd-components",
-            "version": "dev-master",
+            "version": "dev-backup",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SurangaPG/heavyd-components.git",
-                "reference": "64b514eeb63f9b27dcd03d25468250ef34068bc8"
+                "reference": "6cc7730a2a3cf7773d2e2cf5fdcb4b9c3c1626cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SurangaPG/heavyd-components/zipball/64b514eeb63f9b27dcd03d25468250ef34068bc8",
-                "reference": "64b514eeb63f9b27dcd03d25468250ef34068bc8",
+                "url": "https://api.github.com/repos/SurangaPG/heavyd-components/zipball/6cc7730a2a3cf7773d2e2cf5fdcb4b9c3c1626cc",
+                "reference": "6cc7730a2a3cf7773d2e2cf5fdcb4b9c3c1626cc",
                 "shasum": ""
             },
             "require": {
                 "paragonie/random_compat": "^2.0",
-                "symfony/console": "^2.8 || ^3",
-                "symfony/filesystem": "^2.8 || ^3",
-                "symfony/yaml": "^2.8 || ^3"
+                "symfony/console": "^3",
+                "symfony/filesystem": "^3",
+                "symfony/yaml": "^3"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "surangapg\\HeavydComponents\\Test\\": "tests/Test",
                     "surangapg\\HeavydComponents\\": "src"
                 }
             },
-            "description": "Contains a number of shared components useful for both the general heavyd package as the cli etc. These can be used stand alone.",
+            "description": "Contains a number of shared components useful for both several implementations.",
             "support": {
-                "source": "https://github.com/SurangaPG/heavyd-components/tree/master",
+                "source": "https://github.com/SurangaPG/heavyd-components/tree/backup",
                 "issues": "https://github.com/SurangaPG/heavyd-components/issues"
             },
-            "time": "2018-03-31T22:09:23+00:00"
+            "time": "2018-01-10T21:59:20+00:00"
         },
         {
             "name": "symfony/console",
