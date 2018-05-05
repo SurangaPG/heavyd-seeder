@@ -4,5 +4,3 @@ output
 build
 /temp
 build.test.properties.local
-
-/composer.lock

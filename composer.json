@@ -16,7 +16,7 @@
   "require": {
     "surangapg/heavyd-components": "@dev",
     "phing/phing": "^2.16",
-    "phpunit/phpunit": "^7.0"
+    "phpunit/phpunit": "7.0.*"
   },
   "config": {
     "platform": {

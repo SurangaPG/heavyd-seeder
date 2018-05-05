@@ -38,6 +38,14 @@
             </fileset>
         </copy>
 
+        <copy todir="${dir.build}/drush/custom">
+            <fileset dir="${project.basedir}/etc/drupal8/drush-modules">
+                <patternset>
+                    <include name="**"/>
+                </patternset>
+            </fileset>
+        </copy>
+
         <copy todir="${dir.build}/web/themes/custom">
             <fileset dir="${project.basedir}/etc/drupal8/themes">
                 <patternset>

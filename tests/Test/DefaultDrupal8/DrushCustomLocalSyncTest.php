@@ -9,13 +9,13 @@ use surangapg\HeavydSeeder\Test\DefaultDrupal8\AbstractDefaultDrupal8BaseTestCas
 /**
  * Class TestsTest
  */
-class WebModuleBaselineContentTest extends AbstractDefaultDrupal8BaseTestCase {
+class DrushCustomLocalSyncTest extends AbstractDefaultDrupal8BaseTestCase {
 
   /**
    * Checks or the etc folder exists.
    */
   public function testPropertiesDirExists() {
-    $this->assertFileExists($this->getProjectDirectory() . '/web/modules/custom/baseline_content');
-    $this->assertFileExists($this->getProjectDirectory() . '/web/modules/custom/baseline_content/baseline_content.info.yml');
+    $this->assertFileExists($this->getProjectDirectory() . '/drush/custom/drush_locale_sync');
+    $this->assertFileExists($this->getProjectDirectory() . '/drush/custom/drush_locale_sync/drush_locale_sync.drush.inc');
   }
 }
