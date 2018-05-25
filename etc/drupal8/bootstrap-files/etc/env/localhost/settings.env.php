@@ -23,6 +23,9 @@ if (file_exists($dbPropertiesFile)) {
 // Add default database settings if not given
 foreach ($dbPropertieSets[$baseSiteName] as $key1 => $databaseList) {
   foreach ($databaseList as $key2 => $database) {
+
+    $dbPropertieSets[$baseSiteName][$key1][$key2]['database'] .= '_' . $baseSiteName;
+
     // check if port is given
     if (!isset($dbPropertieSets[$baseSiteName][$key1][$key2]['port'])) {
       $dbPropertieSets[$baseSiteName][$key1][$key2]['port'] = 3306;
