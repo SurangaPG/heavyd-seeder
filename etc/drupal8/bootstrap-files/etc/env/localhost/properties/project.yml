@@ -1,2 +1,4 @@
 active:
   env: localhost
+requires:
+  additional_docker_services: TRUE
